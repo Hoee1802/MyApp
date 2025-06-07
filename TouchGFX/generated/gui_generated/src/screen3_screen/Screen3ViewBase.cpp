@@ -9,12 +9,12 @@
 Screen3ViewBase::Screen3ViewBase() :
     buttonCallback(this, &Screen3ViewBase::buttonCallbackHandler)
 {
-    __background.setPosition(0, 0, 240, 320);
+    __background.setPosition(0, 0, 320, 240);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    box1.setPosition(0, 0, 240, 320);
-    box1.setColor(touchgfx::Color::getColorFromRGB(12, 56, 55));
+    box1.setPosition(0, 0, 320, 240);
+    box1.setColor(touchgfx::Color::getColorFromRGB(173, 220, 237));
     add(box1);
 
     winer.setXY(107, 133);
@@ -23,10 +23,10 @@ Screen3ViewBase::Screen3ViewBase() :
     winer.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9392));
     add(winer);
 
-    playagainButton.setXY(33, 160);
-    playagainButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_PRESSED_ID));
+    playagainButton.setXY(91, 175);
+    playagainButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUND_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUND_DISABLED_ID));
     playagainButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_4E2E));
-    playagainButton.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    playagainButton.setLabelColor(touchgfx::Color::getColorFromRGB(237, 241, 245));
     playagainButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     playagainButton.setAction(buttonCallback);
     add(playagainButton);
