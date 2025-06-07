@@ -3,7 +3,7 @@
     "Screens": [
       {
         "Name": "Screen2",
-        "CanvasBufferSize": 3600,
+        "CanvasBufferSize": 4800,
         "Components": [
           {
             "Type": "Box",
@@ -183,32 +183,55 @@
         ]
       },
       {
-        "Name": "Screen3",
+        "Name": "Screen4",
         "Components": [
           {
             "Type": "Box",
             "Name": "box1",
-            "Width": 240,
-            "Height": 320,
+            "Width": 320,
+            "Height": 240,
             "Color": {
-              "Red": 12,
-              "Green": 56,
-              "Blue": 55
+              "Red": 173,
+              "Green": 220,
+              "Blue": 237
             }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "playagainButton_1",
+            "X": 91,
+            "Y": 120,
+            "Width": 138,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
+            "TextId": "__SingleUse_VTUE",
+            "ReleasedColor": {
+              "Red": 237,
+              "Green": 241,
+              "Blue": 245
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_round_disabled.json"
           },
           {
             "Type": "TextArea",
             "Name": "winer",
-            "X": 107,
-            "Y": 133,
-            "Width": 38,
-            "Height": 26,
+            "X": 122,
+            "Y": 60,
+            "Width": 59,
+            "Height": 40,
             "TextId": "__SingleUse_9392",
             "TextRotation": "0",
             "Color": {
-              "Red": 232,
-              "Green": 19,
-              "Blue": 19
+              "Red": 63,
+              "Green": 70,
+              "Blue": 105
             },
             "AutoSize": true,
             "Wildcard1": {}
@@ -216,20 +239,41 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "playagainButton",
-            "X": 33,
-            "Y": 160,
-            "Width": 175,
-            "Height": 50,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_active.png",
+            "X": 91,
+            "Y": 182,
+            "Width": 138,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
             "TextId": "__SingleUse_4E2E",
+            "ReleasedColor": {
+              "Red": 237,
+              "Green": 241,
+              "Blue": 245
+            },
             "PressedColor": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
             "TextRotation": "0",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_active.json"
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_round_disabled.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 91,
+            "Y": 20,
+            "Width": 138,
+            "Height": 40,
+            "TextId": "__SingleUse_86XU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 63,
+              "Green": 70,
+              "Blue": 105
+            },
+            "AutoSize": true
           }
         ],
         "Interactions": [
@@ -248,75 +292,321 @@
         ]
       },
       {
-        "Name": "Screen4",
-        "CanvasBufferSize": 3600,
+        "Name": "Screen0",
+        "CanvasBufferSize": 4800,
         "Components": [
           {
-            "Type": "Image",
-            "Name": "image1",
+            "Type": "Box",
+            "Name": "background",
+            "Width": 320,
+            "Height": 240,
+            "Color": {
+              "Red": 173,
+              "Green": 220,
+              "Blue": 237
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonHard",
+            "X": 85,
+            "Y": 102,
+            "Width": 150,
+            "Height": 80,
+            "Pressed": "__generated\\clay_theme_images_widgets_button_regular_height_36_tiny_round_pressed.png",
+            "Released": "__generated\\clay_theme_images_widgets_button_regular_height_36_tiny_round_normal.png",
+            "TextId": "__SingleUse_EUDS",
+            "ReleasedColor": {
+              "Red": 57,
+              "Green": 80,
+              "Blue": 128
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "clay_theme\\presets\\button\\regular\\height_36\\tiny_round_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonEasy",
+            "X": 1,
+            "Y": 50,
+            "Width": 150,
+            "Height": 80,
+            "Pressed": "__generated\\clay_theme_images_widgets_button_regular_height_36_tiny_round_pressed.png",
+            "Released": "__generated\\clay_theme_images_widgets_button_regular_height_36_tiny_round_normal.png",
+            "TextId": "__SingleUse_0R22",
+            "ReleasedColor": {
+              "Red": 57,
+              "Green": 80,
+              "Blue": 128
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "clay_theme\\presets\\button\\regular\\height_36\\tiny_round_normal.json"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle5_1_4",
+            "X": 207,
+            "Y": 197,
+            "Width": 29,
+            "Height": 29,
+            "Color": {
+              "Red": 212,
+              "Green": 131,
+              "Blue": 165
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle5_1_3",
+            "X": 91,
+            "Y": 197,
+            "Width": 29,
+            "Height": 29,
+            "Color": {
+              "Red": 161,
+              "Green": 164,
+              "Blue": 209
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle5_4",
+            "X": 149,
+            "Y": 197,
+            "Width": 29,
+            "Height": 29,
+            "Color": {
+              "Red": 222,
+              "Green": 180,
+              "Blue": 202
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle5_2_1",
+            "X": 236,
+            "Y": 168,
+            "Width": 29,
+            "Height": 29,
+            "Color": {
+              "Red": 134,
+              "Green": 194,
+              "Blue": 183
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle5_2",
+            "X": 117,
+            "Y": 168,
+            "Width": 29,
+            "Height": 29,
+            "Color": {
+              "Red": 235,
+              "Green": 207,
+              "Blue": 155
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle5_1_1",
+            "X": 178,
+            "Y": 168,
+            "Width": 29,
+            "Height": 29,
+            "Color": {
+              "Red": 153,
+              "Green": 199,
+              "Blue": 147
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle5_1",
             "X": 62,
-            "Y": 20,
+            "Y": 168,
+            "Width": 29,
+            "Height": 29,
+            "Color": {
+              "Red": 235,
+              "Green": 145,
+              "Blue": 145
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "titleText",
+            "X": 89,
+            "Y": 10,
+            "Width": 159,
+            "Height": 49,
+            "TextId": "__SingleUse_YPFP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 50,
+              "Green": 93,
+              "Blue": 143
+            },
+            "LineSpacing": 1
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle1",
+            "X": -26,
+            "Y": -30,
             "Width": 80,
-            "Height": 80
+            "Height": 80,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "CenterX": 40.0,
+            "CenterY": 40.0,
+            "Radius": 40.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
           },
           {
-            "Type": "Image",
-            "Name": "image2",
-            "X": 80,
-            "Y": 126,
+            "Type": "Circle",
+            "Name": "circle2",
+            "X": 270,
+            "Y": -30,
             "Width": 80,
-            "Height": 80
+            "Height": 80,
+            "Color": {
+              "Red": 136,
+              "Green": 202,
+              "Blue": 235
+            },
+            "CenterX": 40.0,
+            "CenterY": 40.0,
+            "Radius": 40.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
           },
           {
-            "Type": "Image",
-            "Name": "image3",
+            "Type": "Circle",
+            "Name": "circle3",
+            "X": -26,
+            "Y": 189,
             "Width": 80,
-            "Height": 80
+            "Height": 80,
+            "Color": {
+              "Red": 136,
+              "Green": 202,
+              "Blue": 235
+            },
+            "CenterX": 40.0,
+            "CenterY": 40.0,
+            "Radius": 40.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
           },
           {
-            "Type": "SvgImage",
-            "Name": "svgImage1",
-            "Width": 152,
-            "Height": 152,
-            "Image": "__generated\\alternate_theme_images_logos_touchgfx_gradient_embossed_svg.svg",
-            "FitImageToSize": true,
-            "ImageHorizontalScale": 1.0,
-            "ImageVerticalScale": 1.0
+            "Type": "Circle",
+            "Name": "circle4",
+            "X": 270,
+            "Y": 189,
+            "Width": 80,
+            "Height": 80,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "CenterX": 40.0,
+            "CenterY": 40.0,
+            "Radius": 40.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
           },
           {
-            "Type": "TextureMapper",
-            "Name": "textureMapper1",
-            "Width": 152,
-            "Height": 152,
-            "RenderingAlgorithm": "Nearest-neighbor",
-            "FileNameImage": "__generated\\alternate_theme_images_logos_touchgfx_gradient_smooth.png",
-            "LockBitmapToCenter": true,
-            "Scale": 1.0,
-            "LockOrigoToCenter": true,
-            "XOrigo": 76.0,
-            "YOrigo": 76.0,
-            "ZOrigo": 1000.0,
-            "CameraDistance": 1000.0
-          },
-          {
-            "Type": "TextureMapper",
-            "Name": "textureMapper2",
-            "X": 62,
-            "Y": 68,
-            "Width": 152,
-            "Height": 152,
-            "RenderingAlgorithm": "Nearest-neighbor",
-            "FileNameImage": "__generated\\alternate_theme_images_logos_touchgfx_gradient_smooth.png",
-            "LockBitmapToCenter": true,
-            "Scale": 1.0,
-            "LockOrigoToCenter": true,
-            "XOrigo": 76.0,
-            "YOrigo": 76.0,
-            "ZOrigo": 1000.0,
-            "CameraDistance": 1000.0
+            "Type": "ButtonWithLabel",
+            "Name": "buttonMedium",
+            "X": 170,
+            "Y": 50,
+            "Width": 150,
+            "Height": 80,
+            "Pressed": "__generated\\clay_theme_images_widgets_button_regular_height_36_tiny_round_pressed.png",
+            "Released": "__generated\\clay_theme_images_widgets_button_regular_height_36_tiny_round_normal.png",
+            "TextId": "__SingleUse_AHDE",
+            "ReleasedColor": {
+              "Red": 57,
+              "Green": 80,
+              "Blue": 128
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "clay_theme\\presets\\button\\regular\\height_36\\tiny_round_normal.json"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "action1"
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
@@ -364,7 +654,7 @@
     "LandscapeSkinY": 0,
     "PortraitSkinX": 0,
     "PortraitSkinY": 0,
-    "DisplayOrientation": "Portrait",
+    "DisplayOrientation": "Landscape",
     "Family": "STM32F4",
     "SubFamily": "STM32F429/439",
     "Toolchain": "STM32CubeIDE",

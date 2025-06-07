@@ -15,6 +15,8 @@
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <gui/screen3_screen/Screen3View.hpp>
 #include <gui/screen3_screen/Screen3Presenter.hpp>
+#include <gui/screen0_screen/Screen0View.hpp>
+#include <gui/screen0_screen/Screen0Presenter.hpp>
 
 using namespace touchgfx;
 
@@ -24,7 +26,7 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
       frontendHeap(heap),
       model(m)
 {
-    touchgfx::HAL::getInstance()->setDisplayOrientation(touchgfx::ORIENTATION_PORTRAIT);
+    touchgfx::HAL::getInstance()->setDisplayOrientation(touchgfx::ORIENTATION_LANDSCAPE);
     touchgfx::Texts::setLanguage(GB);
     reinterpret_cast<touchgfx::LCD16bpp&>(touchgfx::HAL::lcd()).enableTextureMapperAll();
     reinterpret_cast<touchgfx::LCD16bpp&>(touchgfx::HAL::lcd()).enableDecompressorL8_All();

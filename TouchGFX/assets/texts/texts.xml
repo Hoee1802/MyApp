@@ -6,11 +6,29 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_4E2E" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">Play again !</Translation>
+      <Text Id="__SingleUse_86XU" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">WINNER</Translation>
       </Text>
-      <Text Id="__SingleUse_9392" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">&lt;value&gt;win</Translation>
+      <Text Id="__SingleUse_VTUE" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">PLAY AGAIN</Translation>
+      </Text>
+      <Text Id="__SingleUse_EUDS" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Hard</Translation>
+      </Text>
+      <Text Id="__SingleUse_0R22" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Easy</Translation>
+      </Text>
+      <Text Id="__SingleUse_AHDE" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Medium</Translation>
+      </Text>
+      <Text Id="__SingleUse_YPFP" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Ping Pong</Translation>
+      </Text>
+      <Text Id="__SingleUse_4E2E" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">EXIT</Translation>
+      </Text>
+      <Text Id="__SingleUse_9392" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt; win</Translation>
       </Text>
       <Text Id="__SingleUse_GGS0" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">&lt;score2&gt;</Translation>
@@ -24,8 +42,18 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Small" Font="verdana.ttf" Size="22" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="verdana.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="comicz.ttf" Size="31" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="comicbd.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_01" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_02" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_03" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_04" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_05" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_06" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_07" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_08" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_09" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

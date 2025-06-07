@@ -18,6 +18,8 @@
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <gui/screen3_screen/Screen3View.hpp>
 #include <gui/screen3_screen/Screen3Presenter.hpp>
+#include <gui/screen0_screen/Screen0View.hpp>
+#include <gui/screen0_screen/Screen0Presenter.hpp>
 
 
 /**
@@ -43,7 +45,8 @@ public:
     typedef touchgfx::meta::TypeList< Screen2View,
             touchgfx::meta::TypeList< Screen1View,
             touchgfx::meta::TypeList< Screen3View,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< Screen0View,
+            touchgfx::meta::Nil > > >
             > GeneratedViewTypes;
 
     /**
@@ -58,7 +61,8 @@ public:
     typedef touchgfx::meta::TypeList< Screen2Presenter,
             touchgfx::meta::TypeList< Screen1Presenter,
             touchgfx::meta::TypeList< Screen3Presenter,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< Screen0Presenter,
+            touchgfx::meta::Nil > > >
             > GeneratedPresenterTypes;
 
     /**
