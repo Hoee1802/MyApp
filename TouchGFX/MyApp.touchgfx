@@ -246,6 +246,77 @@
             }
           }
         ]
+      },
+      {
+        "Name": "Screen4",
+        "CanvasBufferSize": 3600,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "X": 62,
+            "Y": 20,
+            "Width": 80,
+            "Height": 80
+          },
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "X": 80,
+            "Y": 126,
+            "Width": 80,
+            "Height": 80
+          },
+          {
+            "Type": "Image",
+            "Name": "image3",
+            "Width": 80,
+            "Height": 80
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "svgImage1",
+            "Width": 152,
+            "Height": 152,
+            "Image": "__generated\\alternate_theme_images_logos_touchgfx_gradient_embossed_svg.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 1.0,
+            "ImageVerticalScale": 1.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "textureMapper1",
+            "Width": 152,
+            "Height": 152,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "__generated\\alternate_theme_images_logos_touchgfx_gradient_smooth.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 76.0,
+            "YOrigo": 76.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "textureMapper2",
+            "X": 62,
+            "Y": 68,
+            "Width": 152,
+            "Height": 152,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "__generated\\alternate_theme_images_logos_touchgfx_gradient_smooth.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 76.0,
+            "YOrigo": 76.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          }
+        ],
+        "Interactions": []
       }
     ],
     "CustomContainerDefinitions": [],
