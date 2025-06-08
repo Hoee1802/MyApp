@@ -8,12 +8,12 @@
 #include <mvp/View.hpp>
 #include <gui/mediumscreen_screen/MediumScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/mixins/Draggable.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
 
 class MediumScreenViewBase : public touchgfx::View<MediumScreenPresenter>
 {
@@ -21,8 +21,6 @@ public:
     MediumScreenViewBase();
     virtual ~MediumScreenViewBase();
     virtual void setupScreen();
-    virtual void handleTickEvent();
-    virtual void afterTransition();
 
 protected:
     FrontendApplication& application() {
@@ -35,7 +33,6 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box3;
     touchgfx::Box box1;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  exit2;
     touchgfx::Box box2;
     touchgfx::Circle ball;
     touchgfx::PainterRGB565 ballPainter;
@@ -45,14 +42,8 @@ protected:
     touchgfx::TextAreaWithOneWildcard score1;
     touchgfx::TextArea player1;
     touchgfx::TextArea player2;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  exit1;
-    touchgfx::TextArea start;
-    touchgfx::TextArea check1;
-    touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  no1;
-    touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  no2;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  yes1;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  yes2;
-    touchgfx::TextArea check2;
+    touchgfx::BoxWithBorder goal2;
+    touchgfx::BoxWithBorder goal1;
 
 private:
 
@@ -61,22 +52,6 @@ private:
      */
     static const uint32_t CANVAS_BUFFER_SIZE = 4800;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
-
-    /*
-     * Callback Declarations
-     */
-    touchgfx::Callback<MediumScreenViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
-
-    /*
-     * Callback Handler Declarations
-     */
-    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
-
-    /*
-     * Delay Variable Declarations
-     */
-    static const uint16_t INTERACTION1_DURATION = 60;
-    uint16_t interaction1Counter;
 
 };
 

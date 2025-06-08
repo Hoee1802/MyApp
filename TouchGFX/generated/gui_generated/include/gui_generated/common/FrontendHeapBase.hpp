@@ -14,6 +14,8 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
+#include <gui/startscreen_screen/StartScreenView.hpp>
+#include <gui/startscreen_screen/StartScreenPresenter.hpp>
 #include <gui/hardscreen_screen/HardScreenView.hpp>
 #include <gui/hardscreen_screen/HardScreenPresenter.hpp>
 #include <gui/hardreadyscreen_screen/HardReadyScreenView.hpp>
@@ -28,8 +30,6 @@
 #include <gui/easyreadyscreen_screen/EasyReadyScreenPresenter.hpp>
 #include <gui/endscreen_screen/EndScreenView.hpp>
 #include <gui/endscreen_screen/EndScreenPresenter.hpp>
-#include <gui/startscreen_screen/StartScreenView.hpp>
-#include <gui/startscreen_screen/StartScreenPresenter.hpp>
 
 
 /**
@@ -52,14 +52,14 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< HardScreenView,
+    typedef touchgfx::meta::TypeList< StartScreenView,
+            touchgfx::meta::TypeList< HardScreenView,
             touchgfx::meta::TypeList< HardReadyScreenView,
             touchgfx::meta::TypeList< MediumScreenView,
             touchgfx::meta::TypeList< MediumReadyScreenView,
             touchgfx::meta::TypeList< EasyScreenView,
             touchgfx::meta::TypeList< EasyReadyScreenView,
             touchgfx::meta::TypeList< EndScreenView,
-            touchgfx::meta::TypeList< StartScreenView,
             touchgfx::meta::Nil > > > > > > >
             > GeneratedViewTypes;
 
@@ -72,14 +72,14 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< HardScreenPresenter,
+    typedef touchgfx::meta::TypeList< StartScreenPresenter,
+            touchgfx::meta::TypeList< HardScreenPresenter,
             touchgfx::meta::TypeList< HardReadyScreenPresenter,
             touchgfx::meta::TypeList< MediumScreenPresenter,
             touchgfx::meta::TypeList< MediumReadyScreenPresenter,
             touchgfx::meta::TypeList< EasyScreenPresenter,
             touchgfx::meta::TypeList< EasyReadyScreenPresenter,
             touchgfx::meta::TypeList< EndScreenPresenter,
-            touchgfx::meta::TypeList< StartScreenPresenter,
             touchgfx::meta::Nil > > > > > > >
             > GeneratedPresenterTypes;
 

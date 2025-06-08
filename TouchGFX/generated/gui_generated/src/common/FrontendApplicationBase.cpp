@@ -9,6 +9,8 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
+#include <gui/startscreen_screen/StartScreenView.hpp>
+#include <gui/startscreen_screen/StartScreenPresenter.hpp>
 #include <gui/hardscreen_screen/HardScreenView.hpp>
 #include <gui/hardscreen_screen/HardScreenPresenter.hpp>
 #include <gui/hardreadyscreen_screen/HardReadyScreenView.hpp>
@@ -23,8 +25,6 @@
 #include <gui/easyreadyscreen_screen/EasyReadyScreenPresenter.hpp>
 #include <gui/endscreen_screen/EndScreenView.hpp>
 #include <gui/endscreen_screen/EndScreenPresenter.hpp>
-#include <gui/startscreen_screen/StartScreenView.hpp>
-#include <gui/startscreen_screen/StartScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -44,6 +44,30 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
 /*
  * Screen Transition Declarations
  */
+
+// StartScreen
+
+void FrontendApplicationBase::gotoStartScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoStartScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoStartScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<StartScreenView, StartScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoStartScreenScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoStartScreenScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoStartScreenScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<StartScreenView, StartScreenPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
 
 // HardReadyScreen
 
@@ -82,41 +106,4 @@ void FrontendApplicationBase::gotoEasyReadyScreenScreenWipeTransitionEast()
 void FrontendApplicationBase::gotoEasyReadyScreenScreenWipeTransitionEastImpl()
 {
     touchgfx::makeTransition<EasyReadyScreenView, EasyReadyScreenPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
-// EndScreen
-
-void FrontendApplicationBase::gotoEndScreenScreenWipeTransitionEast()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoEndScreenScreenWipeTransitionEastImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoEndScreenScreenWipeTransitionEastImpl()
-{
-    touchgfx::makeTransition<EndScreenView, EndScreenPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
-// StartScreen
-
-void FrontendApplicationBase::gotoStartScreenScreenNoTransition()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoStartScreenScreenNoTransitionImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoStartScreenScreenNoTransitionImpl()
-{
-    touchgfx::makeTransition<StartScreenView, StartScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
-void FrontendApplicationBase::gotoStartScreenScreenWipeTransitionEast()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoStartScreenScreenWipeTransitionEastImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoStartScreenScreenWipeTransitionEastImpl()
-{
-    touchgfx::makeTransition<StartScreenView, StartScreenPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

@@ -4,12 +4,9 @@
 #include <gui_generated/easyscreen_screen/EasyScreenViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-EasyScreenViewBase::EasyScreenViewBase() :
-    flexButtonCallback(this, &EasyScreenViewBase::flexButtonCallbackHandler),
-    interaction1Counter(0)
+EasyScreenViewBase::EasyScreenViewBase()
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
     
@@ -24,13 +21,6 @@ EasyScreenViewBase::EasyScreenViewBase() :
     box1.setPosition(2, 2, 316, 236);
     box1.setColor(touchgfx::Color::getColorFromRGB(12, 56, 55));
     add(box1);
-
-    exit2.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_DOWN_20_20_FFFFFF_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_DOWN_20_20_FFFFFF_SVG_ID));
-    exit2.setIconXY(0, 0);
-    exit2.setAlpha(175);
-    exit2.setAction(flexButtonCallback);
-    exit2.setPosition(165, 211, 20, 20);
-    add(exit2);
 
     box2.setPosition(160, 0, 3, 240);
     box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -83,64 +73,6 @@ EasyScreenViewBase::EasyScreenViewBase() :
     player2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OD39));
     player2.setAlpha(190);
     add(player2);
-
-    exit1.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_UP_20_20_FFFFFF_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_UP_20_20_FFFFFF_SVG_ID));
-    exit1.setIconXY(0, 0);
-    exit1.setAlpha(175);
-    exit1.setAction(flexButtonCallback);
-    exit1.setPosition(139, 7, 20, 20);
-    add(exit1);
-
-    start.setXY(93, 106);
-    start.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
-    start.setLinespacing(0);
-    start.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HFBB));
-    start.setAlpha(210);
-    add(start);
-
-    check1.setXY(93, 69);
-    check1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    check1.setLinespacing(0);
-    check1.setRotation(touchgfx::TEXT_ROTATE_90);
-    check1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SPJ5));
-    check1.setAlpha(190);
-    add(check1);
-
-    no1.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CANCEL_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_20_20_E8F6FB_SVG_ID));
-    no1.setIconXY(0, 0);
-    no1.setAlpha(190);
-    no1.setAction(flexButtonCallback);
-    no1.setPosition(52, 86, 20, 20);
-    add(no1);
-
-    no2.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CANCEL_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_20_20_E8F6FB_SVG_ID));
-    no2.setIconXY(0, 0);
-    no2.setAlpha(190);
-    no2.setAction(flexButtonCallback);
-    no2.setPosition(261, 135, 20, 20);
-    add(no2);
-
-    yes1.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_IOS_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_IOS_20_20_E8F6FB_SVG_ID));
-    yes1.setIconXY(0, 0);
-    yes1.setAlpha(190);
-    yes1.setAction(flexButtonCallback);
-    yes1.setPosition(52, 135, 20, 20);
-    add(yes1);
-
-    yes2.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_FORWARD_IOS_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_FORWARD_IOS_20_20_E8F6FB_SVG_ID));
-    yes2.setIconXY(0, 0);
-    yes2.setAlpha(190);
-    yes2.setAction(flexButtonCallback);
-    yes2.setPosition(261, 86, 20, 20);
-    add(yes2);
-
-    check2.setXY(216, 69);
-    check2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    check2.setLinespacing(0);
-    check2.setRotation(touchgfx::TEXT_ROTATE_270);
-    check2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_JUZG));
-    check2.setAlpha(190);
-    add(check2);
 }
 
 EasyScreenViewBase::~EasyScreenViewBase()
@@ -151,156 +83,4 @@ EasyScreenViewBase::~EasyScreenViewBase()
 void EasyScreenViewBase::setupScreen()
 {
 
-}
-
-void EasyScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
-{
-    if (&src == &exit1)
-    {
-        //Interaction9
-        //When exit1 clicked show check1
-        //Show check1
-        check1.setVisible(true);
-        check1.invalidate();
-        //Interaction10
-        //When exit1 clicked show yes1
-        //Show yes1
-        yes1.setVisible(true);
-        yes1.invalidate();
-        //Interaction11
-        //When exit1 clicked show no1
-        //Show no1
-        no1.setVisible(true);
-        no1.invalidate();
-    }
-    if (&src == &exit2)
-    {
-        //Interaction12
-        //When exit2 clicked show check2
-        //Show check2
-        check2.setVisible(true);
-        check2.invalidate();
-        //Interaction13
-        //When exit2 clicked show yes2
-        //Show yes2
-        yes2.setVisible(true);
-        yes2.invalidate();
-        //Interaction14
-        //When exit2 clicked show no2
-        //Show no2
-        no2.setVisible(true);
-        no2.invalidate();
-    }
-    if (&src == &no1)
-    {
-        //Interaction15
-        //When no1 clicked hide check1
-        //Hide check1
-        check1.setVisible(false);
-        check1.invalidate();
-        //Interaction16
-        //When no1 clicked hide yes1
-        //Hide yes1
-        yes1.setVisible(false);
-        yes1.invalidate();
-        //Interaction17
-        //When no1 clicked hide no1
-        //Hide no1
-        no1.setVisible(false);
-        no1.invalidate();
-    }
-    if (&src == &no2)
-    {
-        //Interaction18
-        //When no2 clicked hide check2
-        //Hide check2
-        check2.setVisible(false);
-        check2.invalidate();
-        //Interaction19
-        //When no2 clicked hide yes2
-        //Hide yes2
-        yes2.setVisible(false);
-        yes2.invalidate();
-        //Interaction20
-        //When no2 clicked hide no2
-        //Hide no2
-        no2.setVisible(false);
-        no2.invalidate();
-    }
-    if (&src == &yes1)
-    {
-        //Interaction21
-        //When yes1 clicked change screen to EndScreen
-        //Go to EndScreen with screen transition towards East
-        application().gotoEndScreenScreenWipeTransitionEast();
-    }
-    if (&src == &yes2)
-    {
-        //Interaction22
-        //When yes2 clicked change screen to EndScreen
-        //Go to EndScreen with screen transition towards East
-        application().gotoEndScreenScreenWipeTransitionEast();
-    }
-}
-
-void EasyScreenViewBase::handleTickEvent()
-{
-    if (interaction1Counter > 0)
-    {
-        interaction1Counter--;
-        if (interaction1Counter == 0)
-        {
-
-            //Interaction2
-            //When Interaction1 completed hide start
-            //Hide start
-            start.setVisible(false);
-            start.invalidate();
-        }
-    }
-
-}
-
-void EasyScreenViewBase::afterTransition()
-{
-    //Interaction3
-    //When screen transition ends hide check1
-    //Hide check1
-    check1.setVisible(false);
-    check1.invalidate();
-
-    //Interaction4
-    //When screen transition ends hide no1
-    //Hide no1
-    no1.setVisible(false);
-    no1.invalidate();
-
-    //Interaction5
-    //When screen transition ends hide yes1
-    //Hide yes1
-    yes1.setVisible(false);
-    yes1.invalidate();
-
-    //Interaction1
-    //When Interaction5 completed delay
-    //Delay for 3000 ms (180 Ticks)
-    interaction1Counter = INTERACTION1_DURATION;
-
-    //Interaction6
-    //When screen transition ends hide check2
-    //Hide check2
-    check2.setVisible(false);
-    check2.invalidate();
-
-    //Interaction7
-    //When screen transition ends hide yes2
-    //Hide yes2
-    yes2.setVisible(false);
-    yes2.invalidate();
-
-    //Interaction8
-    //When screen transition ends hide no2
-    //Hide no2
-    no2.setVisible(false);
-    no2.invalidate();
 }

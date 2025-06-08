@@ -1,4 +1,5 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/hardreadyscreen_screen/HardReadyScreenView.cpp:13:6:virtual void HardReadyScreenView::tearDownScreen()	1
 ../../TouchGFX/gui/include/gui/hardreadyscreen_screen/HardReadyScreenView.hpp:11:13:HardReadyScreenView::~HardReadyScreenView()	1
 ../../TouchGFX/gui/include/gui/hardreadyscreen_screen/HardReadyScreenView.hpp:11:13:virtual HardReadyScreenView::~HardReadyScreenView()	1

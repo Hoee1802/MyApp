@@ -11,7 +11,11 @@ public:
     virtual ~EasyReadyScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void handleTickEvent();
+	virtual void updateCounter(int value); // Hàm cập nhật đếm ngược
 protected:
+	int countdownValue;
+	int tickCounter;
 };
 
 #endif // EASYREADYSCREENVIEW_HPP

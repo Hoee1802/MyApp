@@ -2,3986 +2,6 @@
   "Application": {
     "Screens": [
       {
-        "Name": "HardScreen",
-        "CanvasBufferSize": 4800,
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "box3",
-            "Width": 320,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1",
-            "X": 2,
-            "Y": 2,
-            "Width": 316,
-            "Height": 236,
-            "LockPosition": true,
-            "Color": {
-              "Red": 12,
-              "Green": 56,
-              "Blue": 55
-            }
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit2",
-            "X": 165,
-            "Y": 187,
-            "Width": 20,
-            "Height": 50,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "Y": 27,
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "Box",
-            "Name": "box2",
-            "X": 160,
-            "Width": 3,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 220
-          },
-          {
-            "Type": "Circle",
-            "Name": "ball",
-            "X": 154,
-            "Y": 114,
-            "Width": 14,
-            "Height": 14,
-            "LockPosition": true,
-            "Color": {
-              "Red": 153,
-              "Green": 12,
-              "Blue": 12
-            },
-            "CenterX": 7.5,
-            "CenterY": 7.5,
-            "Radius": 6.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Triangle"
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle1",
-            "X": 35,
-            "Y": 110,
-            "Width": 5,
-            "Height": 20,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle2",
-            "X": 282,
-            "Y": 110,
-            "Width": 5,
-            "Height": 20,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score2",
-            "X": 190,
-            "Y": 20,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_UN9H",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score1",
-            "X": 125,
-            "Y": 200,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_OTAD",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player1",
-            "X": 140,
-            "Y": 180,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_Z3TY",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player2",
-            "X": 165,
-            "Y": 5,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_FY8E",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit1",
-            "X": 139,
-            "Y": 7,
-            "Width": 20,
-            "Height": 50,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "TextArea",
-            "Name": "start",
-            "X": 93,
-            "Y": 106,
-            "Width": 142,
-            "Height": 29,
-            "TextId": "__SingleUse_RVEZ",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 222,
-              "Green": 171,
-              "Blue": 95
-            },
-            "Alpha": 210,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check1",
-            "X": 99,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "TextId": "__SingleUse_PWVE",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no1",
-            "X": 62,
-            "Y": 58,
-            "Width": 40,
-            "Height": 50,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "Y": 16,
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no2",
-            "X": 239,
-            "Y": 131,
-            "Width": 40,
-            "Height": 50,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "Y": 15,
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes1",
-            "X": 62,
-            "Y": 131,
-            "Width": 40,
-            "Height": 50,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "Y": 15,
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes2",
-            "X": 239,
-            "Y": 58,
-            "Width": 40,
-            "Height": 50,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "Y": 15,
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check2",
-            "X": 207,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "TextId": "__SingleUse_68VZ",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "goal1",
-            "X": 2,
-            "Y": 61,
-            "Width": 15,
-            "Height": 120,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "BorderColor": {
-              "Red": 173,
-              "Green": 147,
-              "Blue": 52
-            },
-            "BorderSize": 3,
-            "Alpha": 60
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "goal2",
-            "X": 302,
-            "Y": 60,
-            "Width": 15,
-            "Height": 120,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "BorderColor": {
-              "Red": 173,
-              "Green": 147,
-              "Blue": 52
-            },
-            "BorderSize": 3,
-            "Alpha": 60
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerInteractionCompleted",
-              "InteractionToTriggerOn": "Interaction5"
-            },
-            "Action": {
-              "Type": "ActionDelay",
-              "Duration": 1000
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerInteractionCompleted",
-              "InteractionToTriggerOn": "Interaction1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "start"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction5",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction6",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction7",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction8",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction9",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction10",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction11",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction12",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction13",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction14",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction15",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction16",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction17",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction18",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction19",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction20",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction21",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes1"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "EndScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction22",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes2"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "EndScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "HardReadyScreen",
-        "CanvasBufferSize": 4800,
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "box3",
-            "Width": 320,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1",
-            "X": 2,
-            "Y": 2,
-            "Width": 318,
-            "Height": 236,
-            "LockPosition": true,
-            "Color": {
-              "Red": 12,
-              "Green": 56,
-              "Blue": 55
-            }
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "goal2",
-            "X": 294,
-            "Y": 60,
-            "Width": 25,
-            "Height": 120,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "BorderColor": {
-              "Red": 173,
-              "Green": 147,
-              "Blue": 52
-            },
-            "BorderSize": 3,
-            "Alpha": 60
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit2",
-            "X": 165,
-            "Y": 211,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "Box",
-            "Name": "box2",
-            "X": 160,
-            "Width": 3,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 220
-          },
-          {
-            "Type": "Circle",
-            "Name": "ball",
-            "X": 154,
-            "Y": 114,
-            "Width": 14,
-            "Height": 14,
-            "LockPosition": true,
-            "Color": {
-              "Red": 153,
-              "Green": 12,
-              "Blue": 12
-            },
-            "CenterX": 7.5,
-            "CenterY": 7.5,
-            "Radius": 6.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Triangle"
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle1",
-            "X": 35,
-            "Y": 111,
-            "Width": 5,
-            "Height": 20,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle2",
-            "X": 282,
-            "Y": 110,
-            "Width": 5,
-            "Height": 20,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score2",
-            "X": 190,
-            "Y": 20,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_Y8KC",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score1",
-            "X": 125,
-            "Y": 200,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_4E54",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player1",
-            "X": 140,
-            "Y": 180,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_WA77",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "WideTextAction": 3
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player2",
-            "X": 165,
-            "Y": 5,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_8Q6F",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit1",
-            "X": 139,
-            "Y": 7,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "goal1",
-            "X": 3,
-            "Y": 60,
-            "Width": 25,
-            "Height": 120,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "BorderColor": {
-              "Red": 173,
-              "Green": 147,
-              "Blue": 52
-            },
-            "BorderSize": 3,
-            "Alpha": 60
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Ready1",
-            "X": 61,
-            "Y": 90,
-            "Width": 26,
-            "Height": 63,
-            "LockPosition": true,
-            "TextId": "__SingleUse_L9ZN",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Ready2",
-            "X": 233,
-            "Y": 90,
-            "Width": 26,
-            "Height": 63,
-            "LockPosition": true,
-            "TextId": "__SingleUse_SRJD",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check1",
-            "X": 110,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "LockPosition": true,
-            "TextId": "__SingleUse_5EQH",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check2",
-            "X": 190,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "TextId": "__SingleUse_IZPF",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no1",
-            "X": 80,
-            "Y": 80,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no2",
-            "X": 220,
-            "Y": 140,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes1",
-            "X": 80,
-            "Y": 140,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes2",
-            "X": 220,
-            "Y": 80,
-            "Width": 20,
-            "Height": 20,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction5",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction6",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction7",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready1"
-            }
-          },
-          {
-            "InteractionName": "Interaction8",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction9",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction10",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction11",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready2"
-            }
-          },
-          {
-            "InteractionName": "Interaction12",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction13",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction14",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction15",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes1"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "StartScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction16",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes2"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "StartScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction17",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "Ready1"
-            }
-          },
-          {
-            "InteractionName": "Interaction18",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction19",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction20",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction21",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "Ready2"
-            }
-          },
-          {
-            "InteractionName": "Interaction22",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction23",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction24",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction25",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerPhysicalButtonClicked",
-              "ButtonKey": 1
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready1"
-            }
-          },
-          {
-            "InteractionName": "Interaction26",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerPhysicalButtonClicked",
-              "ButtonKey": 2
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready2"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "MediumScreen",
-        "CanvasBufferSize": 4800,
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "box3",
-            "Width": 320,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1",
-            "X": 2,
-            "Y": 2,
-            "Width": 316,
-            "Height": 236,
-            "LockPosition": true,
-            "Color": {
-              "Red": 12,
-              "Green": 56,
-              "Blue": 55
-            }
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit2",
-            "X": 165,
-            "Y": 211,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "Box",
-            "Name": "box2",
-            "X": 160,
-            "Width": 3,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 220
-          },
-          {
-            "Type": "Circle",
-            "Name": "ball",
-            "X": 154,
-            "Y": 114,
-            "Width": 14,
-            "Height": 14,
-            "LockPosition": true,
-            "Color": {
-              "Red": 153,
-              "Green": 12,
-              "Blue": 12
-            },
-            "CenterX": 7.5,
-            "CenterY": 7.5,
-            "Radius": 6.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Triangle"
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle1",
-            "X": 7,
-            "Y": 100,
-            "Width": 5,
-            "Height": 40,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle2",
-            "X": 307,
-            "Y": 100,
-            "Width": 5,
-            "Height": 40,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score2",
-            "X": 190,
-            "Y": 20,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_KK9M",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score1",
-            "X": 125,
-            "Y": 200,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_ATHF",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player1",
-            "X": 140,
-            "Y": 180,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_V9P9",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player2",
-            "X": 165,
-            "Y": 5,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_UJJ8",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit1",
-            "X": 139,
-            "Y": 7,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "TextArea",
-            "Name": "start",
-            "X": 93,
-            "Y": 106,
-            "Width": 142,
-            "Height": 29,
-            "TextId": "__SingleUse_3639",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 222,
-              "Green": 171,
-              "Blue": 95
-            },
-            "Alpha": 210,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check1",
-            "X": 93,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "TextId": "__SingleUse_J6NI",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no1",
-            "X": 52,
-            "Y": 86,
-            "Width": 20,
-            "Height": 20,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no2",
-            "X": 261,
-            "Y": 135,
-            "Width": 20,
-            "Height": 20,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes1",
-            "X": 52,
-            "Y": 135,
-            "Width": 20,
-            "Height": 20,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes2",
-            "X": 261,
-            "Y": 86,
-            "Width": 20,
-            "Height": 20,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check2",
-            "X": 216,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "TextId": "__SingleUse_JC87",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerInteractionCompleted",
-              "InteractionToTriggerOn": "Interaction5"
-            },
-            "Action": {
-              "Type": "ActionDelay",
-              "Duration": 1000
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerInteractionCompleted",
-              "InteractionToTriggerOn": "Interaction1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "start"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction5",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction6",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction7",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction8",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction9",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction10",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction11",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction12",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction13",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction14",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction15",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction16",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction17",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction18",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction19",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction20",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction21",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes1"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "EndScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction22",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes2"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "EndScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "MediumReadyScreen",
-        "CanvasBufferSize": 4800,
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "box3",
-            "Width": 320,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1",
-            "X": 2,
-            "Y": 2,
-            "Width": 318,
-            "Height": 236,
-            "LockPosition": true,
-            "Color": {
-              "Red": 12,
-              "Green": 56,
-              "Blue": 55
-            }
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit2",
-            "X": 165,
-            "Y": 211,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "Box",
-            "Name": "box2",
-            "X": 160,
-            "Width": 3,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 220
-          },
-          {
-            "Type": "Circle",
-            "Name": "ball",
-            "X": 154,
-            "Y": 114,
-            "Width": 14,
-            "Height": 14,
-            "LockPosition": true,
-            "Color": {
-              "Red": 153,
-              "Green": 12,
-              "Blue": 12
-            },
-            "CenterX": 7.5,
-            "CenterY": 7.5,
-            "Radius": 6.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Triangle"
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle1",
-            "X": 7,
-            "Y": 100,
-            "Width": 5,
-            "Height": 40,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle2",
-            "X": 307,
-            "Y": 100,
-            "Width": 5,
-            "Height": 40,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score2",
-            "X": 190,
-            "Y": 20,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_ZVKC",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score1",
-            "X": 125,
-            "Y": 200,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_AUJ6",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player1",
-            "X": 140,
-            "Y": 180,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_LTO4",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "WideTextAction": 3
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player2",
-            "X": 165,
-            "Y": 5,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_52TB",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit1",
-            "X": 139,
-            "Y": 7,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Ready1",
-            "X": 61,
-            "Y": 90,
-            "Width": 26,
-            "Height": 63,
-            "LockPosition": true,
-            "TextId": "__SingleUse_YQRD",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Ready2",
-            "X": 233,
-            "Y": 90,
-            "Width": 26,
-            "Height": 63,
-            "LockPosition": true,
-            "TextId": "__SingleUse_XYSD",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check1",
-            "X": 110,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "LockPosition": true,
-            "TextId": "__SingleUse_EB66",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check2",
-            "X": 190,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "TextId": "__SingleUse_CZGU",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no1",
-            "X": 80,
-            "Y": 80,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no2",
-            "X": 220,
-            "Y": 140,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes1",
-            "X": 80,
-            "Y": 140,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes2",
-            "X": 220,
-            "Y": 80,
-            "Width": 20,
-            "Height": 20,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction5",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction6",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction7",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready1"
-            }
-          },
-          {
-            "InteractionName": "Interaction8",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction9",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction10",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction11",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready2"
-            }
-          },
-          {
-            "InteractionName": "Interaction12",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction13",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction14",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction15",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes1"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "StartScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction16",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes2"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "StartScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction17",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "Ready1"
-            }
-          },
-          {
-            "InteractionName": "Interaction18",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction19",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction20",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction21",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "Ready2"
-            }
-          },
-          {
-            "InteractionName": "Interaction22",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction23",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction24",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction25",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerPhysicalButtonClicked",
-              "ButtonKey": 1
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready1"
-            }
-          },
-          {
-            "InteractionName": "Interaction26",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerPhysicalButtonClicked",
-              "ButtonKey": 2
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready2"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "EasyScreen",
-        "CanvasBufferSize": 4800,
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "box3",
-            "Width": 320,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1",
-            "X": 2,
-            "Y": 2,
-            "Width": 316,
-            "Height": 236,
-            "LockPosition": true,
-            "Color": {
-              "Red": 12,
-              "Green": 56,
-              "Blue": 55
-            }
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit2",
-            "X": 165,
-            "Y": 211,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "Box",
-            "Name": "box2",
-            "X": 160,
-            "Width": 3,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 220
-          },
-          {
-            "Type": "Circle",
-            "Name": "ball",
-            "X": 154,
-            "Y": 114,
-            "Width": 14,
-            "Height": 14,
-            "LockPosition": true,
-            "Color": {
-              "Red": 153,
-              "Green": 12,
-              "Blue": 12
-            },
-            "CenterX": 7.5,
-            "CenterY": 7.5,
-            "Radius": 6.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Triangle"
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle1",
-            "X": 8,
-            "Y": 100,
-            "Width": 5,
-            "Height": 40,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle2",
-            "X": 307,
-            "Y": 100,
-            "Width": 5,
-            "Height": 40,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score2",
-            "X": 190,
-            "Y": 20,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_I1JY",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score1",
-            "X": 125,
-            "Y": 200,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_NJHY",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player1",
-            "X": 140,
-            "Y": 180,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_G2S8",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player2",
-            "X": 165,
-            "Y": 5,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_OD39",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit1",
-            "X": 139,
-            "Y": 7,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "TextArea",
-            "Name": "start",
-            "X": 93,
-            "Y": 106,
-            "Width": 142,
-            "Height": 29,
-            "TextId": "__SingleUse_HFBB",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 222,
-              "Green": 171,
-              "Blue": 95
-            },
-            "Alpha": 210,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check1",
-            "X": 93,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "TextId": "__SingleUse_SPJ5",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no1",
-            "X": 52,
-            "Y": 86,
-            "Width": 20,
-            "Height": 20,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no2",
-            "X": 261,
-            "Y": 135,
-            "Width": 20,
-            "Height": 20,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes1",
-            "X": 52,
-            "Y": 135,
-            "Width": 20,
-            "Height": 20,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes2",
-            "X": 261,
-            "Y": 86,
-            "Width": 20,
-            "Height": 20,
-            "Alpha": 190,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check2",
-            "X": 216,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "TextId": "__SingleUse_JUZG",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerInteractionCompleted",
-              "InteractionToTriggerOn": "Interaction5"
-            },
-            "Action": {
-              "Type": "ActionDelay",
-              "Duration": 3000
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerInteractionCompleted",
-              "InteractionToTriggerOn": "Interaction1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "start"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction5",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction6",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction7",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction8",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction9",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction10",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction11",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction12",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction13",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction14",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction15",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction16",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction17",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction18",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction19",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction20",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction21",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes1"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "EndScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction22",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes2"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "EndScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "EasyReadyScreen",
-        "CanvasBufferSize": 4800,
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "box3",
-            "Width": 320,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1",
-            "X": 2,
-            "Y": 2,
-            "Width": 318,
-            "Height": 236,
-            "LockPosition": true,
-            "Color": {
-              "Red": 12,
-              "Green": 56,
-              "Blue": 55
-            }
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit2",
-            "X": 165,
-            "Y": 211,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "Box",
-            "Name": "box2",
-            "X": 160,
-            "Width": 3,
-            "Height": 240,
-            "LockPosition": true,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 220
-          },
-          {
-            "Type": "Circle",
-            "Name": "ball",
-            "X": 154,
-            "Y": 114,
-            "Width": 14,
-            "Height": 14,
-            "LockPosition": true,
-            "Color": {
-              "Red": 153,
-              "Green": 12,
-              "Blue": 12
-            },
-            "CenterX": 7.5,
-            "CenterY": 7.5,
-            "Radius": 6.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Triangle"
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle1",
-            "X": 8,
-            "Y": 100,
-            "Width": 5,
-            "Height": 40,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "Box",
-            "Name": "paddle2",
-            "X": 308,
-            "Y": 100,
-            "Width": 5,
-            "Height": 40,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Draggable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score2",
-            "X": 190,
-            "Y": 20,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_4U0Z",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "score1",
-            "X": 125,
-            "Y": 200,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
-            "TextId": "__SingleUse_IBVU",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 89,
-              "Green": 86,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player1",
-            "X": 140,
-            "Y": 180,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_1OW4",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "WideTextAction": 3
-          },
-          {
-            "Type": "TextArea",
-            "Name": "player2",
-            "X": 165,
-            "Y": 5,
-            "Width": 19,
-            "Height": 52,
-            "LockPosition": true,
-            "TextId": "__SingleUse_6OW4",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "exit1",
-            "X": 139,
-            "Y": 7,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "Alpha": 175,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Ready1",
-            "X": 61,
-            "Y": 90,
-            "Width": 26,
-            "Height": 63,
-            "LockPosition": true,
-            "TextId": "__SingleUse_3G07",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Ready2",
-            "X": 233,
-            "Y": 90,
-            "Width": 26,
-            "Height": 63,
-            "LockPosition": true,
-            "TextId": "__SingleUse_CTCW",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check1",
-            "X": 110,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "LockPosition": true,
-            "TextId": "__SingleUse_1VJC",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "check2",
-            "X": 190,
-            "Y": 69,
-            "Width": 19,
-            "Height": 102,
-            "TextId": "__SingleUse_BZJ5",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 190,
-            "AutoSize": true
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no1",
-            "X": 80,
-            "Y": 80,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "no2",
-            "X": 220,
-            "Y": 140,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes1",
-            "X": 80,
-            "Y": 140,
-            "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "yes2",
-            "X": 220,
-            "Y": 80,
-            "Width": 20,
-            "Height": 20,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png",
-                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png"
-              }
-            ]
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction5",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction6",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction7",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready1"
-            }
-          },
-          {
-            "InteractionName": "Interaction8",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction9",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction10",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction11",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready2"
-            }
-          },
-          {
-            "InteractionName": "Interaction12",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction13",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction14",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction15",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes1"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "StartScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction16",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "yes2"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "StartScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction17",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "Ready1"
-            }
-          },
-          {
-            "InteractionName": "Interaction18",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check1"
-            }
-          },
-          {
-            "InteractionName": "Interaction19",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no1"
-            }
-          },
-          {
-            "InteractionName": "Interaction20",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes1"
-            }
-          },
-          {
-            "InteractionName": "Interaction21",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "Ready2"
-            }
-          },
-          {
-            "InteractionName": "Interaction22",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "check2"
-            }
-          },
-          {
-            "InteractionName": "Interaction23",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "no2"
-            }
-          },
-          {
-            "InteractionName": "Interaction24",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "no2"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "yes2"
-            }
-          },
-          {
-            "InteractionName": "Interaction25",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerPhysicalButtonClicked",
-              "ButtonKey": 1
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready1"
-            }
-          },
-          {
-            "InteractionName": "Interaction26",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerPhysicalButtonClicked",
-              "ButtonKey": 2
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "Ready2"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "EndScreen",
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "box1",
-            "Width": 320,
-            "Height": 240,
-            "Color": {
-              "Red": 173,
-              "Green": 220,
-              "Blue": 237
-            }
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "playagainButton",
-            "X": 91,
-            "Y": 120,
-            "Width": 138,
-            "Height": 36,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
-            "TextId": "__SingleUse_VTUE",
-            "ReleasedColor": {
-              "Red": 237,
-              "Green": 241,
-              "Blue": 245
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_round_disabled.json"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "playerwin",
-            "X": 105,
-            "Y": 68,
-            "Width": 111,
-            "Height": 40,
-            "TextId": "__SingleUse_9392",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 63,
-              "Green": 70,
-              "Blue": 105
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "exit",
-            "X": 91,
-            "Y": 182,
-            "Width": 138,
-            "Height": 36,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
-            "TextId": "__SingleUse_4E2E",
-            "ReleasedColor": {
-              "Red": 237,
-              "Green": 241,
-              "Blue": 245
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_round_disabled.json"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "winner",
-            "X": 91,
-            "Y": 20,
-            "Width": 138,
-            "Height": 40,
-            "TextId": "__SingleUse_86XU",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 63,
-              "Green": 70,
-              "Blue": 105
-            },
-            "AutoSize": true
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "StartScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "playagainButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "StartScreen"
-            }
-          }
-        ]
-      },
-      {
         "Name": "StartScreen",
         "CanvasBufferSize": 4800,
         "Components": [
@@ -4326,6 +346,1368 @@
         "CustomActions": [
           {
             "Name": "action1"
+          }
+        ]
+      },
+      {
+        "Name": "HardScreen",
+        "CanvasBufferSize": 4800,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image2_1",
+            "X": 56,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled6.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "box3",
+            "Width": 320,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "X": 2,
+            "Y": 2,
+            "Width": 316,
+            "Height": 236,
+            "LockPosition": true,
+            "Color": {
+              "Red": 12,
+              "Green": 56,
+              "Blue": 55
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 160,
+            "Width": 3,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 220
+          },
+          {
+            "Type": "Circle",
+            "Name": "ball",
+            "X": 154,
+            "Y": 114,
+            "Width": 14,
+            "Height": 14,
+            "LockPosition": true,
+            "Color": {
+              "Red": 153,
+              "Green": 12,
+              "Blue": 12
+            },
+            "CenterX": 7.5,
+            "CenterY": 7.5,
+            "Radius": 6.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Triangle"
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle1",
+            "X": 29,
+            "Y": 110,
+            "Width": 5,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle2",
+            "X": 286,
+            "Y": 110,
+            "Width": 5,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "score2",
+            "X": 190,
+            "Y": 20,
+            "Width": 10,
+            "Height": 15,
+            "LockPosition": true,
+            "TextId": "__SingleUse_UN9H",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 89,
+              "Green": 86,
+              "Blue": 86
+            },
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "score1",
+            "X": 125,
+            "Y": 200,
+            "Width": 10,
+            "Height": 15,
+            "LockPosition": true,
+            "TextId": "__SingleUse_OTAD",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 89,
+              "Green": 86,
+              "Blue": 86
+            },
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player1",
+            "X": 140,
+            "Y": 180,
+            "Width": 19,
+            "Height": 52,
+            "LockPosition": true,
+            "TextId": "__SingleUse_Z3TY",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player2",
+            "X": 165,
+            "Y": 5,
+            "Width": 19,
+            "Height": 52,
+            "LockPosition": true,
+            "TextId": "__SingleUse_FY8E",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "goal1",
+            "X": 2,
+            "Y": 61,
+            "Width": 15,
+            "Height": 120,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 173,
+              "Green": 147,
+              "Blue": 52
+            },
+            "BorderSize": 3,
+            "Alpha": 60
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "goal2",
+            "X": 302,
+            "Y": 60,
+            "Width": 15,
+            "Height": 120,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 173,
+              "Green": 147,
+              "Blue": 52
+            },
+            "BorderSize": 3,
+            "Alpha": 60
+          },
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "X": 56,
+            "Y": 230,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled5.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1_1",
+            "X": 223,
+            "Y": 229,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled5.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "X": 56,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled6.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2_2",
+            "X": 223,
+            "Y": 2,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled6.png"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "HardReadyScreen",
+        "CanvasBufferSize": 4800,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "counter2",
+            "X": 245,
+            "Y": 111,
+            "Width": 29,
+            "Height": 17,
+            "TextId": "__SingleUse_WFLF",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 222,
+              "Green": 171,
+              "Blue": 95
+            },
+            "Alpha": 210,
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "counter1",
+            "X": 46,
+            "Y": 111,
+            "Width": 29,
+            "Height": 17,
+            "TextId": "__SingleUse_7Q96",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 222,
+              "Green": 171,
+              "Blue": 95
+            },
+            "Alpha": 210,
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "Image",
+            "Name": "image2_1",
+            "X": 56,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled6.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "box3",
+            "Width": 320,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "X": 2,
+            "Y": 2,
+            "Width": 316,
+            "Height": 236,
+            "LockPosition": true,
+            "Color": {
+              "Red": 12,
+              "Green": 56,
+              "Blue": 55
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 160,
+            "Width": 3,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 220
+          },
+          {
+            "Type": "Circle",
+            "Name": "ball",
+            "X": 154,
+            "Y": 114,
+            "Width": 14,
+            "Height": 14,
+            "LockPosition": true,
+            "Color": {
+              "Red": 153,
+              "Green": 12,
+              "Blue": 12
+            },
+            "CenterX": 7.5,
+            "CenterY": 7.5,
+            "Radius": 6.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Triangle"
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle1",
+            "X": 35,
+            "Y": 110,
+            "Width": 5,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle2",
+            "X": 282,
+            "Y": 110,
+            "Width": 5,
+            "Height": 20,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player1",
+            "X": 94,
+            "Y": 94,
+            "Width": 19,
+            "Height": 52,
+            "TextId": "__SingleUse_7S3Y",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player2",
+            "X": 204,
+            "Y": 93,
+            "Width": 19,
+            "Height": 52,
+            "TextId": "__SingleUse_SJ6Y",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "goal1",
+            "X": 2,
+            "Y": 61,
+            "Width": 15,
+            "Height": 120,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 173,
+              "Green": 147,
+              "Blue": 52
+            },
+            "BorderSize": 3,
+            "Alpha": 60
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "goal2",
+            "X": 302,
+            "Y": 60,
+            "Width": 15,
+            "Height": 120,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 173,
+              "Green": 147,
+              "Blue": 52
+            },
+            "BorderSize": 3,
+            "Alpha": 60
+          },
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "X": 56,
+            "Y": 230,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled5.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1_1",
+            "X": 223,
+            "Y": 229,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled5.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "X": 56,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled6.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2_2",
+            "X": 223,
+            "Y": 2,
+            "Width": 38,
+            "Height": 10,
+            "RelativeFilename": "Untitled6.png"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "MediumScreen",
+        "CanvasBufferSize": 4800,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box3",
+            "Width": 320,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "X": 2,
+            "Y": 2,
+            "Width": 316,
+            "Height": 236,
+            "LockPosition": true,
+            "Color": {
+              "Red": 12,
+              "Green": 56,
+              "Blue": 55
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 160,
+            "Width": 3,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 220
+          },
+          {
+            "Type": "Circle",
+            "Name": "ball",
+            "X": 154,
+            "Y": 114,
+            "Width": 14,
+            "Height": 14,
+            "LockPosition": true,
+            "Color": {
+              "Red": 153,
+              "Green": 12,
+              "Blue": 12
+            },
+            "CenterX": 7.5,
+            "CenterY": 7.5,
+            "Radius": 6.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Triangle"
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle1",
+            "X": 19,
+            "Y": 101,
+            "Width": 5,
+            "Height": 40,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle2",
+            "X": 296,
+            "Y": 101,
+            "Width": 5,
+            "Height": 40,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "score2",
+            "X": 190,
+            "Y": 20,
+            "Width": 10,
+            "Height": 15,
+            "LockPosition": true,
+            "TextId": "__SingleUse_KK9M",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 89,
+              "Green": 86,
+              "Blue": 86
+            },
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "score1",
+            "X": 125,
+            "Y": 200,
+            "Width": 10,
+            "Height": 15,
+            "LockPosition": true,
+            "TextId": "__SingleUse_ATHF",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 89,
+              "Green": 86,
+              "Blue": 86
+            },
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player1",
+            "X": 140,
+            "Y": 180,
+            "Width": 19,
+            "Height": 52,
+            "LockPosition": true,
+            "TextId": "__SingleUse_V9P9",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player2",
+            "X": 165,
+            "Y": 5,
+            "Width": 19,
+            "Height": 52,
+            "LockPosition": true,
+            "TextId": "__SingleUse_UJJ8",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "goal2",
+            "X": 2,
+            "Y": 61,
+            "Width": 10,
+            "Height": 120,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 173,
+              "Green": 147,
+              "Blue": 52
+            },
+            "BorderSize": 3,
+            "Alpha": 60
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "goal1",
+            "X": 308,
+            "Y": 60,
+            "Width": 10,
+            "Height": 120,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 173,
+              "Green": 147,
+              "Blue": 52
+            },
+            "BorderSize": 3,
+            "Alpha": 60
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "MediumReadyScreen",
+        "CanvasBufferSize": 4800,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box3",
+            "Width": 320,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "X": 2,
+            "Y": 2,
+            "Width": 318,
+            "Height": 236,
+            "LockPosition": true,
+            "Color": {
+              "Red": 12,
+              "Green": 56,
+              "Blue": 55
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 160,
+            "Width": 3,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 220
+          },
+          {
+            "Type": "Circle",
+            "Name": "ball",
+            "X": 155,
+            "Y": 114,
+            "Width": 14,
+            "Height": 14,
+            "LockPosition": true,
+            "Color": {
+              "Red": 153,
+              "Green": 12,
+              "Blue": 12
+            },
+            "CenterX": 7.5,
+            "CenterY": 7.5,
+            "Radius": 6.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Triangle"
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle1",
+            "X": 19,
+            "Y": 101,
+            "Width": 5,
+            "Height": 40,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle2",
+            "X": 298,
+            "Y": 100,
+            "Width": 5,
+            "Height": 40,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player1",
+            "X": 116,
+            "Y": 95,
+            "Width": 19,
+            "Height": 52,
+            "TextId": "__SingleUse_VDK7",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190,
+            "WideTextAction": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player2",
+            "X": 187,
+            "Y": 95,
+            "Width": 19,
+            "Height": 52,
+            "TextId": "__SingleUse_CWXV",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190,
+            "WideTextAction": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "counter1",
+            "X": 53,
+            "Y": 111,
+            "Width": 29,
+            "Height": 17,
+            "TextId": "__SingleUse_MH9F",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 222,
+              "Green": 171,
+              "Blue": 95
+            },
+            "Alpha": 210,
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "goal1",
+            "X": 310,
+            "Y": 60,
+            "Width": 10,
+            "Height": 120,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 173,
+              "Green": 147,
+              "Blue": 52
+            },
+            "BorderSize": 3,
+            "Alpha": 60
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "goal2",
+            "X": 2,
+            "Y": 61,
+            "Width": 10,
+            "Height": 120,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 173,
+              "Green": 147,
+              "Blue": 52
+            },
+            "BorderSize": 3,
+            "Alpha": 60
+          },
+          {
+            "Type": "TextArea",
+            "Name": "counter2",
+            "X": 243,
+            "Y": 111,
+            "Width": 29,
+            "Height": 17,
+            "TextId": "__SingleUse_CZR5",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 222,
+              "Green": 171,
+              "Blue": 95
+            },
+            "Alpha": 210,
+            "AutoSize": true,
+            "Wildcard1": {}
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "EasyScreen",
+        "CanvasBufferSize": 4800,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box3",
+            "Width": 320,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "X": 2,
+            "Y": 2,
+            "Width": 316,
+            "Height": 236,
+            "LockPosition": true,
+            "Color": {
+              "Red": 12,
+              "Green": 56,
+              "Blue": 55
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 160,
+            "Width": 3,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 220
+          },
+          {
+            "Type": "Circle",
+            "Name": "ball",
+            "X": 154,
+            "Y": 114,
+            "Width": 14,
+            "Height": 14,
+            "LockPosition": true,
+            "Color": {
+              "Red": 153,
+              "Green": 12,
+              "Blue": 12
+            },
+            "CenterX": 7.5,
+            "CenterY": 7.5,
+            "Radius": 6.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Triangle"
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle1",
+            "X": 8,
+            "Y": 100,
+            "Width": 5,
+            "Height": 40,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle2",
+            "X": 307,
+            "Y": 100,
+            "Width": 5,
+            "Height": 40,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "score2",
+            "X": 190,
+            "Y": 20,
+            "Width": 10,
+            "Height": 15,
+            "LockPosition": true,
+            "TextId": "__SingleUse_I1JY",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 89,
+              "Green": 86,
+              "Blue": 86
+            },
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "score1",
+            "X": 125,
+            "Y": 200,
+            "Width": 10,
+            "Height": 15,
+            "LockPosition": true,
+            "TextId": "__SingleUse_NJHY",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 89,
+              "Green": 86,
+              "Blue": 86
+            },
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player1",
+            "X": 140,
+            "Y": 180,
+            "Width": 19,
+            "Height": 52,
+            "LockPosition": true,
+            "TextId": "__SingleUse_G2S8",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player2",
+            "X": 165,
+            "Y": 5,
+            "Width": 19,
+            "Height": 52,
+            "LockPosition": true,
+            "TextId": "__SingleUse_OD39",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "EasyReadyScreen",
+        "CanvasBufferSize": 4800,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box3",
+            "Width": 320,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "X": 2,
+            "Y": 2,
+            "Width": 318,
+            "Height": 236,
+            "LockPosition": true,
+            "Color": {
+              "Red": 12,
+              "Green": 56,
+              "Blue": 55
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 160,
+            "Width": 3,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 220
+          },
+          {
+            "Type": "Circle",
+            "Name": "ball",
+            "X": 155,
+            "Y": 114,
+            "Width": 14,
+            "Height": 14,
+            "LockPosition": true,
+            "Color": {
+              "Red": 153,
+              "Green": 12,
+              "Blue": 12
+            },
+            "CenterX": 7.5,
+            "CenterY": 7.5,
+            "Radius": 6.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Triangle"
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle1",
+            "X": 8,
+            "Y": 100,
+            "Width": 5,
+            "Height": 40,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "paddle2",
+            "X": 308,
+            "Y": 100,
+            "Width": 5,
+            "Height": 40,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Draggable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player1",
+            "X": 116,
+            "Y": 95,
+            "Width": 19,
+            "Height": 52,
+            "TextId": "__SingleUse_1OW4",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190,
+            "WideTextAction": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "player2",
+            "X": 187,
+            "Y": 95,
+            "Width": 19,
+            "Height": 52,
+            "TextId": "__SingleUse_ERV8",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 190,
+            "WideTextAction": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "counter1",
+            "X": 53,
+            "Y": 111,
+            "Width": 29,
+            "Height": 17,
+            "TextId": "__SingleUse_HVEB",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 222,
+              "Green": 171,
+              "Blue": 95
+            },
+            "Alpha": 210,
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "counter2",
+            "X": 243,
+            "Y": 111,
+            "Width": 29,
+            "Height": 17,
+            "TextId": "__SingleUse_WSW0",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 222,
+              "Green": 171,
+              "Blue": 95
+            },
+            "Alpha": 210,
+            "AutoSize": true,
+            "Wildcard1": {}
+          }
+        ],
+        "Interactions": [],
+        "CustomActions": [
+          {
+            "Name": "action1"
+          }
+        ]
+      },
+      {
+        "Name": "EndScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 320,
+            "Height": 240,
+            "Color": {
+              "Red": 173,
+              "Green": 220,
+              "Blue": 237
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "playagainButton",
+            "X": 91,
+            "Y": 120,
+            "Width": 138,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
+            "TextId": "__SingleUse_VTUE",
+            "ReleasedColor": {
+              "Red": 237,
+              "Green": 241,
+              "Blue": 245
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_round_disabled.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "playerwin",
+            "X": 105,
+            "Y": 68,
+            "Width": 111,
+            "Height": 40,
+            "TextId": "__SingleUse_9392",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 63,
+              "Green": 70,
+              "Blue": 105
+            },
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "exit",
+            "X": 91,
+            "Y": 182,
+            "Width": 138,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
+            "TextId": "__SingleUse_4E2E",
+            "ReleasedColor": {
+              "Red": 237,
+              "Green": 241,
+              "Blue": 245
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_round_disabled.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "winner",
+            "X": 91,
+            "Y": 20,
+            "Width": 138,
+            "Height": 40,
+            "TextId": "__SingleUse_86XU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 63,
+              "Green": 70,
+              "Blue": 105
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "exit"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionWipe",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "StartScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "playagainButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionWipe",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "StartScreen"
+            }
           }
         ]
       }

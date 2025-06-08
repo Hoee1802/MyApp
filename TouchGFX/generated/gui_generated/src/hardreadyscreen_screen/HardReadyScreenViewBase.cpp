@@ -4,11 +4,10 @@
 #include <gui_generated/hardreadyscreen_screen/HardReadyScreenViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
-HardReadyScreenViewBase::HardReadyScreenViewBase() :
-    flexButtonCallback(this, &HardReadyScreenViewBase::flexButtonCallbackHandler)
+HardReadyScreenViewBase::HardReadyScreenViewBase()
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
     
@@ -16,27 +15,33 @@ HardReadyScreenViewBase::HardReadyScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
+    counter2.setXY(245, 111);
+    counter2.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
+    counter2.setLinespacing(0);
+    counter2.setRotation(touchgfx::TEXT_ROTATE_270);
+    counter2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WFLF));
+    counter2.setAlpha(210);
+    add(counter2);
+
+    counter1.setXY(46, 111);
+    counter1.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
+    counter1.setLinespacing(0);
+    counter1.setRotation(touchgfx::TEXT_ROTATE_90);
+    counter1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7Q96));
+    counter1.setAlpha(210);
+    add(counter1);
+
+    image2_1.setXY(56, 0);
+    image2_1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
+    add(image2_1);
+
     box3.setPosition(0, 0, 320, 240);
     box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(box3);
 
-    box1.setPosition(2, 2, 318, 236);
+    box1.setPosition(2, 2, 316, 236);
     box1.setColor(touchgfx::Color::getColorFromRGB(12, 56, 55));
     add(box1);
-
-    goal2.setPosition(294, 60, 25, 120);
-    goal2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    goal2.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
-    goal2.setBorderSize(3);
-    goal2.setAlpha(60);
-    add(goal2);
-
-    exit2.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_DOWN_20_20_FFFFFF_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_DOWN_20_20_FFFFFF_SVG_ID));
-    exit2.setIconXY(0, 0);
-    exit2.setAlpha(175);
-    exit2.setAction(flexButtonCallback);
-    exit2.setPosition(165, 211, 20, 20);
-    add(exit2);
 
     box2.setPosition(160, 0, 3, 240);
     box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -52,7 +57,7 @@ HardReadyScreenViewBase::HardReadyScreenViewBase() :
     ball.setPainter(ballPainter);
     add(ball);
 
-    paddle1.setPosition(35, 111, 5, 20);
+    paddle1.setPosition(35, 110, 5, 20);
     paddle1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle1);
 
@@ -60,106 +65,51 @@ HardReadyScreenViewBase::HardReadyScreenViewBase() :
     paddle2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle2);
 
-    score2.setXY(190, 20);
-    score2.setColor(touchgfx::Color::getColorFromRGB(89, 86, 86));
-    score2.setLinespacing(0);
-    score2.setRotation(touchgfx::TEXT_ROTATE_270);
-    score2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Y8KC));
-    add(score2);
-
-    score1.setXY(125, 200);
-    score1.setColor(touchgfx::Color::getColorFromRGB(89, 86, 86));
-    score1.setLinespacing(0);
-    score1.setRotation(touchgfx::TEXT_ROTATE_90);
-    score1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4E54));
-    add(score1);
-
-    player1.setPosition(140, 180, 19, 52);
+    player1.setPosition(94, 94, 19, 52);
     player1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     player1.setLinespacing(0);
-    player1.setWideTextAction(WIDE_TEXT_WORDWRAP_ELLIPSIS_AFTER_SPACE);
     player1.setRotation(touchgfx::TEXT_ROTATE_90);
-    player1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WA77));
+    player1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7S3Y));
     player1.setAlpha(190);
     add(player1);
 
-    player2.setPosition(165, 5, 19, 52);
+    player2.setPosition(204, 93, 19, 52);
     player2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     player2.setLinespacing(0);
     player2.setRotation(touchgfx::TEXT_ROTATE_270);
-    player2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8Q6F));
+    player2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SJ6Y));
     player2.setAlpha(190);
     add(player2);
 
-    exit1.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_UP_20_20_FFFFFF_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_UP_20_20_FFFFFF_SVG_ID));
-    exit1.setIconXY(0, 0);
-    exit1.setAlpha(175);
-    exit1.setAction(flexButtonCallback);
-    exit1.setPosition(139, 7, 20, 20);
-    add(exit1);
-
-    goal1.setPosition(3, 60, 25, 120);
+    goal1.setPosition(2, 61, 15, 120);
     goal1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     goal1.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
     goal1.setBorderSize(3);
     goal1.setAlpha(60);
     add(goal1);
 
-    Ready1.setXY(61, 90);
-    Ready1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Ready1.setLinespacing(0);
-    Ready1.setRotation(touchgfx::TEXT_ROTATE_90);
-    Ready1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L9ZN));
-    Ready1.setAlpha(190);
-    add(Ready1);
+    goal2.setPosition(302, 60, 15, 120);
+    goal2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    goal2.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
+    goal2.setBorderSize(3);
+    goal2.setAlpha(60);
+    add(goal2);
 
-    Ready2.setXY(233, 90);
-    Ready2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Ready2.setLinespacing(0);
-    Ready2.setRotation(touchgfx::TEXT_ROTATE_270);
-    Ready2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SRJD));
-    Ready2.setAlpha(190);
-    add(Ready2);
+    image1.setXY(56, 230);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
+    add(image1);
 
-    check1.setXY(110, 69);
-    check1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    check1.setLinespacing(0);
-    check1.setRotation(touchgfx::TEXT_ROTATE_90);
-    check1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_5EQH));
-    check1.setAlpha(190);
-    add(check1);
+    image1_1.setXY(223, 229);
+    image1_1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
+    add(image1_1);
 
-    check2.setXY(190, 69);
-    check2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    check2.setLinespacing(0);
-    check2.setRotation(touchgfx::TEXT_ROTATE_270);
-    check2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_IZPF));
-    check2.setAlpha(190);
-    add(check2);
+    image2.setXY(56, 0);
+    image2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
+    add(image2);
 
-    no1.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CANCEL_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_20_20_E8F6FB_SVG_ID));
-    no1.setIconXY(0, 0);
-    no1.setAction(flexButtonCallback);
-    no1.setPosition(80, 80, 20, 20);
-    add(no1);
-
-    no2.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CANCEL_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_20_20_E8F6FB_SVG_ID));
-    no2.setIconXY(0, 0);
-    no2.setAction(flexButtonCallback);
-    no2.setPosition(220, 140, 20, 20);
-    add(no2);
-
-    yes1.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_IOS_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_IOS_20_20_E8F6FB_SVG_ID));
-    yes1.setIconXY(0, 0);
-    yes1.setAction(flexButtonCallback);
-    yes1.setPosition(80, 140, 20, 20);
-    add(yes1);
-
-    yes2.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_FORWARD_IOS_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_FORWARD_IOS_20_20_E8F6FB_SVG_ID));
-    yes2.setIconXY(0, 0);
-    yes2.setAction(flexButtonCallback);
-    yes2.setPosition(220, 80, 20, 20);
-    add(yes2);
+    image2_2.setXY(223, 2);
+    image2_2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
+    add(image2_2);
 }
 
 HardReadyScreenViewBase::~HardReadyScreenViewBase()
@@ -170,176 +120,4 @@ HardReadyScreenViewBase::~HardReadyScreenViewBase()
 void HardReadyScreenViewBase::setupScreen()
 {
 
-}
-
-void HardReadyScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
-{
-    if (&src == &exit1)
-    {
-        //Interaction7
-        //When exit1 clicked hide Ready1
-        //Hide Ready1
-        Ready1.setVisible(false);
-        Ready1.invalidate();
-        //Interaction8
-        //When exit1 clicked show check1
-        //Show check1
-        check1.setVisible(true);
-        check1.invalidate();
-        //Interaction9
-        //When exit1 clicked show no1
-        //Show no1
-        no1.setVisible(true);
-        no1.invalidate();
-        //Interaction10
-        //When exit1 clicked show yes1
-        //Show yes1
-        yes1.setVisible(true);
-        yes1.invalidate();
-    }
-    if (&src == &exit2)
-    {
-        //Interaction11
-        //When exit2 clicked hide Ready2
-        //Hide Ready2
-        Ready2.setVisible(false);
-        Ready2.invalidate();
-        //Interaction12
-        //When exit2 clicked show check2
-        //Show check2
-        check2.setVisible(true);
-        check2.invalidate();
-        //Interaction13
-        //When exit2 clicked show no2
-        //Show no2
-        no2.setVisible(true);
-        no2.invalidate();
-        //Interaction14
-        //When exit2 clicked show yes2
-        //Show yes2
-        yes2.setVisible(true);
-        yes2.invalidate();
-    }
-    if (&src == &yes1)
-    {
-        //Interaction15
-        //When yes1 clicked change screen to StartScreen
-        //Go to StartScreen with screen transition towards East
-        application().gotoStartScreenScreenWipeTransitionEast();
-    }
-    if (&src == &yes2)
-    {
-        //Interaction16
-        //When yes2 clicked change screen to StartScreen
-        //Go to StartScreen with screen transition towards East
-        application().gotoStartScreenScreenWipeTransitionEast();
-    }
-    if (&src == &no1)
-    {
-        //Interaction17
-        //When no1 clicked show Ready1
-        //Show Ready1
-        Ready1.setVisible(true);
-        Ready1.invalidate();
-        //Interaction18
-        //When no1 clicked hide check1
-        //Hide check1
-        check1.setVisible(false);
-        check1.invalidate();
-        //Interaction19
-        //When no1 clicked hide no1
-        //Hide no1
-        no1.setVisible(false);
-        no1.invalidate();
-        //Interaction20
-        //When no1 clicked hide yes1
-        //Hide yes1
-        yes1.setVisible(false);
-        yes1.invalidate();
-    }
-    if (&src == &no2)
-    {
-        //Interaction21
-        //When no2 clicked show Ready2
-        //Show Ready2
-        Ready2.setVisible(true);
-        Ready2.invalidate();
-        //Interaction22
-        //When no2 clicked hide check2
-        //Hide check2
-        check2.setVisible(false);
-        check2.invalidate();
-        //Interaction23
-        //When no2 clicked hide no2
-        //Hide no2
-        no2.setVisible(false);
-        no2.invalidate();
-        //Interaction24
-        //When no2 clicked hide yes2
-        //Hide yes2
-        yes2.setVisible(false);
-        yes2.invalidate();
-    }
-}
-
-void HardReadyScreenViewBase::afterTransition()
-{
-    //Interaction1
-    //When screen transition ends hide check1
-    //Hide check1
-    check1.setVisible(false);
-    check1.invalidate();
-
-    //Interaction2
-    //When screen transition ends hide no1
-    //Hide no1
-    no1.setVisible(false);
-    no1.invalidate();
-
-    //Interaction3
-    //When screen transition ends hide yes1
-    //Hide yes1
-    yes1.setVisible(false);
-    yes1.invalidate();
-
-    //Interaction4
-    //When screen transition ends hide check2
-    //Hide check2
-    check2.setVisible(false);
-    check2.invalidate();
-
-    //Interaction5
-    //When screen transition ends hide no2
-    //Hide no2
-    no2.setVisible(false);
-    no2.invalidate();
-
-    //Interaction6
-    //When screen transition ends hide yes2
-    //Hide yes2
-    yes2.setVisible(false);
-    yes2.invalidate();
-}
-
-void HardReadyScreenViewBase::handleKeyEvent(uint8_t key)
-{
-    if(1 == key)
-    {
-        //Interaction25
-        //When hardware button 1 clicked hide Ready1
-        //Hide Ready1
-        Ready1.setVisible(false);
-        Ready1.invalidate();
-    
-    }
-
-    if(2 == key)
-    {
-        //Interaction26
-        //When hardware button 2 clicked hide Ready2
-        //Hide Ready2
-        Ready2.setVisible(false);
-        Ready2.invalidate();
-    
-    }
 }

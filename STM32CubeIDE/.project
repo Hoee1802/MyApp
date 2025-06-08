@@ -605,34 +605,14 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_clay_theme_images_widgets_button_regular_height_36_tiny_round_pressed.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.cpp</name>
+			<name>Application/User/generated/image_Untitled5.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_Untitled5.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.cpp</name>
+			<name>Application/User/generated/image_Untitled6.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_action_arrow_circle_up_20_20_FFFFFF.svg.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_icon_theme_images_action_done_20_20_E8F6FB.svg.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_action_done_20_20_E8F6FB.svg.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_Untitled6.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>

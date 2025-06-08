@@ -20,6 +20,11 @@ public:
         gotoStartScreenScreenNoTransition();
     }
 
+    // StartScreen
+    void gotoStartScreenScreenNoTransition();
+
+    void gotoStartScreenScreenWipeTransitionEast();
+
     // HardReadyScreen
     void gotoHardReadyScreenScreenWipeTransitionEast();
 
@@ -29,18 +34,15 @@ public:
     // EasyReadyScreen
     void gotoEasyReadyScreenScreenWipeTransitionEast();
 
-    // EndScreen
-    void gotoEndScreenScreenWipeTransitionEast();
-
-    // StartScreen
-    void gotoStartScreenScreenNoTransition();
-
-    void gotoStartScreenScreenWipeTransitionEast();
-
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
+
+    // StartScreen
+    void gotoStartScreenScreenNoTransitionImpl();
+
+    void gotoStartScreenScreenWipeTransitionEastImpl();
 
     // HardReadyScreen
     void gotoHardReadyScreenScreenWipeTransitionEastImpl();
@@ -50,14 +52,6 @@ protected:
 
     // EasyReadyScreen
     void gotoEasyReadyScreenScreenWipeTransitionEastImpl();
-
-    // EndScreen
-    void gotoEndScreenScreenWipeTransitionEastImpl();
-
-    // StartScreen
-    void gotoStartScreenScreenNoTransitionImpl();
-
-    void gotoStartScreenScreenWipeTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

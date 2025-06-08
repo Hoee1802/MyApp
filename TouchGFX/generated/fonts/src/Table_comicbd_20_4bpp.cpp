@@ -4,13 +4,7 @@
 
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_comicbd_20_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
-    {     0, 0x0021,   4,  18,  17,   0,   5,   0,   0, 0x00 },
-    {    36, 0x003F,  11,  17,  16,   0,  11,   0,   0, 0x00 },
-    {   138, 0x0052,  13,  16,  16,   0,  13,   0,   0, 0x00 },
-    {   250, 0x0061,  11,  12,  11,   0,  11,   0,   0, 0x00 },
-    {   322, 0x0064,  11,  18,  17,   0,  12,   0,   0, 0x00 },
-    {   430, 0x0065,  11,  12,  11,   0,  11,   0,   0, 0x00 },
-    {   502, 0x0079,  11,  17,  11,   0,  11,   0,   0, 0x00 }
+    {     0, 0x003F,  11,  17,  16,   0,  11,   0,   0, 0x00 }
 };
 
 // comicbd_20_4bpp
@@ -28,6 +22,6 @@ touchgfx::GeneratedFont& getFont_comicbd_20_4bpp();
 
 touchgfx::GeneratedFont& getFont_comicbd_20_4bpp()
 {
-    static touchgfx::GeneratedFont comicbd_20_4bpp(glyphs_comicbd_20_4bpp, 7, 26, 20, 0, 0, 4, 1, 0, 0, unicodes_comicbd_20_4bpp, kerning_comicbd_20_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont comicbd_20_4bpp(glyphs_comicbd_20_4bpp, 1, 21, 20, 0, 0, 4, 1, 0, 0, unicodes_comicbd_20_4bpp, kerning_comicbd_20_4bpp, 63, 0, 0, 0);
     return comicbd_20_4bpp;
 }

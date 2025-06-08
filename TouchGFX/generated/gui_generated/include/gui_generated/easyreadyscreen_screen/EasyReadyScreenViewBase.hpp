@@ -8,12 +8,11 @@
 #include <mvp/View.hpp>
 #include <gui/easyreadyscreen_screen/EasyReadyScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/mixins/Draggable.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class EasyReadyScreenViewBase : public touchgfx::View<EasyReadyScreenPresenter>
 {
@@ -21,8 +20,15 @@ public:
     EasyReadyScreenViewBase();
     virtual ~EasyReadyScreenViewBase();
     virtual void setupScreen();
-    virtual void afterTransition();
-    virtual void handleKeyEvent(uint8_t key);
+
+    /*
+     * Custom Actions
+     */
+    virtual void action1()
+    {
+        // Override and implement this function in Screen1
+    }
+    
 
 protected:
     FrontendApplication& application() {
@@ -35,25 +41,15 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box3;
     touchgfx::Box box1;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  exit2;
     touchgfx::Box box2;
     touchgfx::Circle ball;
     touchgfx::PainterRGB565 ballPainter;
     touchgfx::Draggable< touchgfx::Box > paddle1;
     touchgfx::Draggable< touchgfx::Box > paddle2;
-    touchgfx::TextAreaWithOneWildcard score2;
-    touchgfx::TextAreaWithOneWildcard score1;
     touchgfx::TextArea player1;
     touchgfx::TextArea player2;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  exit1;
-    touchgfx::TextArea Ready1;
-    touchgfx::TextArea Ready2;
-    touchgfx::TextArea check1;
-    touchgfx::TextArea check2;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  no1;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  no2;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  yes1;
-    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  yes2;
+    touchgfx::TextAreaWithOneWildcard counter1;
+    touchgfx::TextAreaWithOneWildcard counter2;
 
 private:
 
@@ -62,16 +58,6 @@ private:
      */
     static const uint32_t CANVAS_BUFFER_SIZE = 4800;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
-
-    /*
-     * Callback Declarations
-     */
-    touchgfx::Callback<EasyReadyScreenViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
-
-    /*
-     * Callback Handler Declarations
-     */
-    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

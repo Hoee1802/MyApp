@@ -1,6 +1,0 @@
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
-D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/easyreadyscreen_screen/EasyReadyScreenView.cpp:13:6:virtual void EasyReadyScreenView::tearDownScreen()	0	static
-../../TouchGFX/gui/include/gui/easyreadyscreen_screen/EasyReadyScreenView.hpp:11:13:EasyReadyScreenView::~EasyReadyScreenView()	8	static
-../../TouchGFX/gui/include/gui/easyreadyscreen_screen/EasyReadyScreenView.hpp:11:13:virtual EasyReadyScreenView::~EasyReadyScreenView()	8	static
-D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/easyreadyscreen_screen/EasyReadyScreenView.cpp:3:1:EasyReadyScreenView::EasyReadyScreenView()	8	static
-D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/easyreadyscreen_screen/EasyReadyScreenView.cpp:8:6:virtual void EasyReadyScreenView::setupScreen()	0	static
