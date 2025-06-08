@@ -142,14 +142,14 @@ HardScreenViewBase::HardScreenViewBase() :
     check2.setAlpha(190);
     add(check2);
 
-    goal1.setPosition(2, 61, 25, 120);
+    goal1.setPosition(2, 61, 15, 120);
     goal1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     goal1.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
     goal1.setBorderSize(3);
     goal1.setAlpha(60);
     add(goal1);
 
-    goal2.setPosition(292, 60, 25, 120);
+    goal2.setPosition(302, 60, 15, 120);
     goal2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     goal2.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
     goal2.setBorderSize(3);

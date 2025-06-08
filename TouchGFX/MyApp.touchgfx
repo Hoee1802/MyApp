@@ -337,9 +337,8 @@
             "Name": "goal1",
             "X": 2,
             "Y": 61,
-            "Width": 25,
+            "Width": 15,
             "Height": 120,
-            "LockPosition": true,
             "Color": {
               "Red": 255,
               "Green": 255,
@@ -356,11 +355,10 @@
           {
             "Type": "BoxWithBorder",
             "Name": "goal2",
-            "X": 292,
+            "X": 302,
             "Y": 60,
-            "Width": 25,
+            "Width": 15,
             "Height": 120,
-            "LockPosition": true,
             "Color": {
               "Red": 255,
               "Green": 255,
