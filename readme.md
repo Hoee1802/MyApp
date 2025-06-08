@@ -17,7 +17,7 @@ Game Pingpong
   |1|Vũ Văn Nam|20215623|hiện thị oled, hiệu ứng, và xử lý ngắt|
   |2|Vũ Thị Thanh Hoa|20210356|hiện thị oled, hiệu ứng, và xử lý ngắt|
   |3|Trần Bích Diệp|20215539|hiện thị oled, hiệu ứng, và xử lý ngắt|
-  |4|Nguyễn Văn Long|20215610|hiện thị oled, hiệu ứng, và xử lý ngắt|
+  |4|Nguyễn Văn Long|20215610|Vẽ sơ đồ Schematic và viết báo cáo|
 
 ## MÔI TRƯỜNG HOẠT ĐỘNG
 
