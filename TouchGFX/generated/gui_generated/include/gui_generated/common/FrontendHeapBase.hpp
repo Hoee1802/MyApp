@@ -9,17 +9,27 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
+#include <touchgfx/transitions/WipeTransition.hpp>
+
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen2_screen/Screen2View.hpp>
-#include <gui/screen2_screen/Screen2Presenter.hpp>
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
-#include <gui/screen3_screen/Screen3View.hpp>
-#include <gui/screen3_screen/Screen3Presenter.hpp>
-#include <gui/screen0_screen/Screen0View.hpp>
-#include <gui/screen0_screen/Screen0Presenter.hpp>
+#include <gui/hardscreen_screen/HardScreenView.hpp>
+#include <gui/hardscreen_screen/HardScreenPresenter.hpp>
+#include <gui/hardreadyscreen_screen/HardReadyScreenView.hpp>
+#include <gui/hardreadyscreen_screen/HardReadyScreenPresenter.hpp>
+#include <gui/mediumscreen_screen/MediumScreenView.hpp>
+#include <gui/mediumscreen_screen/MediumScreenPresenter.hpp>
+#include <gui/mediumreadyscreen_screen/MediumReadyScreenView.hpp>
+#include <gui/mediumreadyscreen_screen/MediumReadyScreenPresenter.hpp>
+#include <gui/easyscreen_screen/EasyScreenView.hpp>
+#include <gui/easyscreen_screen/EasyScreenPresenter.hpp>
+#include <gui/easyreadyscreen_screen/EasyReadyScreenView.hpp>
+#include <gui/easyreadyscreen_screen/EasyReadyScreenPresenter.hpp>
+#include <gui/endscreen_screen/EndScreenView.hpp>
+#include <gui/endscreen_screen/EndScreenPresenter.hpp>
+#include <gui/startscreen_screen/StartScreenView.hpp>
+#include <gui/startscreen_screen/StartScreenPresenter.hpp>
 
 
 /**
@@ -42,11 +52,15 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< Screen2View,
-            touchgfx::meta::TypeList< Screen1View,
-            touchgfx::meta::TypeList< Screen3View,
-            touchgfx::meta::TypeList< Screen0View,
-            touchgfx::meta::Nil > > >
+    typedef touchgfx::meta::TypeList< HardScreenView,
+            touchgfx::meta::TypeList< HardReadyScreenView,
+            touchgfx::meta::TypeList< MediumScreenView,
+            touchgfx::meta::TypeList< MediumReadyScreenView,
+            touchgfx::meta::TypeList< EasyScreenView,
+            touchgfx::meta::TypeList< EasyReadyScreenView,
+            touchgfx::meta::TypeList< EndScreenView,
+            touchgfx::meta::TypeList< StartScreenView,
+            touchgfx::meta::Nil > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -58,11 +72,15 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< Screen2Presenter,
-            touchgfx::meta::TypeList< Screen1Presenter,
-            touchgfx::meta::TypeList< Screen3Presenter,
-            touchgfx::meta::TypeList< Screen0Presenter,
-            touchgfx::meta::Nil > > >
+    typedef touchgfx::meta::TypeList< HardScreenPresenter,
+            touchgfx::meta::TypeList< HardReadyScreenPresenter,
+            touchgfx::meta::TypeList< MediumScreenPresenter,
+            touchgfx::meta::TypeList< MediumReadyScreenPresenter,
+            touchgfx::meta::TypeList< EasyScreenPresenter,
+            touchgfx::meta::TypeList< EasyReadyScreenPresenter,
+            touchgfx::meta::TypeList< EndScreenPresenter,
+            touchgfx::meta::TypeList< StartScreenPresenter,
+            touchgfx::meta::Nil > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -75,7 +93,8 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::Nil
+            touchgfx::meta::TypeList< WipeTransition<EAST>,
+            touchgfx::meta::Nil >
             > GeneratedTransitionTypes;
 
     /**
@@ -85,7 +104,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoScreen2ScreenNoTransition();
+        app.gotoEasyScreenScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

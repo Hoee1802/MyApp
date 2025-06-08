@@ -17,19 +17,49 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoScreen2ScreenNoTransition();
+        gotoEasyScreenScreenNoTransition();
     }
 
-    // Screen2
-    void gotoScreen2ScreenNoTransition();
+    // HardReadyScreen
+    void gotoHardReadyScreenScreenWipeTransitionEast();
+
+    // MediumReadyScreen
+    void gotoMediumReadyScreenScreenWipeTransitionEast();
+
+    // EasyScreen
+    void gotoEasyScreenScreenNoTransition();
+
+    // EasyReadyScreen
+    void gotoEasyReadyScreenScreenWipeTransitionEast();
+
+    // EndScreen
+    void gotoEndScreenScreenWipeTransitionEast();
+
+    // StartScreen
+    void gotoStartScreenScreenWipeTransitionEast();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // Screen2
-    void gotoScreen2ScreenNoTransitionImpl();
+    // HardReadyScreen
+    void gotoHardReadyScreenScreenWipeTransitionEastImpl();
+
+    // MediumReadyScreen
+    void gotoMediumReadyScreenScreenWipeTransitionEastImpl();
+
+    // EasyScreen
+    void gotoEasyScreenScreenNoTransitionImpl();
+
+    // EasyReadyScreen
+    void gotoEasyReadyScreenScreenWipeTransitionEastImpl();
+
+    // EndScreen
+    void gotoEndScreenScreenWipeTransitionEastImpl();
+
+    // StartScreen
+    void gotoStartScreenScreenWipeTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

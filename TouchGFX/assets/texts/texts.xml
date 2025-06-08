@@ -6,6 +6,141 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_BZJ5" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_1VJC" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_CTCW" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Ready!</Translation>
+      </Text>
+      <Text Id="__SingleUse_3G07" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Ready!</Translation>
+      </Text>
+      <Text Id="__SingleUse_6OW4" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player2</Translation>
+      </Text>
+      <Text Id="__SingleUse_1OW4" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player1</Translation>
+      </Text>
+      <Text Id="__SingleUse_IBVU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4U0Z" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CZGU" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_EB66" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_XYSD" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Ready!</Translation>
+      </Text>
+      <Text Id="__SingleUse_YQRD" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Ready!</Translation>
+      </Text>
+      <Text Id="__SingleUse_52TB" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player2</Translation>
+      </Text>
+      <Text Id="__SingleUse_LTO4" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player1</Translation>
+      </Text>
+      <Text Id="__SingleUse_AUJ6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZVKC" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_IZPF" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_5EQH" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_68VZ" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_PWVE" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_RVEZ" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">LET'S GO!</Translation>
+      </Text>
+      <Text Id="__SingleUse_FY8E" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player2</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z3TY" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player1</Translation>
+      </Text>
+      <Text Id="__SingleUse_OTAD" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UN9H" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JC87" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_J6NI" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_3639" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">LET'S GO!</Translation>
+      </Text>
+      <Text Id="__SingleUse_UJJ8" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player2</Translation>
+      </Text>
+      <Text Id="__SingleUse_V9P9" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player1</Translation>
+      </Text>
+      <Text Id="__SingleUse_ATHF" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KK9M" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JUZG" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_SPJ5" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">Are you sure?</Translation>
+      </Text>
+      <Text Id="__SingleUse_HFBB" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">LET'S GO!</Translation>
+      </Text>
+      <Text Id="__SingleUse_SRJD" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Ready!</Translation>
+      </Text>
+      <Text Id="__SingleUse_L9ZN" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Ready!</Translation>
+      </Text>
+      <Text Id="__SingleUse_8Q6F" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player2</Translation>
+      </Text>
+      <Text Id="__SingleUse_WA77" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player1</Translation>
+      </Text>
+      <Text Id="__SingleUse_4E54" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y8KC" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_OD39" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player2</Translation>
+      </Text>
+      <Text Id="__SingleUse_G2S8" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">player1</Translation>
+      </Text>
+      <Text Id="__SingleUse_NJHY" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_I1JY" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;score1&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_86XU" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">WINNER</Translation>
       </Text>
@@ -28,16 +163,7 @@
         <Translation Language="GB">EXIT</Translation>
       </Text>
       <Text Id="__SingleUse_9392" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">&lt;value&gt; win</Translation>
-      </Text>
-      <Text Id="__SingleUse_GGS0" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">&lt;score2&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_HGQ6" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">&lt;score1&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_0DT6" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Start</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
     </TextGroup>
   </Texts>
@@ -45,13 +171,13 @@
     <Typography Id="Default" Font="verdana.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Large" Font="comicz.ttf" Size="31" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="comicbd.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Typography_01" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="comicbd.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_01" Font="comicbd.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_02" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_03" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_04" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_05" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Typography_06" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_06" Font="comicbd.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_07" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_08" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_09" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
