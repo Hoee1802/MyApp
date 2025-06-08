@@ -24,7 +24,7 @@ Game Pingpong
 - Liệt kê module CPU/dev kit. Ví dụ ESP32 Dev Module, hoặc STM32F429-DISC.
 - Liệt kê các kit, module được sử dụng: ví dụ: stm32 cảm biến...
 
-## SO ĐỒ SCHEMATIC
+## SƠ ĐỒ SCHEMATIC
 
 _Cho biết cách nối dây, kết nối giữa các linh kiện_
 Ví dụ có thể liệt kê dạng bảng
@@ -36,7 +36,7 @@ Ví dụ có thể liệt kê dạng bảng
 |PE3|MQ3 SDA|
 
 hoặc dạng ảnh:\
-![image](https://github.com/user-attachments/assets/f15f7379-09bf-472a-b0d9-4de6d32a6ec0)
+![Sơ đồ Schematic](https://github.com/Hoee1802/MyApp/blob/long/schematic.PNG)
 
 hoặc bất cứ dạng nào thể hiện được cách đấu nối giữa các linh kiện
 
