@@ -22,6 +22,7 @@ EndScreenViewBase::EndScreenViewBase() :
     playagainButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_VTUE));
     playagainButton.setLabelColor(touchgfx::Color::getColorFromRGB(237, 241, 245));
     playagainButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    playagainButton.setAction(buttonCallback);
     add(playagainButton);
 
     playerwin.setXY(105, 68);
@@ -61,6 +62,13 @@ void EndScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& sr
     {
         //Interaction1
         //When exit clicked change screen to StartScreen
+        //Go to StartScreen with screen transition towards East
+        application().gotoStartScreenScreenWipeTransitionEast();
+    }
+    if (&src == &playagainButton)
+    {
+        //Interaction2
+        //When playagainButton clicked change screen to StartScreen
         //Go to StartScreen with screen transition towards East
         application().gotoStartScreenScreenWipeTransitionEast();
     }

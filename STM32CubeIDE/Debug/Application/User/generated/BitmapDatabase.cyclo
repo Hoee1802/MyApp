@@ -1,2 +1,2 @@
-D:/THNHUNG/MyApp/TouchGFX/generated/images/src/BitmapDatabase.cpp:21:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	1
-D:/THNHUNG/MyApp/TouchGFX/generated/images/src/BitmapDatabase.cpp:26:10:uint16_t BitmapDatabase::getInstanceSize()	1
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/generated/images/src/BitmapDatabase.cpp:31:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	1
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/generated/images/src/BitmapDatabase.cpp:36:10:uint16_t BitmapDatabase::getInstanceSize()	1

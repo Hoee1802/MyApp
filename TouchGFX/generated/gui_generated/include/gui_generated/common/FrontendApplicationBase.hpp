@@ -17,7 +17,7 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoEasyScreenScreenNoTransition();
+        gotoStartScreenScreenNoTransition();
     }
 
     // HardReadyScreen
@@ -26,9 +26,6 @@ public:
     // MediumReadyScreen
     void gotoMediumReadyScreenScreenWipeTransitionEast();
 
-    // EasyScreen
-    void gotoEasyScreenScreenNoTransition();
-
     // EasyReadyScreen
     void gotoEasyReadyScreenScreenWipeTransitionEast();
 
@@ -36,6 +33,8 @@ public:
     void gotoEndScreenScreenWipeTransitionEast();
 
     // StartScreen
+    void gotoStartScreenScreenNoTransition();
+
     void gotoStartScreenScreenWipeTransitionEast();
 
 protected:
@@ -49,9 +48,6 @@ protected:
     // MediumReadyScreen
     void gotoMediumReadyScreenScreenWipeTransitionEastImpl();
 
-    // EasyScreen
-    void gotoEasyScreenScreenNoTransitionImpl();
-
     // EasyReadyScreen
     void gotoEasyReadyScreenScreenWipeTransitionEastImpl();
 
@@ -59,6 +55,8 @@ protected:
     void gotoEndScreenScreenWipeTransitionEastImpl();
 
     // StartScreen
+    void gotoStartScreenScreenNoTransitionImpl();
+
     void gotoStartScreenScreenWipeTransitionEastImpl();
 };
 

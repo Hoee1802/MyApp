@@ -26,10 +26,10 @@ HardScreenViewBase::HardScreenViewBase() :
     add(box1);
 
     exit2.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_DOWN_20_20_FFFFFF_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_ARROW_CIRCLE_DOWN_20_20_FFFFFF_SVG_ID));
-    exit2.setIconXY(0, 0);
+    exit2.setIconXY(0, 27);
     exit2.setAlpha(175);
     exit2.setAction(flexButtonCallback);
-    exit2.setPosition(165, 211, 20, 20);
+    exit2.setPosition(165, 187, 20, 50);
     add(exit2);
 
     box2.setPosition(160, 0, 3, 240);
@@ -88,7 +88,7 @@ HardScreenViewBase::HardScreenViewBase() :
     exit1.setIconXY(0, 0);
     exit1.setAlpha(175);
     exit1.setAction(flexButtonCallback);
-    exit1.setPosition(139, 7, 20, 20);
+    exit1.setPosition(139, 7, 20, 50);
     add(exit1);
 
     start.setXY(93, 106);
@@ -107,31 +107,31 @@ HardScreenViewBase::HardScreenViewBase() :
     add(check1);
 
     no1.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CANCEL_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_20_20_E8F6FB_SVG_ID));
-    no1.setIconXY(0, 0);
+    no1.setIconXY(0, 16);
     no1.setAlpha(190);
     no1.setAction(flexButtonCallback);
-    no1.setPosition(62, 86, 20, 20);
+    no1.setPosition(62, 58, 40, 50);
     add(no1);
 
     no2.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CANCEL_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_20_20_E8F6FB_SVG_ID));
-    no2.setIconXY(0, 0);
+    no2.setIconXY(0, 15);
     no2.setAlpha(190);
     no2.setAction(flexButtonCallback);
-    no2.setPosition(241, 135, 20, 20);
+    no2.setPosition(239, 131, 40, 50);
     add(no2);
 
     yes1.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_IOS_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_IOS_20_20_E8F6FB_SVG_ID));
-    yes1.setIconXY(0, 0);
+    yes1.setIconXY(0, 15);
     yes1.setAlpha(190);
     yes1.setAction(flexButtonCallback);
-    yes1.setPosition(62, 135, 20, 20);
+    yes1.setPosition(62, 131, 40, 50);
     add(yes1);
 
     yes2.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_FORWARD_IOS_20_20_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_FORWARD_IOS_20_20_E8F6FB_SVG_ID));
-    yes2.setIconXY(0, 0);
+    yes2.setIconXY(0, 15);
     yes2.setAlpha(190);
     yes2.setAction(flexButtonCallback);
-    yes2.setPosition(241, 86, 20, 20);
+    yes2.setPosition(239, 58, 40, 50);
     add(yes2);
 
     check2.setXY(207, 69);

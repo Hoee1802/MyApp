@@ -1,0 +1,6 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/mediumscreen_screen/MediumScreenView.cpp:13:6:virtual void MediumScreenView::tearDownScreen()	0	static
+../../TouchGFX/gui/include/gui/mediumscreen_screen/MediumScreenView.hpp:11:13:MediumScreenView::~MediumScreenView()	8	static
+../../TouchGFX/gui/include/gui/mediumscreen_screen/MediumScreenView.hpp:11:13:virtual MediumScreenView::~MediumScreenView()	8	static
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/mediumscreen_screen/MediumScreenView.cpp:3:1:MediumScreenView::MediumScreenView()	8	static
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/mediumscreen_screen/MediumScreenView.cpp:8:6:virtual void MediumScreenView::setupScreen()	0	static

@@ -1,0 +1,6 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/mediumreadyscreen_screen/MediumReadyScreenView.cpp:13:6:virtual void MediumReadyScreenView::tearDownScreen()	1
+../../TouchGFX/gui/include/gui/mediumreadyscreen_screen/MediumReadyScreenView.hpp:11:13:MediumReadyScreenView::~MediumReadyScreenView()	1
+../../TouchGFX/gui/include/gui/mediumreadyscreen_screen/MediumReadyScreenView.hpp:11:13:virtual MediumReadyScreenView::~MediumReadyScreenView()	1
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/mediumreadyscreen_screen/MediumReadyScreenView.cpp:3:1:MediumReadyScreenView::MediumReadyScreenView()	1
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/mediumreadyscreen_screen/MediumReadyScreenView.cpp:8:6:virtual void MediumReadyScreenView::setupScreen()	1

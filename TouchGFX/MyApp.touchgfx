@@ -35,10 +35,9 @@
             "Type": "FlexButton",
             "Name": "exit2",
             "X": 165,
-            "Y": 211,
+            "Y": 187,
             "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
+            "Height": 50,
             "Alpha": 175,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
@@ -46,6 +45,7 @@
             "ButtonStyles": [
               {
                 "Type": "IconButtonStyle",
+                "Y": 27,
                 "IconReleased": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png",
                 "IconPressed": "__generated\\icon_theme_images_action_arrow_circle_down_20_20_FFFFFF.svg.png"
               }
@@ -188,8 +188,7 @@
             "X": 139,
             "Y": 7,
             "Width": 20,
-            "Height": 20,
-            "LockPosition": true,
+            "Height": 50,
             "Alpha": 175,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
@@ -240,9 +239,9 @@
             "Type": "FlexButton",
             "Name": "no1",
             "X": 62,
-            "Y": 86,
-            "Width": 20,
-            "Height": 20,
+            "Y": 58,
+            "Width": 40,
+            "Height": 50,
             "Alpha": 190,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
@@ -250,6 +249,7 @@
             "ButtonStyles": [
               {
                 "Type": "IconButtonStyle",
+                "Y": 16,
                 "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
                 "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
               }
@@ -258,10 +258,10 @@
           {
             "Type": "FlexButton",
             "Name": "no2",
-            "X": 241,
-            "Y": 135,
-            "Width": 20,
-            "Height": 20,
+            "X": 239,
+            "Y": 131,
+            "Width": 40,
+            "Height": 50,
             "Alpha": 190,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
@@ -269,6 +269,7 @@
             "ButtonStyles": [
               {
                 "Type": "IconButtonStyle",
+                "Y": 15,
                 "IconReleased": "__generated\\icon_theme_images_navigation_cancel_20_20_E8F6FB.svg.png",
                 "IconPressed": "__generated\\icon_theme_images_action_done_20_20_E8F6FB.svg.png"
               }
@@ -278,9 +279,9 @@
             "Type": "FlexButton",
             "Name": "yes1",
             "X": 62,
-            "Y": 135,
-            "Width": 20,
-            "Height": 20,
+            "Y": 131,
+            "Width": 40,
+            "Height": 50,
             "Alpha": 190,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
@@ -288,6 +289,7 @@
             "ButtonStyles": [
               {
                 "Type": "IconButtonStyle",
+                "Y": 15,
                 "IconReleased": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png",
                 "IconPressed": "__generated\\icon_theme_images_navigation_arrow_back_ios_20_20_E8F6FB.svg.png"
               }
@@ -296,10 +298,10 @@
           {
             "Type": "FlexButton",
             "Name": "yes2",
-            "X": 241,
-            "Y": 86,
-            "Width": 20,
-            "Height": 20,
+            "X": 239,
+            "Y": 58,
+            "Width": 40,
+            "Height": 50,
             "Alpha": 190,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
@@ -307,6 +309,7 @@
             "ButtonStyles": [
               {
                 "Type": "IconButtonStyle",
+                "Y": 15,
                 "IconReleased": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png",
                 "IconPressed": "__generated\\icon_theme_images_navigation_arrow_forward_ios_20_20_E8F6FB.svg.png"
               }
@@ -3963,6 +3966,20 @@
               "ScreenTransitionDirection": "East",
               "ActionComponent": "StartScreen"
             }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "playagainButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionWipe",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "StartScreen"
+            }
           }
         ]
       },
@@ -4322,7 +4339,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "EasyScreen",
+    "StartupScreenName": "StartScreen",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

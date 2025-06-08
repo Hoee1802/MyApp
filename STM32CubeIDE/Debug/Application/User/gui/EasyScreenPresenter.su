@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/easyscreen_screen/EasyScreenPresenter.hpp:28:13:EasyScreenPresenter::~EasyScreenPresenter()	0	static
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/easyscreen_screen/EasyScreenPresenter.cpp:10:6:virtual void EasyScreenPresenter::activate()	0	static
+../../TouchGFX/gui/include/gui/easyscreen_screen/EasyScreenPresenter.hpp:28:13:virtual EasyScreenPresenter::~EasyScreenPresenter()	8	static
+../../TouchGFX/gui/include/gui/easyscreen_screen/EasyScreenPresenter.hpp:28:13:virtual void* EasyScreenPresenter::_ZThn4_N19EasyScreenPresenterD1Ev()	0	static
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/easyscreen_screen/EasyScreenPresenter.cpp:4:1:EasyScreenPresenter::EasyScreenPresenter(EasyScreenView&)	0	static

@@ -1,3 +1,3 @@
-../../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:29:7:ApplicationFontProvider::~ApplicationFontProvider()	1
-../../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:29:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	1
-D:/THNHUNG/MyApp/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp:8:17:virtual touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId)	4
+../../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:49:7:ApplicationFontProvider::~ApplicationFontProvider()	1
+D:/henhung/project/BTL-nhung/MyApp/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp:8:17:virtual touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId)	14
+../../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:49:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	1
