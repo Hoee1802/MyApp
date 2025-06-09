@@ -437,7 +437,7 @@
           {
             "Type": "Box",
             "Name": "paddle2",
-            "X": 286,
+            "X": 287,
             "Y": 110,
             "Width": 5,
             "Height": 20,
@@ -541,7 +541,7 @@
           {
             "Type": "BoxWithBorder",
             "Name": "goal2",
-            "X": 302,
+            "X": 303,
             "Y": 60,
             "Width": 15,
             "Height": 120,
@@ -600,42 +600,6 @@
         "Name": "HardReadyScreen",
         "CanvasBufferSize": 4800,
         "Components": [
-          {
-            "Type": "TextArea",
-            "Name": "counter2",
-            "X": 245,
-            "Y": 111,
-            "Width": 29,
-            "Height": 17,
-            "TextId": "__SingleUse_WFLF",
-            "TextRotation": "270",
-            "Color": {
-              "Red": 222,
-              "Green": 171,
-              "Blue": 95
-            },
-            "Alpha": 210,
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
-            "Name": "counter1",
-            "X": 46,
-            "Y": 111,
-            "Width": 29,
-            "Height": 17,
-            "TextId": "__SingleUse_7Q96",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 222,
-              "Green": 171,
-              "Blue": 95
-            },
-            "Alpha": 210,
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
           {
             "Type": "Image",
             "Name": "image2_1",
@@ -706,7 +670,7 @@
           {
             "Type": "Box",
             "Name": "paddle1",
-            "X": 35,
+            "X": 26,
             "Y": 110,
             "Width": 5,
             "Height": 20,
@@ -720,7 +684,7 @@
           {
             "Type": "Box",
             "Name": "paddle2",
-            "X": 282,
+            "X": 288,
             "Y": 110,
             "Width": 5,
             "Height": 20,
@@ -804,6 +768,28 @@
             "Alpha": 60
           },
           {
+            "Type": "TextArea",
+            "Name": "counter1",
+            "X": 46,
+            "Y": 111,
+            "Width": 29,
+            "Height": 17,
+            "TextId": "__SingleUse_7Q96",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 222,
+              "Green": 171,
+              "Blue": 95
+            },
+            "Alpha": 210,
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "counter3Buffer",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
             "Type": "Image",
             "Name": "image1",
             "X": 56,
@@ -830,6 +816,28 @@
             "RelativeFilename": "Untitled6.png"
           },
           {
+            "Type": "TextArea",
+            "Name": "counter2",
+            "X": 245,
+            "Y": 111,
+            "Width": 29,
+            "Height": 17,
+            "TextId": "__SingleUse_WFLF",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 222,
+              "Green": 171,
+              "Blue": 95
+            },
+            "Alpha": 210,
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "counter3Buffer",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
             "Type": "Image",
             "Name": "image2_2",
             "X": 223,
@@ -839,7 +847,20 @@
             "RelativeFilename": "Untitled6.png"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 180
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "HardScreen"
+            }
+          }
+        ]
       },
       {
         "Name": "MediumScreen",
@@ -1174,7 +1195,7 @@
             "Type": "TextArea",
             "Name": "counter1",
             "X": 53,
-            "Y": 111,
+            "Y": 113,
             "Width": 29,
             "Height": 17,
             "TextId": "__SingleUse_MH9F",
@@ -1186,7 +1207,11 @@
             },
             "Alpha": 210,
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "counter2Buffer",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "BoxWithBorder",
@@ -1244,10 +1269,27 @@
             },
             "Alpha": 210,
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "counter2Buffer",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 180
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MediumScreen"
+            }
+          }
+        ]
       },
       {
         "Name": "EasyScreen",
@@ -1546,7 +1588,7 @@
             "Type": "TextArea",
             "Name": "counter1",
             "X": 53,
-            "Y": 111,
+            "Y": 112,
             "Width": 29,
             "Height": 17,
             "TextId": "__SingleUse_HVEB",
@@ -1558,7 +1600,11 @@
             },
             "Alpha": 210,
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "counter1Buffer",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -1576,13 +1622,25 @@
             },
             "Alpha": 210,
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "counter1Buffer",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
-        "Interactions": [],
-        "CustomActions": [
+        "Interactions": [
           {
-            "Name": "action1"
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 180
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "EasyScreen"
+            }
           }
         ]
       },

@@ -14,8 +14,8 @@ public:
     virtual void handleTickEvent();
 	virtual void updateCounter(int value); // Hàm cập nhật đếm ngược
 protected:
-	int countdownValue;
-	int tickCounter;
+	//int countdownValue;
+	int tickCounter=180;
 };
 
 #endif // EASYREADYSCREENVIEW_HPP

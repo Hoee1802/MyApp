@@ -6,11 +6,20 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="counter2Buffer" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="counter3Buffer" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="counter1Buffer" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">3</Translation>
+      </Text>
       <Text Id="__SingleUse_WFLF" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;%d&gt;</Translation>
+        <Translation Language="GB">&lt;%s&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_7Q96" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;%d&gt;</Translation>
+        <Translation Language="GB">&lt;%s&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_SJ6Y" Alignment="Left" TypographyId="Typography_06">
         <Translation Language="GB">player2</Translation>
@@ -19,10 +28,10 @@
         <Translation Language="GB">player1</Translation>
       </Text>
       <Text Id="__SingleUse_CZR5" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;%d&gt;</Translation>
+        <Translation Language="GB">&lt;%s&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_MH9F" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;%d&gt;</Translation>
+        <Translation Language="GB">&lt;%s&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_CWXV" Alignment="Left" TypographyId="Typography_06">
         <Translation Language="GB">player2</Translation>
@@ -34,10 +43,10 @@
         <Translation Language="GB">player2</Translation>
       </Text>
       <Text Id="__SingleUse_WSW0" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;%d&gt;</Translation>
+        <Translation Language="GB">&lt;%s&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_HVEB" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;%d&gt;</Translation>
+        <Translation Language="GB">&lt;%s&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_1OW4" Alignment="Left" TypographyId="Typography_06">
         <Translation Language="GB">player1</Translation>
@@ -109,7 +118,7 @@
     <Typography Id="Large" Font="comicz.ttf" Size="31" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="comicbd.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_00" Font="comicbd.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Typography_01" Font="comicbd.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_01" Font="comicbd.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789" />
     <Typography Id="Typography_02" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_03" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_04" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />

@@ -6,7 +6,8 @@
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-MediumReadyScreenViewBase::MediumReadyScreenViewBase()
+MediumReadyScreenViewBase::MediumReadyScreenViewBase() :
+    frameCountInteraction1Interval(0)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
     
@@ -62,10 +63,13 @@ MediumReadyScreenViewBase::MediumReadyScreenViewBase()
     player2.setAlpha(190);
     add(player2);
 
-    counter1.setXY(53, 111);
+    counter1.setXY(53, 113);
     counter1.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
     counter1.setLinespacing(0);
     counter1.setRotation(touchgfx::TEXT_ROTATE_90);
+    Unicode::snprintf(counter1Buffer, COUNTER1_SIZE, "%s", touchgfx::TypedText(T_COUNTER2BUFFER).getText());
+    counter1.setWildcard(counter1Buffer);
+    counter1.resizeToCurrentText();
     counter1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MH9F));
     counter1.setAlpha(210);
     add(counter1);
@@ -88,6 +92,9 @@ MediumReadyScreenViewBase::MediumReadyScreenViewBase()
     counter2.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
     counter2.setLinespacing(0);
     counter2.setRotation(touchgfx::TEXT_ROTATE_270);
+    Unicode::snprintf(counter2Buffer, COUNTER2_SIZE, "%s", touchgfx::TypedText(T_COUNTER2BUFFER).getText());
+    counter2.setWildcard(counter2Buffer);
+    counter2.resizeToCurrentText();
     counter2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CZR5));
     counter2.setAlpha(210);
     add(counter2);
@@ -101,4 +108,17 @@ MediumReadyScreenViewBase::~MediumReadyScreenViewBase()
 void MediumReadyScreenViewBase::setupScreen()
 {
 
+}
+
+void MediumReadyScreenViewBase::handleTickEvent()
+{
+    frameCountInteraction1Interval++;
+    if(frameCountInteraction1Interval == TICK_INTERACTION1_INTERVAL)
+    {
+        //Interaction1
+        //When every N tick change screen to MediumScreen
+        //Go to MediumScreen with no screen transition
+        application().gotoMediumScreenScreenNoTransition();
+        frameCountInteraction1Interval = 0;
+    }
 }

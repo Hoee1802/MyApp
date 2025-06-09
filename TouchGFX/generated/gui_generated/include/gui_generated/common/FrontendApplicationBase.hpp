@@ -25,11 +25,20 @@ public:
 
     void gotoStartScreenScreenWipeTransitionEast();
 
+    // HardScreen
+    void gotoHardScreenScreenNoTransition();
+
     // HardReadyScreen
     void gotoHardReadyScreenScreenWipeTransitionEast();
 
+    // MediumScreen
+    void gotoMediumScreenScreenNoTransition();
+
     // MediumReadyScreen
     void gotoMediumReadyScreenScreenWipeTransitionEast();
+
+    // EasyScreen
+    void gotoEasyScreenScreenNoTransition();
 
     // EasyReadyScreen
     void gotoEasyReadyScreenScreenWipeTransitionEast();
@@ -44,11 +53,20 @@ protected:
 
     void gotoStartScreenScreenWipeTransitionEastImpl();
 
+    // HardScreen
+    void gotoHardScreenScreenNoTransitionImpl();
+
     // HardReadyScreen
     void gotoHardReadyScreenScreenWipeTransitionEastImpl();
 
+    // MediumScreen
+    void gotoMediumScreenScreenNoTransitionImpl();
+
     // MediumReadyScreen
     void gotoMediumReadyScreenScreenWipeTransitionEastImpl();
+
+    // EasyScreen
+    void gotoEasyScreenScreenNoTransitionImpl();
 
     // EasyReadyScreen
     void gotoEasyReadyScreenScreenWipeTransitionEastImpl();

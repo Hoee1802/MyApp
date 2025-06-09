@@ -21,6 +21,7 @@ public:
     MediumReadyScreenViewBase();
     virtual ~MediumReadyScreenViewBase();
     virtual void setupScreen();
+    virtual void handleTickEvent();
 
 protected:
     FrontendApplication& application() {
@@ -45,6 +46,14 @@ protected:
     touchgfx::BoxWithBorder goal2;
     touchgfx::TextAreaWithOneWildcard counter2;
 
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t COUNTER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar counter1Buffer[COUNTER1_SIZE];
+    static const uint16_t COUNTER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar counter2Buffer[COUNTER2_SIZE];
+
 private:
 
     /*
@@ -52,6 +61,12 @@ private:
      */
     static const uint32_t CANVAS_BUFFER_SIZE = 4800;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
+
+    /*
+     * Tick Counter Declarations
+     */
+    static const uint32_t TICK_INTERACTION1_INTERVAL = 180;
+    uint32_t frameCountInteraction1Interval;
 
 };
 

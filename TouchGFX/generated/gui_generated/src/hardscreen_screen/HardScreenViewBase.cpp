@@ -45,7 +45,7 @@ HardScreenViewBase::HardScreenViewBase()
     paddle1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle1);
 
-    paddle2.setPosition(286, 110, 5, 20);
+    paddle2.setPosition(287, 110, 5, 20);
     paddle2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle2);
 
@@ -86,7 +86,7 @@ HardScreenViewBase::HardScreenViewBase()
     goal1.setAlpha(60);
     add(goal1);
 
-    goal2.setPosition(302, 60, 15, 120);
+    goal2.setPosition(303, 60, 15, 120);
     goal2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     goal2.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
     goal2.setBorderSize(3);

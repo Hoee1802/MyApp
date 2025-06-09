@@ -1,5 +1,5 @@
 ../../TouchGFX/gui/include/gui/mediumscreen_screen/MediumScreenPresenter.hpp:28:13:MediumScreenPresenter::~MediumScreenPresenter()	0	static
-D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/mediumscreen_screen/MediumScreenPresenter.cpp:10:6:virtual void MediumScreenPresenter::activate()	0	static
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/mediumscreen_screen/MediumScreenPresenter.cpp:10:6:virtual void MediumScreenPresenter::activate()	0	static
 ../../TouchGFX/gui/include/gui/mediumscreen_screen/MediumScreenPresenter.hpp:28:13:virtual MediumScreenPresenter::~MediumScreenPresenter()	8	static
 ../../TouchGFX/gui/include/gui/mediumscreen_screen/MediumScreenPresenter.hpp:28:13:virtual void* MediumScreenPresenter::_ZThn4_N21MediumScreenPresenterD1Ev()	0	static
-D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/mediumscreen_screen/MediumScreenPresenter.cpp:4:1:MediumScreenPresenter::MediumScreenPresenter(MediumScreenView&)	0	static
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/mediumscreen_screen/MediumScreenPresenter.cpp:4:1:MediumScreenPresenter::MediumScreenPresenter(MediumScreenView&)	0	static

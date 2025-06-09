@@ -4,32 +4,17 @@
 #include <gui_generated/hardreadyscreen_screen/HardReadyScreenViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
-HardReadyScreenViewBase::HardReadyScreenViewBase()
+HardReadyScreenViewBase::HardReadyScreenViewBase() :
+    frameCountInteraction1Interval(0)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
     
     __background.setPosition(0, 0, 320, 240);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
-
-    counter2.setXY(245, 111);
-    counter2.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
-    counter2.setLinespacing(0);
-    counter2.setRotation(touchgfx::TEXT_ROTATE_270);
-    counter2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WFLF));
-    counter2.setAlpha(210);
-    add(counter2);
-
-    counter1.setXY(46, 111);
-    counter1.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
-    counter1.setLinespacing(0);
-    counter1.setRotation(touchgfx::TEXT_ROTATE_90);
-    counter1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7Q96));
-    counter1.setAlpha(210);
-    add(counter1);
 
     image2_1.setXY(56, 0);
     image2_1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
@@ -57,11 +42,11 @@ HardReadyScreenViewBase::HardReadyScreenViewBase()
     ball.setPainter(ballPainter);
     add(ball);
 
-    paddle1.setPosition(35, 110, 5, 20);
+    paddle1.setPosition(26, 110, 5, 20);
     paddle1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle1);
 
-    paddle2.setPosition(282, 110, 5, 20);
+    paddle2.setPosition(288, 110, 5, 20);
     paddle2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle2);
 
@@ -95,6 +80,17 @@ HardReadyScreenViewBase::HardReadyScreenViewBase()
     goal2.setAlpha(60);
     add(goal2);
 
+    counter1.setXY(46, 111);
+    counter1.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
+    counter1.setLinespacing(0);
+    counter1.setRotation(touchgfx::TEXT_ROTATE_90);
+    Unicode::snprintf(counter1Buffer, COUNTER1_SIZE, "%s", touchgfx::TypedText(T_COUNTER3BUFFER).getText());
+    counter1.setWildcard(counter1Buffer);
+    counter1.resizeToCurrentText();
+    counter1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7Q96));
+    counter1.setAlpha(210);
+    add(counter1);
+
     image1.setXY(56, 230);
     image1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
     add(image1);
@@ -106,6 +102,17 @@ HardReadyScreenViewBase::HardReadyScreenViewBase()
     image2.setXY(56, 0);
     image2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
     add(image2);
+
+    counter2.setXY(245, 111);
+    counter2.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
+    counter2.setLinespacing(0);
+    counter2.setRotation(touchgfx::TEXT_ROTATE_270);
+    Unicode::snprintf(counter2Buffer, COUNTER2_SIZE, "%s", touchgfx::TypedText(T_COUNTER3BUFFER).getText());
+    counter2.setWildcard(counter2Buffer);
+    counter2.resizeToCurrentText();
+    counter2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WFLF));
+    counter2.setAlpha(210);
+    add(counter2);
 
     image2_2.setXY(223, 2);
     image2_2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
@@ -120,4 +127,17 @@ HardReadyScreenViewBase::~HardReadyScreenViewBase()
 void HardReadyScreenViewBase::setupScreen()
 {
 
+}
+
+void HardReadyScreenViewBase::handleTickEvent()
+{
+    frameCountInteraction1Interval++;
+    if(frameCountInteraction1Interval == TICK_INTERACTION1_INTERVAL)
+    {
+        //Interaction1
+        //When every N tick change screen to HardScreen
+        //Go to HardScreen with no screen transition
+        application().gotoHardScreenScreenNoTransition();
+        frameCountInteraction1Interval = 0;
+    }
 }

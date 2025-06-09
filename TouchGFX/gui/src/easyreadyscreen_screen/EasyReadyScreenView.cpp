@@ -3,14 +3,13 @@
 EasyReadyScreenView::EasyReadyScreenView()
 
 {
-	countdownValue = 3; // Giá trị đếm ngược ban đầu
-	tickCounter = 0;     // Khởi tạo tickCounter
+
 }
 
 void EasyReadyScreenView::setupScreen()
 {
     EasyReadyScreenViewBase::setupScreen();
-    updateCounter(countdownValue);
+    updateCounter(tickCounter);
 }
 
 void EasyReadyScreenView::tearDownScreen()
@@ -19,26 +18,33 @@ void EasyReadyScreenView::tearDownScreen()
 }
 void EasyReadyScreenView::handleTickEvent()
 {
-	tickCounter++;
-	    // Cập nhật đếm ngược mỗi 1 giây (giả sử 60 tick ~ 1 giây)
-	    if (tickCounter >= 60)
+
+	    if (tickCounter > 0)
 	    {
-	        countdownValue--;
-	        updateCounter(countdownValue);
-	        tickCounter = 0; // Reset tickCounter
-	    }
-	    if(countdownValue<=0){
-	    	application().goto
+	        tickCounter--;
+	        updateCounter(tickCounter);
+
+	    }else{
+	    	application().gotoEasyScreenScreenNoTransition();
 	    }
 
+}
 void EasyReadyScreenView::updateCounter(int value)
 {
-    countdownValue = value;
-    // Cập nhật giá trị cho textCounter1
-    Unicode::snprintf(counter1Buffer, COUNTER1_SIZE, "%d", countdownValue);
-    counter1.invalidate(); // Yêu cầu vẽ lại textCounter1
+	 	int countdownDisplay = 3;
+	    if (value > 120)
+	        countdownDisplay = 3;
+	    else if (value > 60)
+	        countdownDisplay = 2;
+	    else if (value > 0)
+	        countdownDisplay = 1;
+	    else
+	        countdownDisplay = 0;
 
-    // Cập nhật giá trị cho textCounter2
-    Unicode::snprintf(counter2Buffer, COUNTER2_SIZE, "%d", countdownValue);
-    counter2.invalidate(); // Yêu cầu vẽ lại textCounter2
+	    Unicode::snprintf(counter1Buffer, COUNTER1_SIZE, "%d", countdownDisplay);
+	    Unicode::snprintf(counter2Buffer, COUNTER2_SIZE, "%d", countdownDisplay);
+	    counter1.setWildcard(counter1Buffer);
+	    counter2.setWildcard(counter2Buffer);
+	    counter1.invalidate();  // Vẽ lại TextArea
+	    counter2.invalidate();  // Vẽ lại TextArea
 }

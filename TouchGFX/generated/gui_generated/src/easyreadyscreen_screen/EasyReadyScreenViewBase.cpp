@@ -6,7 +6,8 @@
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-EasyReadyScreenViewBase::EasyReadyScreenViewBase()
+EasyReadyScreenViewBase::EasyReadyScreenViewBase() :
+    frameCountInteraction1Interval(0)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
     
@@ -62,10 +63,13 @@ EasyReadyScreenViewBase::EasyReadyScreenViewBase()
     player2.setAlpha(190);
     add(player2);
 
-    counter1.setXY(53, 111);
+    counter1.setXY(53, 112);
     counter1.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
     counter1.setLinespacing(0);
     counter1.setRotation(touchgfx::TEXT_ROTATE_90);
+    Unicode::snprintf(counter1Buffer, COUNTER1_SIZE, "%s", touchgfx::TypedText(T_COUNTER1BUFFER).getText());
+    counter1.setWildcard(counter1Buffer);
+    counter1.resizeToCurrentText();
     counter1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HVEB));
     counter1.setAlpha(210);
     add(counter1);
@@ -74,6 +78,9 @@ EasyReadyScreenViewBase::EasyReadyScreenViewBase()
     counter2.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
     counter2.setLinespacing(0);
     counter2.setRotation(touchgfx::TEXT_ROTATE_270);
+    Unicode::snprintf(counter2Buffer, COUNTER2_SIZE, "%s", touchgfx::TypedText(T_COUNTER1BUFFER).getText());
+    counter2.setWildcard(counter2Buffer);
+    counter2.resizeToCurrentText();
     counter2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WSW0));
     counter2.setAlpha(210);
     add(counter2);
@@ -87,4 +94,17 @@ EasyReadyScreenViewBase::~EasyReadyScreenViewBase()
 void EasyReadyScreenViewBase::setupScreen()
 {
 
+}
+
+void EasyReadyScreenViewBase::handleTickEvent()
+{
+    frameCountInteraction1Interval++;
+    if(frameCountInteraction1Interval == TICK_INTERACTION1_INTERVAL)
+    {
+        //Interaction1
+        //When every N tick change screen to EasyScreen
+        //Go to EasyScreen with no screen transition
+        application().gotoEasyScreenScreenNoTransition();
+        frameCountInteraction1Interval = 0;
+    }
 }

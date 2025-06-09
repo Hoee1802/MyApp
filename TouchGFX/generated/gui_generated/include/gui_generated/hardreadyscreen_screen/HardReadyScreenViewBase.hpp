@@ -8,13 +8,13 @@
 #include <mvp/View.hpp>
 #include <gui/hardreadyscreen_screen/HardReadyScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/mixins/Draggable.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class HardReadyScreenViewBase : public touchgfx::View<HardReadyScreenPresenter>
 {
@@ -22,6 +22,7 @@ public:
     HardReadyScreenViewBase();
     virtual ~HardReadyScreenViewBase();
     virtual void setupScreen();
+    virtual void handleTickEvent();
 
 protected:
     FrontendApplication& application() {
@@ -32,8 +33,6 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::TextAreaWithOneWildcard counter2;
-    touchgfx::TextAreaWithOneWildcard counter1;
     touchgfx::Image image2_1;
     touchgfx::Box box3;
     touchgfx::Box box1;
@@ -46,10 +45,20 @@ protected:
     touchgfx::TextArea player2;
     touchgfx::BoxWithBorder goal1;
     touchgfx::BoxWithBorder goal2;
+    touchgfx::TextAreaWithOneWildcard counter1;
     touchgfx::Image image1;
     touchgfx::Image image1_1;
     touchgfx::Image image2;
+    touchgfx::TextAreaWithOneWildcard counter2;
     touchgfx::Image image2_2;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t COUNTER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar counter1Buffer[COUNTER1_SIZE];
+    static const uint16_t COUNTER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar counter2Buffer[COUNTER2_SIZE];
 
 private:
 
@@ -58,6 +67,12 @@ private:
      */
     static const uint32_t CANVAS_BUFFER_SIZE = 4800;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
+
+    /*
+     * Tick Counter Declarations
+     */
+    static const uint32_t TICK_INTERACTION1_INTERVAL = 180;
+    uint32_t frameCountInteraction1Interval;
 
 };
 

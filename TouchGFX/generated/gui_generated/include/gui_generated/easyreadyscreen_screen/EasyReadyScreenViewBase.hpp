@@ -20,15 +20,7 @@ public:
     EasyReadyScreenViewBase();
     virtual ~EasyReadyScreenViewBase();
     virtual void setupScreen();
-
-    /*
-     * Custom Actions
-     */
-    virtual void action1()
-    {
-        // Override and implement this function in Screen1
-    }
-    
+    virtual void handleTickEvent();
 
 protected:
     FrontendApplication& application() {
@@ -51,6 +43,14 @@ protected:
     touchgfx::TextAreaWithOneWildcard counter1;
     touchgfx::TextAreaWithOneWildcard counter2;
 
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t COUNTER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar counter1Buffer[COUNTER1_SIZE];
+    static const uint16_t COUNTER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar counter2Buffer[COUNTER2_SIZE];
+
 private:
 
     /*
@@ -58,6 +58,12 @@ private:
      */
     static const uint32_t CANVAS_BUFFER_SIZE = 4800;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
+
+    /*
+     * Tick Counter Declarations
+     */
+    static const uint32_t TICK_INTERACTION1_INTERVAL = 180;
+    uint32_t frameCountInteraction1Interval;
 
 };
 

@@ -1,5 +1,5 @@
 ../../TouchGFX/gui/include/gui/endscreen_screen/EndScreenPresenter.hpp:28:13:EndScreenPresenter::~EndScreenPresenter()	1
-D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/endscreen_screen/EndScreenPresenter.cpp:10:6:virtual void EndScreenPresenter::activate()	1
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/endscreen_screen/EndScreenPresenter.cpp:10:6:virtual void EndScreenPresenter::activate()	1
 ../../TouchGFX/gui/include/gui/endscreen_screen/EndScreenPresenter.hpp:28:13:virtual EndScreenPresenter::~EndScreenPresenter()	1
 ../../TouchGFX/gui/include/gui/endscreen_screen/EndScreenPresenter.hpp:28:13:virtual void* EndScreenPresenter::_ZThn4_N18EndScreenPresenterD1Ev()	1
-D:/henhung/project/BTL-nhung/MyApp/TouchGFX/gui/src/endscreen_screen/EndScreenPresenter.cpp:4:1:EndScreenPresenter::EndScreenPresenter(EndScreenView&)	1
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/endscreen_screen/EndScreenPresenter.cpp:4:1:EndScreenPresenter::EndScreenPresenter(EndScreenView&)	1
