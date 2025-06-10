@@ -14,7 +14,6 @@ Game Pingpong
   - Có thể bổ sung hiệu ứng âm thanh (buzzer) hoặc đèn báo khi có điểm/va chạm (nếu có linh kiện hỗ trợ).
 - **Ý nghĩa:** Dự án giúp sinh viên rèn luyện kỹ năng lập trình nhúng, xử lý ngoại vi (ADC cho joystick, giao tiếp màn hình, ngắt...), thiết kế giao diện điều khiển thực tế, và làm việc nhóm.
 
-
 - Ảnh chụp minh họa:\
   ![Ảnh minh họa](https://soict.hust.edu.vn/wp-content/uploads/logo-soict-hust-1-1024x416.png)
 
@@ -31,67 +30,60 @@ Game Pingpong
 
 ## MÔI TRƯỜNG HOẠT ĐỘNG
 
-- **Module CPU / Dev kit sử dụng:**  
+- **Module CPU / Dev kit sử dụng:**
+
   - STM32F429ZIT6 (ARM Cortex-M4 32-bit)
 
 - **Các kit, module, linh kiện sử dụng:**
+
   - 2 x Joystick analog (điều khiển hai vợt trong game)
   - Dây kết nối Dupont
 
 - **Sơ đồ kết nối cơ bản:**
 
 | STM32F429ZIT6 | Joystick 1 | Joystick 2 |
-|:-------------:|:----------:|:----------:|
-| 3V3           | 5V         | 5V         |
-| GND           | GND        | GND        |
-| PA2           | VRx        |            |
-| PA3           | VRy        |            |
-| PB1           | SW         |            |
-| PA0           |            | VRx        |
-| PA1           |            | VRy        |
-| PB0           |            | SW         |
+| :-----------: | :--------: | :--------: |
+|      3V3      |     5V     |     5V     |
+|      GND      |    GND     |    GND     |
+|      PA2      |    VRx     |            |
+|      PA3      |    VRy     |            |
+|      PB1      |     SW     |            |
+|      PA0      |            |    VRx     |
+|      PA1      |            |    VRy     |
+|      PB0      |            |     SW     |
 
 - **Chức năng từng module:**
   - **STM32F429ZIT6:** Xử lý tín hiệu, đọc dữ liệu joystick, điều khiển logic game ping pong hai người chơi.
   - **Joystick:** Nhập tín hiệu điều khiển từ người chơi (di chuyển vợt).
 
-
-
 ## SƠ ĐỒ SCHEMATIC
-
-_Cho biết cách nối dây, kết nối giữa các linh kiện_
-Ví dụ có thể liệt kê dạng bảng
-|STM32F429|Module ngoại vi|
-|--|--|
-|PA0|Nút bấm điều khiển trên board|
-|PG13|Led báo trên board|
-|PE2|MQ3 SCK|
-|PE3|MQ3 SDA|
 
 ![Sơ đồ Schematic](https://github.com/Hoee1802/MyApp/blob/long/schematic.PNG)
 
 ### TÍCH HỢP HỆ THỐNG
 
 #### **Thành phần phần cứng và vai trò**
+
 - **STM32F429ZIT6**: Vi điều khiển trung tâm, tiếp nhận tín hiệu từ joystick, xử lý thuật toán game và xuất dữ liệu hiển thị.
 - **Joystick x2**: Thiết bị nhập liệu, mỗi joystick điều khiển một vợt, cho phép 2 người chơi tương tác với trò chơi.
-- **Màn hình OLED/LCD** *(nếu có)*: Hiển thị trạng thái trò chơi: vị trí bóng, vị trí vợt, điểm số của từng người chơi.
-- **Buzzer hoặc LED báo hiệu** *(nếu có)*: Tạo hiệu ứng âm thanh/ánh sáng khi có sự kiện đặc biệt như ghi điểm, va chạm.
+- **Màn hình OLED/LCD** _(nếu có)_: Hiển thị trạng thái trò chơi: vị trí bóng, vị trí vợt, điểm số của từng người chơi.
+- **Buzzer hoặc LED báo hiệu** _(nếu có)_: Tạo hiệu ứng âm thanh/ánh sáng khi có sự kiện đặc biệt như ghi điểm, va chạm.
 
 #### **Thành phần phần mềm và vai trò**
-- **Firmware (chạy trên STM32)**: 
+
+- **Firmware (chạy trên STM32)**:
   - Nhận và xử lý tín hiệu analog từ 2 joystick.
   - Thực hiện thuật toán di chuyển bóng, phát hiện va chạm, cập nhật điểm số.
   - Điều khiển giao diện hiển thị (OLED/LCD).
   - Xử lý các hiệu ứng phụ như âm thanh, ánh sáng (nếu có).
-- **Giao diện người dùng**:  
+- **Giao diện người dùng**:
   - Được hiển thị trực tiếp trên màn hình nối với STM32.
   - Không sử dụng phần mềm ngoài, mọi thao tác điều khiển và hiển thị được thực hiện toàn bộ trên vi điều khiển và các module ngoại vi.
 
 #### **Lưu ý**
+
 - Hệ thống hoạt động hoàn toàn **độc lập, không cần kết nối mạng, không có máy chủ** hay các thành phần IoT phức tạp.
 - Tất cả các chức năng từ nhập liệu, xử lý đến hiển thị đều nằm trên **STM32F429ZIT6** và các module ngoại vi kèm theo.
-
 
 ### ĐẶC TẢ HÀM
 
