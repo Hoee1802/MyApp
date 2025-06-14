@@ -29,14 +29,14 @@
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<HardScreenPresenter>::~View()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/Draggable.hpp:32:7:touchgfx::Draggable<touchgfx::Box>::~Draggable()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
-D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/hardscreen_screen/HardScreenViewBase.cpp:118:6:virtual void HardScreenViewBase::setupScreen()	0	static
+D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/hardscreen_screen/HardScreenViewBase.cpp:124:6:virtual void HardScreenViewBase::setupScreen()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<HardScreenPresenter>::~View()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/Draggable.hpp:32:7:virtual touchgfx::Draggable<touchgfx::Box>::~Draggable()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/Draggable.hpp:48:18:void touchgfx::Draggable<T>::handleDragEvent(const touchgfx::DragEvent&) [with T = touchgfx::Box]	0	static
-D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/hardscreen_screen/HardScreenViewBase.cpp:113:1:HardScreenViewBase::~HardScreenViewBase()	8	static
-D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/hardscreen_screen/HardScreenViewBase.cpp:113:1:virtual HardScreenViewBase::~HardScreenViewBase()	8	static
+D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/hardscreen_screen/HardScreenViewBase.cpp:119:1:HardScreenViewBase::~HardScreenViewBase()	8	static
+D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/hardscreen_screen/HardScreenViewBase.cpp:119:1:virtual HardScreenViewBase::~HardScreenViewBase()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static

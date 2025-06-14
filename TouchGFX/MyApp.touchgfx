@@ -423,7 +423,7 @@
           {
             "Type": "Box",
             "Name": "paddle1",
-            "X": 29,
+            "X": 18,
             "Y": 110,
             "Width": 5,
             "Height": 20,
@@ -437,7 +437,7 @@
           {
             "Type": "Box",
             "Name": "paddle2",
-            "X": 287,
+            "X": 296,
             "Y": 110,
             "Width": 5,
             "Height": 20,
@@ -451,11 +451,10 @@
           {
             "Type": "TextArea",
             "Name": "score2",
-            "X": 190,
-            "Y": 20,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
+            "X": 184,
+            "Y": 22,
+            "Width": 23,
+            "Height": 22,
             "TextId": "__SingleUse_UN9H",
             "TextRotation": "270",
             "Color": {
@@ -464,16 +463,19 @@
               "Blue": 86
             },
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "score2Buffer3",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
             "Name": "score1",
-            "X": 125,
-            "Y": 200,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
+            "X": 117,
+            "Y": 195,
+            "Width": 23,
+            "Height": 22,
             "TextId": "__SingleUse_OTAD",
             "TextRotation": "90",
             "Color": {
@@ -482,7 +484,11 @@
               "Blue": 86
             },
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "score1Buffer3",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -491,7 +497,6 @@
             "Y": 180,
             "Width": 19,
             "Height": 52,
-            "LockPosition": true,
             "TextId": "__SingleUse_Z3TY",
             "TextRotation": "90",
             "Color": {
@@ -505,10 +510,9 @@
             "Type": "TextArea",
             "Name": "player2",
             "X": 165,
-            "Y": 5,
+            "Y": 7,
             "Width": 19,
             "Height": 52,
-            "LockPosition": true,
             "TextId": "__SingleUse_FY8E",
             "TextRotation": "270",
             "Color": {
@@ -523,7 +527,7 @@
             "Name": "goal1",
             "X": 2,
             "Y": 61,
-            "Width": 15,
+            "Width": 10,
             "Height": 120,
             "Color": {
               "Red": 255,
@@ -541,9 +545,9 @@
           {
             "Type": "BoxWithBorder",
             "Name": "goal2",
-            "X": 303,
+            "X": 308,
             "Y": 60,
-            "Width": 15,
+            "Width": 10,
             "Height": 120,
             "Color": {
               "Red": 255,
@@ -956,11 +960,10 @@
           {
             "Type": "TextArea",
             "Name": "score2",
-            "X": 190,
-            "Y": 20,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
+            "X": 184,
+            "Y": 22,
+            "Width": 23,
+            "Height": 22,
             "TextId": "__SingleUse_KK9M",
             "TextRotation": "270",
             "Color": {
@@ -969,16 +972,19 @@
               "Blue": 86
             },
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "score2Buffer2",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
             "Name": "score1",
-            "X": 125,
-            "Y": 200,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
+            "X": 117,
+            "Y": 195,
+            "Width": 23,
+            "Height": 22,
             "TextId": "__SingleUse_ATHF",
             "TextRotation": "90",
             "Color": {
@@ -987,7 +993,11 @@
               "Blue": 86
             },
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "score1Buffer2",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -996,7 +1006,6 @@
             "Y": 180,
             "Width": 19,
             "Height": 52,
-            "LockPosition": true,
             "TextId": "__SingleUse_V9P9",
             "TextRotation": "90",
             "Color": {
@@ -1010,10 +1019,9 @@
             "Type": "TextArea",
             "Name": "player2",
             "X": 165,
-            "Y": 5,
+            "Y": 7,
             "Width": 19,
             "Height": 52,
-            "LockPosition": true,
             "TextId": "__SingleUse_UJJ8",
             "TextRotation": "270",
             "Color": {
@@ -1387,11 +1395,10 @@
           {
             "Type": "TextArea",
             "Name": "score2",
-            "X": 190,
-            "Y": 20,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
+            "X": 184,
+            "Y": 22,
+            "Width": 23,
+            "Height": 22,
             "TextId": "__SingleUse_I1JY",
             "TextRotation": "270",
             "Color": {
@@ -1400,16 +1407,19 @@
               "Blue": 86
             },
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "score2Buffer1",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
             "Name": "score1",
-            "X": 125,
-            "Y": 200,
-            "Width": 10,
-            "Height": 15,
-            "LockPosition": true,
+            "X": 117,
+            "Y": 195,
+            "Width": 23,
+            "Height": 22,
             "TextId": "__SingleUse_NJHY",
             "TextRotation": "90",
             "Color": {
@@ -1418,7 +1428,11 @@
               "Blue": 86
             },
             "AutoSize": true,
-            "Wildcard1": {}
+            "Wildcard1": {
+              "TextId": "score1Buffer1",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -1427,7 +1441,6 @@
             "Y": 180,
             "Width": 19,
             "Height": 52,
-            "LockPosition": true,
             "TextId": "__SingleUse_G2S8",
             "TextRotation": "90",
             "Color": {
@@ -1441,10 +1454,9 @@
             "Type": "TextArea",
             "Name": "player2",
             "X": 165,
-            "Y": 5,
+            "Y": 7,
             "Width": 19,
             "Height": 52,
-            "LockPosition": true,
             "TextId": "__SingleUse_OD39",
             "TextRotation": "270",
             "Color": {

@@ -19,9 +19,11 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
+#include <joystick_task.h>
 #include "FreeRTOS.h"
 #include "task.h"
 #include "main.h"
+#include "cmsis_os2.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -35,7 +37,17 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+void MX_FREERTOS_Init(void) {
+    // ... Các queue, semaphore nếu có
 
+    // Tạo task đọc joystick
+    const osThreadAttr_t joystickTask_attributes = {
+        .name = "joystickTask",
+        .priority = (osPriority_t) osPriorityNormal,
+        .stack_size = 256 * 4
+    };
+    osThreadNew(JoystickTask, NULL, &joystickTask_attributes);
+}
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/

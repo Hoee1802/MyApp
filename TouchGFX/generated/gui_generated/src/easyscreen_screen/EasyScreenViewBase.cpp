@@ -44,17 +44,23 @@ EasyScreenViewBase::EasyScreenViewBase()
     paddle2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle2);
 
-    score2.setXY(190, 20);
+    score2.setXY(184, 22);
     score2.setColor(touchgfx::Color::getColorFromRGB(89, 86, 86));
     score2.setLinespacing(0);
     score2.setRotation(touchgfx::TEXT_ROTATE_270);
+    Unicode::snprintf(score2Buffer, SCORE2_SIZE, "%s", touchgfx::TypedText(T_SCORE2BUFFER1).getText());
+    score2.setWildcard(score2Buffer);
+    score2.resizeToCurrentText();
     score2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_I1JY));
     add(score2);
 
-    score1.setXY(125, 200);
+    score1.setXY(117, 195);
     score1.setColor(touchgfx::Color::getColorFromRGB(89, 86, 86));
     score1.setLinespacing(0);
     score1.setRotation(touchgfx::TEXT_ROTATE_90);
+    Unicode::snprintf(score1Buffer, SCORE1_SIZE, "%s", touchgfx::TypedText(T_SCORE1BUFFER1).getText());
+    score1.setWildcard(score1Buffer);
+    score1.resizeToCurrentText();
     score1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NJHY));
     add(score1);
 
@@ -66,7 +72,7 @@ EasyScreenViewBase::EasyScreenViewBase()
     player1.setAlpha(190);
     add(player1);
 
-    player2.setPosition(165, 5, 19, 52);
+    player2.setPosition(165, 7, 19, 52);
     player2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     player2.setLinespacing(0);
     player2.setRotation(touchgfx::TEXT_ROTATE_270);

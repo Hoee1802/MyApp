@@ -10,9 +10,15 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE;
 // Remap all strings
 TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
-    68, // T_COUNTER2BUFFER: "3"
-    68, // T_COUNTER3BUFFER: "3"
-    68, // T_COUNTER1BUFFER: "3"
+    68, // T_SCORE2BUFFER3: "00"
+    68, // T_SCORE1BUFFER3: "00"
+    68, // T_SCORE2BUFFER2: "00"
+    68, // T_SCORE1BUFFER2: "00"
+    68, // T_SCORE1BUFFER1: "00"
+    68, // T_SCORE2BUFFER1: "00"
+    71, // T_COUNTER2BUFFER: "3"
+    71, // T_COUNTER3BUFFER: "3"
+    71, // T_COUNTER1BUFFER: "3"
     21, // T___SINGLEUSE_WFLF: "<>"
     21, // T___SINGLEUSE_7Q96: "<>"
     31, // T___SINGLEUSE_SJ6Y: "player2"

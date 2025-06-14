@@ -42,6 +42,14 @@ protected:
     touchgfx::TextArea player1;
     touchgfx::TextArea player2;
 
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t SCORE2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar score2Buffer[SCORE2_SIZE];
+    static const uint16_t SCORE1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar score1Buffer[SCORE1_SIZE];
+
 private:
 
     /*

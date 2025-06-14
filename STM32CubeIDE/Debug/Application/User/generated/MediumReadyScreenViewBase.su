@@ -49,4 +49,4 @@ D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/mediumreadyscreen_scre
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	0	static
-D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/mediumreadyscreen_screen/MediumReadyScreenViewBase.cpp:9:1:MediumReadyScreenViewBase::MediumReadyScreenViewBase()	120	static
+D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/mediumreadyscreen_screen/MediumReadyScreenViewBase.cpp:9:1:MediumReadyScreenViewBase::MediumReadyScreenViewBase()	112	static

@@ -71,7 +71,7 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
     if (state.TouchDetected)
     {
         x = state.X;
-        y = state.Y;
+        y = 320-state.Y;
         return true;
     }
     return false;

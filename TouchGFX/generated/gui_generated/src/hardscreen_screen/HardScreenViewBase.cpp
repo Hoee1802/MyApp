@@ -41,25 +41,31 @@ HardScreenViewBase::HardScreenViewBase()
     ball.setPainter(ballPainter);
     add(ball);
 
-    paddle1.setPosition(29, 110, 5, 20);
+    paddle1.setPosition(18, 110, 5, 20);
     paddle1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle1);
 
-    paddle2.setPosition(287, 110, 5, 20);
+    paddle2.setPosition(296, 110, 5, 20);
     paddle2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle2);
 
-    score2.setXY(190, 20);
+    score2.setXY(184, 22);
     score2.setColor(touchgfx::Color::getColorFromRGB(89, 86, 86));
     score2.setLinespacing(0);
     score2.setRotation(touchgfx::TEXT_ROTATE_270);
+    Unicode::snprintf(score2Buffer, SCORE2_SIZE, "%s", touchgfx::TypedText(T_SCORE2BUFFER3).getText());
+    score2.setWildcard(score2Buffer);
+    score2.resizeToCurrentText();
     score2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UN9H));
     add(score2);
 
-    score1.setXY(125, 200);
+    score1.setXY(117, 195);
     score1.setColor(touchgfx::Color::getColorFromRGB(89, 86, 86));
     score1.setLinespacing(0);
     score1.setRotation(touchgfx::TEXT_ROTATE_90);
+    Unicode::snprintf(score1Buffer, SCORE1_SIZE, "%s", touchgfx::TypedText(T_SCORE1BUFFER3).getText());
+    score1.setWildcard(score1Buffer);
+    score1.resizeToCurrentText();
     score1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OTAD));
     add(score1);
 
@@ -71,7 +77,7 @@ HardScreenViewBase::HardScreenViewBase()
     player1.setAlpha(190);
     add(player1);
 
-    player2.setPosition(165, 5, 19, 52);
+    player2.setPosition(165, 7, 19, 52);
     player2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     player2.setLinespacing(0);
     player2.setRotation(touchgfx::TEXT_ROTATE_270);
@@ -79,14 +85,14 @@ HardScreenViewBase::HardScreenViewBase()
     player2.setAlpha(190);
     add(player2);
 
-    goal1.setPosition(2, 61, 15, 120);
+    goal1.setPosition(2, 61, 10, 120);
     goal1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     goal1.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
     goal1.setBorderSize(3);
     goal1.setAlpha(60);
     add(goal1);
 
-    goal2.setPosition(303, 60, 15, 120);
+    goal2.setPosition(308, 60, 10, 120);
     goal2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     goal2.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
     goal2.setBorderSize(3);

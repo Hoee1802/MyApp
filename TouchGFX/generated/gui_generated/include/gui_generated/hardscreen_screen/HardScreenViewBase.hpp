@@ -51,6 +51,14 @@ protected:
     touchgfx::Image image2;
     touchgfx::Image image2_2;
 
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t SCORE2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar score2Buffer[SCORE2_SIZE];
+    static const uint16_t SCORE1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar score1Buffer[SCORE1_SIZE];
+
 private:
 
     /*
