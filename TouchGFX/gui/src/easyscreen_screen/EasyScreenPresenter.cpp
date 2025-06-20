@@ -16,3 +16,9 @@ void EasyScreenPresenter::deactivate()
 {
 
 }
+
+
+void  EasyScreenPresenter::handleTickEvent()
+{
+
+}

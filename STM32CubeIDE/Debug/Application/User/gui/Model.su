@@ -1,2 +1,8 @@
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:4:1:Model::Model()	0	static
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:9:6:void Model::tick()	0	static
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:15:6:static void Model::movePaddle1Left()	0	static
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:19:6:static void Model::movePaddle1Right()	0	static
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:24:6:static void Model::movePaddle2Left()	0	static
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:28:6:static void Model::movePaddle2Right()	0	static
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:32:6:static void Model::paddle1Action()	0	static
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:36:6:static void Model::paddle2Action()	0	static

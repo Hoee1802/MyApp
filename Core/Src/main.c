@@ -16,17 +16,20 @@
   *
   ******************************************************************************
   */
+
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
 #include "app_touchgfx.h"
+#include "joystick_task.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "Components/ili9341/ili9341.h"
-#include "stm32f4xx_hal.h"
 #include "stm32f4xx_hal_adc.h"
+#include "Components/ili9341/ili9341.h"
+#include "stm32f4xx_hal_uart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,6 +57,8 @@
 #define SDRAM_MODEREG_WRITEBURST_MODE_PROGRAMMED ((uint16_t)0x0000)
 #define SDRAM_MODEREG_WRITEBURST_MODE_SINGLE     ((uint16_t)0x0200)
 
+
+
 #define I2C3_TIMEOUT_MAX                    0x3000 /*<! The value of the maximal timeout for I2C waiting loops */
 #define SPI5_TIMEOUT_MAX                    0x1000
 /* USER CODE END PD */
@@ -78,6 +83,9 @@ SDRAM_HandleTypeDef hsdram1;
 
 ADC_HandleTypeDef hadc1;
 
+UART_HandleTypeDef huart1;
+
+
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
@@ -93,6 +101,21 @@ const osThreadAttr_t GUI_Task_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
+// Add before osKernelStart();
+osThreadId_t joystickTaskHandle;
+const osThreadAttr_t joystickTask_attributes = {
+  .name = "joystickTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
+/* USER CODE BEGIN PV */
+/* Queue for joystick commands */
+osMessageQueueId_t joystickQueueHandle;
+const osMessageQueueAttr_t joystickQueue_attributes = {
+  .name = "joystickQueue"
+};
+
+
 
 /* USER CODE END PV */
 
@@ -111,6 +134,7 @@ extern void TouchGFX_Task(void *argument);
 /* USER CODE BEGIN PFP */
 static void BSP_SDRAM_Initialization_Sequence(SDRAM_HandleTypeDef *hsdram, FMC_SDRAM_CommandTypeDef *Command);
 void MX_ADC1_Init(void);
+void MX_USART1_UART_Init(void);
 
 
 static uint8_t            I2C3_ReadData(uint8_t Addr, uint8_t Reg);
@@ -186,6 +210,7 @@ int main(void)
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
+  MX_USART1_UART_Init();
 
   /* USER CODE END 2 */
 
@@ -195,7 +220,7 @@ int main(void)
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
-
+  joystickQueueHandle = osMessageQueueNew(10, sizeof(JoystickCommand_t), &joystickQueue_attributes);
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
@@ -218,7 +243,7 @@ int main(void)
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
-
+  joystickTaskHandle = osThreadNew(JoystickTask, NULL, &joystickTask_attributes);
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
@@ -613,27 +638,28 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 
-// Joystick 1 - X axis: PA0 (analog), SW: PA1 (input pull-up) cấu hình joystick1
-  GPIO_InitStruct.Pin = GPIO_PIN_0;
+// Joystick Analog
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_5;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  GPIO_InitStruct.Pin = GPIO_PIN_1;
+//Joystick Button
+  GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
-// Joystick 2 - X axis: PA2 (analog), SW: PA3 (input pull-up) cấu hình joystick2
-  GPIO_InitStruct.Pin = GPIO_PIN_2;
-  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  // USART1 TX: PA9, RX: PA10
+
+
+  GPIO_InitStruct.Pin = GPIO_PIN_9 | GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  GPIO_InitStruct.Pin = GPIO_PIN_3;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 /* USER CODE END MX_GPIO_Init_2 */
 
@@ -642,15 +668,37 @@ static void MX_GPIO_Init(void)
 void MX_ADC1_Init(void){
     __HAL_RCC_ADC1_CLK_ENABLE();
 
-    hadc1.Instance = ADC1;
-    hadc1.Init.Resolution = ADC_RESOLUTION_12B;
-    hadc1.Init.ScanConvMode = DISABLE;
-    hadc1.Init.ContinuousConvMode = DISABLE;
-    hadc1.Init.DiscontinuousConvMode = DISABLE;
-    hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-    hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-    hadc1.Init.NbrOfConversion = 1;
+      hadc1.Instance = ADC1;
+      hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+      hadc1.Init.Resolution = ADC_RESOLUTION_12B;
+      hadc1.Init.ScanConvMode = DISABLE;
+      hadc1.Init.ContinuousConvMode = DISABLE;
+      hadc1.Init.DiscontinuousConvMode = DISABLE;
+      hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+      hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+      hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+      hadc1.Init.NbrOfConversion = 1;
+      hadc1.Init.DMAContinuousRequests = DISABLE;
+      hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
     HAL_ADC_Init(&hadc1);
+}
+
+void MX_USART1_UART_Init(void)
+{
+    __HAL_RCC_USART1_CLK_ENABLE();
+
+    huart1.Instance = USART1;
+    huart1.Init.BaudRate = 115200;
+    huart1.Init.WordLength = UART_WORDLENGTH_8B;
+    huart1.Init.StopBits = UART_STOPBITS_1;
+    huart1.Init.Parity = UART_PARITY_NONE;
+    huart1.Init.Mode = UART_MODE_TX_RX;
+    huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+    huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+    if (HAL_UART_Init(&huart1) != HAL_OK)
+    {
+        Error_Handler();
+    }
 }
 
 /* USER CODE BEGIN 4 */

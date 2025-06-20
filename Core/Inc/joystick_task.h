@@ -8,6 +8,18 @@
 #ifndef APPLICATION_USER_JOYSTICK_TASK_H_
 #define APPLICATION_USER_JOYSTICK_TASK_H_
 
+#include "cmsis_os.h"
+
+
+typedef enum {
+    JOY1_LEFT,
+    JOY1_RIGHT,
+    JOY2_LEFT,
+    JOY2_RIGHT,
+	JOY1_BUTTON,
+	JOY2_BUTTON
+} JoystickCommand_t;
+
 #ifdef __cplusplus
 extern "C" {
 #endif

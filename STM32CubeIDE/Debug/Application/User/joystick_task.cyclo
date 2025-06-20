@@ -1,0 +1,2 @@
+../Application/User/joystick_task.cpp:30:6:void uart_print(const char*)	1
+../Application/User/joystick_task.cpp:36:17:void JoystickTask(void*)	11
