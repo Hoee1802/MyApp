@@ -15,13 +15,25 @@ EasyScreenView::EasyScreenView(): ballX(160), ballY(120), ballVelX(1), ballVelY(
 void EasyScreenView::setupScreen()
 {
     EasyScreenViewBase::setupScreen();
+    score1 = 0;
+	score2 = 0;
+	gameOver = false;
+	ballX = 160;
+	ballY = 120;
+	ballVelX = 1;
+	ballVelY = 1;
+	waitingForServe = false;
+	serveDelayTicks = 0;
+	servingPlayer = 0;
     // Đặt vị trí ban đầu của bóng
 	ball.invalidate();
 	ball.moveTo(ballX, ballY);
 	ball.invalidate();
     // Khởi tạo điểm số
-    Unicode::snprintf(score1Buffer, SCORE1_SIZE, "%d", this->score1);
-    Unicode::snprintf(score2Buffer, SCORE2_SIZE, "%d", this->score2);
+	Unicode::snprintf(EasyScreenViewBase::score1Buffer, EasyScreenViewBase::SCORE1_SIZE, "%d", score1);
+	EasyScreenViewBase::score1.invalidate();
+	Unicode::snprintf(EasyScreenViewBase::score2Buffer, EasyScreenViewBase::SCORE2_SIZE, "%d", score2);
+	EasyScreenViewBase::score2.invalidate();
 }
 
 void EasyScreenView::tearDownScreen()
@@ -152,10 +164,13 @@ void EasyScreenView::handleTickEvent()
             if (ballX < 0) {
                 // Người chơi 2 ghi điểm
 
-            	this->score2++;
-                Unicode::snprintf(score2Buffer, SCORE2_SIZE, "%d", this->score2);
-				if (this->score2 >= 11) {
+            	score2++;
+            	Unicode::snprintf(EasyScreenViewBase::score2Buffer, EasyScreenViewBase::SCORE2_SIZE, "%d", score2);
+            	EasyScreenViewBase::score2.invalidate();
+
+				if (score2 >= 11) {
 					gameOver = true;
+					presenter->goToEndScreen(2);
 
 				}
                 ball.setVisible(false);
@@ -168,10 +183,13 @@ void EasyScreenView::handleTickEvent()
                 ball.moveTo(ballX, ballY);
             } else if (ballX + ball.getWidth() > 320) {
                 // Người chơi 1 ghi điểm
-            	this->score1++;
-                Unicode::snprintf(score1Buffer, SCORE1_SIZE, "%d", this->score1);
-				if (this->score1 >= 11) {
+            	score1++;
+            	Unicode::snprintf(EasyScreenViewBase::score1Buffer, EasyScreenViewBase::SCORE1_SIZE, "%d", score1);
+            	EasyScreenViewBase::score1.invalidate();
+
+				if (score1 >= 11) {
 					gameOver = true;
+					presenter->goToEndScreen(1);
 
 				}
 

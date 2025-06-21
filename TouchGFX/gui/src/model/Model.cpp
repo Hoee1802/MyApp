@@ -1,9 +1,12 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
-ModelListener* Model::staticListener = nullptr;
-Model::Model() : modelListener(0)
-{
 
+#include <cstring>
+#include <cstdio>
+
+ModelListener* Model::staticListener = nullptr;
+Model::Model() : modelListener(0), winner(0), player1Score(0), player2Score(0), gameOver(false)
+{
 }
 
 void Model::tick()
@@ -35,4 +38,25 @@ void Model::paddle1Action() {
 
 void Model::paddle2Action() {
     if (staticListener) staticListener->paddle2Action();
+}
+void Model::setWinner(int winnerId)
+{
+    winner = winnerId;
+    printf("Model::setWinner: %d\n", winner);
+}
+
+int Model::getWinner(int playerId)
+{
+    int result = (winner == playerId) ? 1 : 0;
+    printf("Model::getWinner: playerId=%d, result=%d\n", playerId, result);
+    return result;
+}
+
+void Model::resetGame()
+{
+
+    player1Score = 0;
+    player2Score = 0;
+    gameOver = false;
+    winner = 0; // Đặt lại winner về 0
 }

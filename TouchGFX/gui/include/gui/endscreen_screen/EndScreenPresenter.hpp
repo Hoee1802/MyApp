@@ -24,6 +24,9 @@ public:
      * (ie. made inactive). Teardown functionality can be placed here.
      */
     virtual void deactivate();
+    int getWinner(int playerId);
+    void handlePlayAgain();
+
 
     virtual ~EndScreenPresenter() {}
 

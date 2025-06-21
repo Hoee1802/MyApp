@@ -17,7 +17,7 @@ EndScreenViewBase::EndScreenViewBase() :
     box1.setColor(touchgfx::Color::getColorFromRGB(173, 220, 237));
     add(box1);
 
-    playagainButton.setXY(91, 120);
+    playagainButton.setXY(91, 164);
     playagainButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUND_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUND_DISABLED_ID));
     playagainButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_VTUE));
     playagainButton.setLabelColor(touchgfx::Color::getColorFromRGB(237, 241, 245));
@@ -25,21 +25,16 @@ EndScreenViewBase::EndScreenViewBase() :
     playagainButton.setAction(buttonCallback);
     add(playagainButton);
 
-    playerwin.setXY(105, 68);
+    playerwin.setXY(105, 93);
     playerwin.setColor(touchgfx::Color::getColorFromRGB(63, 70, 105));
     playerwin.setLinespacing(0);
+    Unicode::snprintf(playerwinBuffer, PLAYERWIN_SIZE, "%s", touchgfx::TypedText(T_WINNERBUFFER).getText());
+    playerwin.setWildcard(playerwinBuffer);
+    playerwin.resizeToCurrentText();
     playerwin.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9392));
     add(playerwin);
 
-    exit.setXY(91, 182);
-    exit.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUND_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_SMALL_ROUND_DISABLED_ID));
-    exit.setLabelText(touchgfx::TypedText(T___SINGLEUSE_4E2E));
-    exit.setLabelColor(touchgfx::Color::getColorFromRGB(237, 241, 245));
-    exit.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    exit.setAction(buttonCallback);
-    add(exit);
-
-    winner.setXY(91, 20);
+    winner.setXY(91, 28);
     winner.setColor(touchgfx::Color::getColorFromRGB(63, 70, 105));
     winner.setLinespacing(0);
     winner.setTypedText(touchgfx::TypedText(T___SINGLEUSE_86XU));
@@ -58,13 +53,6 @@ void EndScreenViewBase::setupScreen()
 
 void EndScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &exit)
-    {
-        //Interaction1
-        //When exit clicked change screen to StartScreen
-        //Go to StartScreen with screen transition towards East
-        application().gotoStartScreenScreenWipeTransitionEast();
-    }
     if (&src == &playagainButton)
     {
         //Interaction2

@@ -31,7 +31,7 @@ struct Typography
 struct TypographyFontIndex
 {
     static const touchgfx::FontId DEFAULT = 0;       // verdana_17_4bpp
-    static const touchgfx::FontId LARGE = 1;         // comicz_31_4bpp
+    static const touchgfx::FontId LARGE = 1;         // comicz_29_4bpp
     static const touchgfx::FontId SMALL = 2;         // comicbd_18_4bpp
     static const touchgfx::FontId TYPOGRAPHY_00 = 3; // comicbd_20_4bpp
     static const touchgfx::FontId TYPOGRAPHY_01 = 4; // comicbd_28_4bpp

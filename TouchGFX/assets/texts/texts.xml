@@ -6,6 +6,9 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="winnerBuffer" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+      </Text>
       <Text Id="score2Buffer3" Alignment="Left" TypographyId="Typography_01">
         <Translation Language="GB">00</Translation>
       </Text>
@@ -123,17 +126,14 @@
       <Text Id="__SingleUse_YPFP" Alignment="Center" TypographyId="Large">
         <Translation Language="GB">Ping Pong</Translation>
       </Text>
-      <Text Id="__SingleUse_4E2E" Alignment="Center" TypographyId="Small">
-        <Translation Language="GB">EXIT</Translation>
-      </Text>
       <Text Id="__SingleUse_9392" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="GB">player&lt;%d&gt;</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="comicz.ttf" Size="31" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="verdana.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789" />
+    <Typography Id="Large" Font="comicz.ttf" Size="29" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789" />
     <Typography Id="Small" Font="comicbd.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789" />
     <Typography Id="Typography_00" Font="comicbd.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_01" Font="comicbd.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789" />

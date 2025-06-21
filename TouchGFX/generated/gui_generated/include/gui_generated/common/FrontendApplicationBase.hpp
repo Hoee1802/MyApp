@@ -43,6 +43,9 @@ public:
     // EasyReadyScreen
     void gotoEasyReadyScreenScreenWipeTransitionEast();
 
+    // EndScreen
+    void gotoEndScreenScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -70,6 +73,9 @@ protected:
 
     // EasyReadyScreen
     void gotoEasyReadyScreenScreenWipeTransitionEastImpl();
+
+    // EndScreen
+    void gotoEndScreenScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

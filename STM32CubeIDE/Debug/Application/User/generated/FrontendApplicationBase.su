@@ -52,7 +52,9 @@ D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/common/FrontendApplica
 D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:113:6:void FrontendApplicationBase::gotoMediumReadyScreenScreenWipeTransitionEast()	0	static
 D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:126:6:void FrontendApplicationBase::gotoEasyScreenScreenNoTransition()	0	static
 D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:139:6:void FrontendApplicationBase::gotoEasyReadyScreenScreenWipeTransitionEast()	0	static
+D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:152:6:void FrontendApplicationBase::gotoEndScreenScreenNoTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	0	static
+D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:158:6:void FrontendApplicationBase::gotoEndScreenScreenNoTransitionImpl()	40	static
 D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:132:6:void FrontendApplicationBase::gotoEasyScreenScreenNoTransitionImpl()	40	static
 D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:106:6:void FrontendApplicationBase::gotoMediumScreenScreenNoTransitionImpl()	40	static
 D:/henhung/BTL/MyApp/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:80:6:void FrontendApplicationBase::gotoHardScreenScreenNoTransitionImpl()	40	static

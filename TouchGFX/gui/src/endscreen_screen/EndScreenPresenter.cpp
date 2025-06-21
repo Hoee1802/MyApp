@@ -9,10 +9,21 @@ EndScreenPresenter::EndScreenPresenter(EndScreenView& v)
 
 void EndScreenPresenter::activate()
 {
-
+	view.updateWinner();
 }
 
 void EndScreenPresenter::deactivate()
 {
 
 }
+int EndScreenPresenter::getWinner(int playerId)
+{
+    return model->getWinner(playerId);
+}
+
+void EndScreenPresenter::handlePlayAgain()
+{
+    model->resetGame();
+    static_cast<FrontendApplication*>(touchgfx::Application::getInstance())->gotoStartScreenScreenNoTransition();
+}
+

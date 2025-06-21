@@ -6,8 +6,8 @@
 #include "gui/model/Model.hpp"
 
 
-#include <cstring>
-#include <cstdio>
+//#include <cstring>
+//#include <cstdio>
 
 extern ADC_HandleTypeDef hadc1;
 extern UART_HandleTypeDef huart1;
@@ -27,10 +27,7 @@ extern osMessageQueueId_t joystickQueueHandle;
 uint32_t tick_counter = 0;
 
 
-void uart_print(const char* msg)
-{
-    HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
-}
+
 
 // ⚠️ Thêm extern "C" ở đây để export hàm cho file C
 extern "C" void JoystickTask(void *argument)
@@ -108,10 +105,7 @@ extern "C" void JoystickTask(void *argument)
 			tick_counter = 0;
 			currentJoystick = (currentJoystick == JOY1) ? JOY2 : JOY1;
 
-			char buffer[64];
-			sprintf(buffer, "adc1: %lu, adc2: %lu\r\n", adc_value1, adc_value2);
-			uart_print(buffer);
-		}
+			}
 
         osDelay(10);
     }

@@ -31,8 +31,13 @@ protected:
     touchgfx::Box box1;
     touchgfx::ButtonWithLabel playagainButton;
     touchgfx::TextAreaWithOneWildcard playerwin;
-    touchgfx::ButtonWithLabel exit;
     touchgfx::TextArea winner;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t PLAYERWIN_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar playerwinBuffer[PLAYERWIN_SIZE];
 
 private:
 

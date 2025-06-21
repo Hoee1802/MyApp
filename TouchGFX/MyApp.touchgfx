@@ -598,7 +598,19 @@
             "RelativeFilename": "Untitled6.png"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "EndScreen"
+            }
+          }
+        ]
       },
       {
         "Name": "HardReadyScreen",
@@ -1072,7 +1084,19 @@
             "Alpha": 60
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "EndScreen"
+            }
+          }
+        ]
       },
       {
         "Name": "MediumReadyScreen",
@@ -1467,7 +1491,19 @@
             "Alpha": 190
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "EndScreen"
+            }
+          }
+        ]
       },
       {
         "Name": "EasyReadyScreen",
@@ -1674,7 +1710,7 @@
             "Type": "ButtonWithLabel",
             "Name": "playagainButton",
             "X": 91,
-            "Y": 120,
+            "Y": 164,
             "Width": 138,
             "Height": 36,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
@@ -1697,9 +1733,9 @@
             "Type": "TextArea",
             "Name": "playerwin",
             "X": 105,
-            "Y": 68,
-            "Width": 111,
-            "Height": 40,
+            "Y": 93,
+            "Width": 86,
+            "Height": 37,
             "TextId": "__SingleUse_9392",
             "TextRotation": "0",
             "Color": {
@@ -1708,38 +1744,19 @@
               "Blue": 105
             },
             "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "exit",
-            "X": 91,
-            "Y": 182,
-            "Width": 138,
-            "Height": 36,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_disabled.png",
-            "TextId": "__SingleUse_4E2E",
-            "ReleasedColor": {
-              "Red": 237,
-              "Green": 241,
-              "Blue": 245
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_36\\small_round_disabled.json"
+            "Wildcard1": {
+              "TextId": "winnerBuffer",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
             "Name": "winner",
             "X": 91,
-            "Y": 20,
-            "Width": 138,
-            "Height": 40,
+            "Y": 28,
+            "Width": 131,
+            "Height": 37,
             "TextId": "__SingleUse_86XU",
             "TextRotation": "0",
             "Color": {
@@ -1751,20 +1768,6 @@
           }
         ],
         "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "exit"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "StartScreen"
-            }
-          },
           {
             "InteractionName": "Interaction2",
             "HasCompletedTrigger": true,

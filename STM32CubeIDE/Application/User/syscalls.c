@@ -55,6 +55,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include <sys/times.h>
+#include "stm32f4xx_hal.h"
 
 
 /* Variables */
@@ -62,6 +63,7 @@
 extern int errno;
 extern int __io_putchar(int ch) __attribute__((weak));
 extern int __io_getchar(void) __attribute__((weak));
+extern UART_HandleTypeDef huart1;
 
 register char * stack_ptr asm("sp");
 
@@ -103,16 +105,16 @@ __attribute__((weak)) int _read(int file, char *ptr, int len)
 return len;
 }
 
-__attribute__((weak)) int _write(int file, char *ptr, int len)
-{
-	int DataIdx;
-
-	for (DataIdx = 0; DataIdx < len; DataIdx++)
-	{
-		__io_putchar(*ptr++);
-	}
-	return len;
-}
+//__attribute__((weak)) int _write(int file, char *ptr, int len)
+//{
+//	int DataIdx;
+//
+//	for (DataIdx = 0; DataIdx < len; DataIdx++)
+//	{
+//		__io_putchar(*ptr++);
+//	}
+//	return len;
+//}
 
 int _close(int file)
 {
@@ -182,3 +184,9 @@ int _execve(char *name, char **argv, char **env)
 	errno = ENOMEM;
 	return -1;
 }
+__attribute__((weak)) int _write(int file, char *ptr, int len)
+{
+    HAL_UART_Transmit(&huart1, (uint8_t*)ptr, len, HAL_MAX_DELAY);
+    return len;
+}
+

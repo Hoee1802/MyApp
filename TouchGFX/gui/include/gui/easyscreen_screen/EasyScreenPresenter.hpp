@@ -25,6 +25,8 @@ public:
      */
     virtual void deactivate();
     void handleTickEvent();
+    void goToEndScreen(int winner);
+    void resetGame();
     virtual ~EasyScreenPresenter() {}
 
 private:
