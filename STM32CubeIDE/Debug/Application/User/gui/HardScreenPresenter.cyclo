@@ -4,8 +4,10 @@
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:15:18:virtual void ModelListener::movePaddle2Right()	1
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:18:virtual void ModelListener::paddle1Action()	1
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::paddle2Action()	1
-../../TouchGFX/gui/include/gui/hardscreen_screen/HardScreenPresenter.hpp:28:13:HardScreenPresenter::~HardScreenPresenter()	1
+../../TouchGFX/gui/include/gui/hardscreen_screen/HardScreenPresenter.hpp:30:13:HardScreenPresenter::~HardScreenPresenter()	1
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenPresenter.cpp:10:6:virtual void HardScreenPresenter::activate()	1
-../../TouchGFX/gui/include/gui/hardscreen_screen/HardScreenPresenter.hpp:28:13:virtual HardScreenPresenter::~HardScreenPresenter()	1
-../../TouchGFX/gui/include/gui/hardscreen_screen/HardScreenPresenter.hpp:28:13:virtual void* HardScreenPresenter::_ZThn4_N19HardScreenPresenterD1Ev()	1
+../../TouchGFX/gui/include/gui/hardscreen_screen/HardScreenPresenter.hpp:30:13:virtual HardScreenPresenter::~HardScreenPresenter()	1
+../../TouchGFX/gui/include/gui/hardscreen_screen/HardScreenPresenter.hpp:30:13:virtual void* HardScreenPresenter::_ZThn4_N19HardScreenPresenterD1Ev()	1
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenPresenter.cpp:4:1:HardScreenPresenter::HardScreenPresenter(HardScreenView&)	1
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenPresenter.cpp:24:6:void HardScreenPresenter::goToEndScreen(int)	1
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenPresenter.cpp:29:6:void HardScreenPresenter::resetGame()	1

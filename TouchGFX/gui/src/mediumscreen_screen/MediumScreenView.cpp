@@ -108,8 +108,8 @@ void MediumScreenView::handleTickEvent()
 				// Người chơi 1 bấm nút để phát bóng
 				if (waitingForServe && servingPlayer == 1) {
 					waitingForServe = false;
-					ballVelX = 1; // Phát bóng sang phải
-					ballVelY = (paddle1.getY() + paddle1.getHeight()/2 > ballY) ? -1 : 1;
+					ballVelX = 1.2f; // Phát bóng sang phải
+					ballVelY = (paddle1.getY() + paddle1.getHeight()/2 > ballY) ? -1.2f : 1.2f;
 					ball.setVisible(true);
 					ball.invalidate();
 				}
@@ -118,8 +118,8 @@ void MediumScreenView::handleTickEvent()
 				// Người chơi 2 bấm nút để phát bóng
 				if (waitingForServe && servingPlayer == 2) {
 					waitingForServe = false;
-					ballVelX = -1; // Phát bóng sang trái
-					ballVelY = (paddle2.getY() + paddle2.getHeight()/2 > ballY) ? -1 : 1;
+					ballVelX = -1.2f; // Phát bóng sang trái
+					ballVelY = (paddle2.getY() + paddle2.getHeight()/2 > ballY) ? -1.2f : 1.2f;
 					ball.setVisible(true);
 					ball.invalidate();
 				}

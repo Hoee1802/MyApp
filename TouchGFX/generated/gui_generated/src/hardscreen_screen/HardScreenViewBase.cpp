@@ -4,8 +4,8 @@
 #include <gui_generated/hardscreen_screen/HardScreenViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 HardScreenViewBase::HardScreenViewBase()
 {
@@ -14,10 +14,6 @@ HardScreenViewBase::HardScreenViewBase()
     __background.setPosition(0, 0, 320, 240);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
-
-    image2_1.setXY(56, 0);
-    image2_1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
-    add(image2_1);
 
     box3.setPosition(0, 0, 320, 240);
     box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -32,20 +28,11 @@ HardScreenViewBase::HardScreenViewBase()
     box2.setAlpha(220);
     add(box2);
 
-    ball.setPosition(154, 114, 14, 14);
-    ball.setCenter(7.5f, 7.5f);
-    ball.setRadius(6);
-    ball.setLineWidth(0);
-    ball.setArc(0, 360);
-    ballPainter.setColor(touchgfx::Color::getColorFromRGB(153, 12, 12));
-    ball.setPainter(ballPainter);
-    add(ball);
-
-    paddle1.setPosition(18, 110, 5, 20);
+    paddle1.setPosition(7, 110, 5, 20);
     paddle1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle1);
 
-    paddle2.setPosition(296, 110, 5, 20);
+    paddle2.setPosition(308, 110, 5, 20);
     paddle2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle2);
 
@@ -85,18 +72,16 @@ HardScreenViewBase::HardScreenViewBase()
     player2.setAlpha(190);
     add(player2);
 
-    goal1.setPosition(2, 61, 10, 120);
-    goal1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    goal1.setPosition(0, 60, 2, 120);
+    goal1.setColor(touchgfx::Color::getColorFromRGB(0, 11, 110));
     goal1.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
-    goal1.setBorderSize(3);
-    goal1.setAlpha(60);
+    goal1.setBorderSize(0);
     add(goal1);
 
-    goal2.setPosition(308, 60, 10, 120);
-    goal2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    goal2.setPosition(318, 60, 2, 120);
+    goal2.setColor(touchgfx::Color::getColorFromRGB(0, 11, 110));
     goal2.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
-    goal2.setBorderSize(3);
-    goal2.setAlpha(60);
+    goal2.setBorderSize(0);
     add(goal2);
 
     image1.setXY(56, 230);
@@ -114,6 +99,15 @@ HardScreenViewBase::HardScreenViewBase()
     image2_2.setXY(223, 2);
     image2_2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
     add(image2_2);
+
+    ball.setPosition(154, 114, 14, 14);
+    ball.setCenter(7.5f, 7.5f);
+    ball.setRadius(6);
+    ball.setLineWidth(0);
+    ball.setArc(0, 360);
+    ballPainter.setColor(touchgfx::Color::getColorFromRGB(153, 12, 12));
+    ball.setPainter(ballPainter);
+    add(ball);
 }
 
 HardScreenViewBase::~HardScreenViewBase()

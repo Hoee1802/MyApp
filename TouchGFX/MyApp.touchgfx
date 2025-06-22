@@ -354,14 +354,6 @@
         "CanvasBufferSize": 4800,
         "Components": [
           {
-            "Type": "Image",
-            "Name": "image2_1",
-            "X": 56,
-            "Width": 38,
-            "Height": 10,
-            "RelativeFilename": "Untitled6.png"
-          },
-          {
             "Type": "Box",
             "Name": "box3",
             "Width": 320,
@@ -402,28 +394,9 @@
             "Alpha": 220
           },
           {
-            "Type": "Circle",
-            "Name": "ball",
-            "X": 154,
-            "Y": 114,
-            "Width": 14,
-            "Height": 14,
-            "LockPosition": true,
-            "Color": {
-              "Red": 153,
-              "Green": 12,
-              "Blue": 12
-            },
-            "CenterX": 7.5,
-            "CenterY": 7.5,
-            "Radius": 6.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Triangle"
-          },
-          {
             "Type": "Box",
             "Name": "paddle1",
-            "X": 18,
+            "X": 7,
             "Y": 110,
             "Width": 5,
             "Height": 20,
@@ -437,7 +410,7 @@
           {
             "Type": "Box",
             "Name": "paddle2",
-            "X": 296,
+            "X": 308,
             "Y": 110,
             "Width": 5,
             "Height": 20,
@@ -525,42 +498,35 @@
           {
             "Type": "BoxWithBorder",
             "Name": "goal1",
-            "X": 2,
-            "Y": 61,
-            "Width": 10,
+            "Y": 60,
+            "Width": 2,
             "Height": 120,
             "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 11,
+              "Blue": 110
             },
             "BorderColor": {
               "Red": 173,
               "Green": 147,
               "Blue": 52
-            },
-            "BorderSize": 3,
-            "Alpha": 60
+            }
           },
           {
             "Type": "BoxWithBorder",
             "Name": "goal2",
-            "X": 308,
+            "X": 318,
             "Y": 60,
-            "Width": 10,
+            "Width": 2,
             "Height": 120,
             "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 11,
+              "Blue": 110
             },
             "BorderColor": {
               "Red": 173,
               "Green": 147,
               "Blue": 52
-            },
-            "BorderSize": 3,
-            "Alpha": 60
+            }
           },
           {
             "Type": "Image",
@@ -596,6 +562,24 @@
             "Width": 38,
             "Height": 10,
             "RelativeFilename": "Untitled6.png"
+          },
+          {
+            "Type": "Circle",
+            "Name": "ball",
+            "X": 154,
+            "Y": 114,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 153,
+              "Green": 12,
+              "Blue": 12
+            },
+            "CenterX": 7.5,
+            "CenterY": 7.5,
+            "Radius": 6.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Triangle"
           }
         ],
         "Interactions": [
@@ -686,7 +670,7 @@
           {
             "Type": "Box",
             "Name": "paddle1",
-            "X": 26,
+            "X": 7,
             "Y": 110,
             "Width": 5,
             "Height": 20,
@@ -700,7 +684,7 @@
           {
             "Type": "Box",
             "Name": "paddle2",
-            "X": 288,
+            "X": 308,
             "Y": 110,
             "Width": 5,
             "Height": 20,
@@ -746,42 +730,35 @@
           {
             "Type": "BoxWithBorder",
             "Name": "goal1",
-            "X": 2,
             "Y": 61,
-            "Width": 15,
+            "Width": 2,
             "Height": 120,
             "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 11,
+              "Blue": 110
             },
             "BorderColor": {
               "Red": 173,
               "Green": 147,
               "Blue": 52
-            },
-            "BorderSize": 3,
-            "Alpha": 60
+            }
           },
           {
             "Type": "BoxWithBorder",
             "Name": "goal2",
-            "X": 302,
+            "X": 318,
             "Y": 60,
-            "Width": 15,
+            "Width": 2,
             "Height": 120,
             "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 11,
+              "Blue": 110
             },
             "BorderColor": {
               "Red": 173,
               "Green": 147,
               "Blue": 52
-            },
-            "BorderSize": 3,
-            "Alpha": 60
+            }
           },
           {
             "Type": "TextArea",
