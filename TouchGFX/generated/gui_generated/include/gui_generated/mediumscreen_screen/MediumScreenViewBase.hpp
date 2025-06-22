@@ -8,12 +8,12 @@
 #include <mvp/View.hpp>
 #include <gui/mediumscreen_screen/MediumScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/canvas/Circle.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/mixins/Draggable.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/canvas/Circle.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 
 class MediumScreenViewBase : public touchgfx::View<MediumScreenPresenter>
 {
@@ -34,8 +34,6 @@ protected:
     touchgfx::Box box3;
     touchgfx::Box box1;
     touchgfx::Box box2;
-    touchgfx::Circle ball;
-    touchgfx::PainterRGB565 ballPainter;
     touchgfx::Draggable< touchgfx::Box > paddle1;
     touchgfx::Draggable< touchgfx::Box > paddle2;
     touchgfx::TextAreaWithOneWildcard score2;
@@ -44,6 +42,8 @@ protected:
     touchgfx::TextArea player2;
     touchgfx::BoxWithBorder goal2;
     touchgfx::BoxWithBorder goal1;
+    touchgfx::Circle ball;
+    touchgfx::PainterRGB565 ballPainter;
 
     /*
      * Wildcard Buffers

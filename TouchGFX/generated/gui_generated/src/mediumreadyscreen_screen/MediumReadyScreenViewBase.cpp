@@ -37,11 +37,11 @@ MediumReadyScreenViewBase::MediumReadyScreenViewBase() :
     ball.setPainter(ballPainter);
     add(ball);
 
-    paddle1.setPosition(19, 101, 5, 40);
+    paddle1.setPosition(10, 100, 5, 40);
     paddle1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle1);
 
-    paddle2.setPosition(298, 100, 5, 40);
+    paddle2.setPosition(307, 100, 5, 40);
     paddle2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle2);
 
@@ -74,18 +74,16 @@ MediumReadyScreenViewBase::MediumReadyScreenViewBase() :
     counter1.setAlpha(210);
     add(counter1);
 
-    goal1.setPosition(310, 60, 10, 120);
-    goal1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    goal1.setPosition(318, 60, 2, 120);
+    goal1.setColor(touchgfx::Color::getColorFromRGB(0, 11, 110));
     goal1.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
-    goal1.setBorderSize(3);
-    goal1.setAlpha(60);
+    goal1.setBorderSize(0);
     add(goal1);
 
-    goal2.setPosition(2, 61, 10, 120);
-    goal2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    goal2.setPosition(0, 60, 2, 120);
+    goal2.setColor(touchgfx::Color::getColorFromRGB(0, 11, 110));
     goal2.setBorderColor(touchgfx::Color::getColorFromRGB(173, 147, 52));
-    goal2.setBorderSize(3);
-    goal2.setAlpha(60);
+    goal2.setBorderSize(0);
     add(goal2);
 
     counter2.setXY(243, 111);

@@ -27,15 +27,6 @@ EasyScreenViewBase::EasyScreenViewBase()
     box2.setAlpha(220);
     add(box2);
 
-    ball.setPosition(154, 114, 14, 14);
-    ball.setCenter(7.5f, 7.5f);
-    ball.setRadius(6);
-    ball.setLineWidth(0);
-    ball.setArc(0, 360);
-    ballPainter.setColor(touchgfx::Color::getColorFromRGB(153, 12, 12));
-    ball.setPainter(ballPainter);
-    add(ball);
-
     paddle1.setPosition(8, 100, 5, 40);
     paddle1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(paddle1);
@@ -79,6 +70,15 @@ EasyScreenViewBase::EasyScreenViewBase()
     player2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OD39));
     player2.setAlpha(190);
     add(player2);
+
+    ball.setPosition(154, 114, 14, 14);
+    ball.setCenter(7.5f, 7.5f);
+    ball.setRadius(6);
+    ball.setLineWidth(0);
+    ball.setArc(0, 360);
+    ballPainter.setColor(touchgfx::Color::getColorFromRGB(153, 12, 12));
+    ball.setPainter(ballPainter);
+    add(ball);
 }
 
 EasyScreenViewBase::~EasyScreenViewBase()
