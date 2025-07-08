@@ -4,8 +4,8 @@
 #include <gui_generated/hardreadyscreen_screen/HardReadyScreenViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 HardReadyScreenViewBase::HardReadyScreenViewBase() :
     frameCountInteraction1Interval(0)
@@ -15,10 +15,6 @@ HardReadyScreenViewBase::HardReadyScreenViewBase() :
     __background.setPosition(0, 0, 320, 240);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
-
-    image2_1.setXY(56, 0);
-    image2_1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
-    add(image2_1);
 
     box3.setPosition(0, 0, 320, 240);
     box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -89,18 +85,6 @@ HardReadyScreenViewBase::HardReadyScreenViewBase() :
     counter1.setAlpha(210);
     add(counter1);
 
-    image1.setXY(56, 230);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
-    add(image1);
-
-    image1_1.setXY(223, 229);
-    image1_1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
-    add(image1_1);
-
-    image2.setXY(56, 0);
-    image2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
-    add(image2);
-
     counter2.setXY(245, 111);
     counter2.setColor(touchgfx::Color::getColorFromRGB(222, 171, 95));
     counter2.setLinespacing(0);
@@ -112,8 +96,20 @@ HardReadyScreenViewBase::HardReadyScreenViewBase() :
     counter2.setAlpha(210);
     add(counter2);
 
-    image2_2.setXY(223, 2);
-    image2_2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
+    image1.setXY(313, 10);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
+    add(image1);
+
+    image1_1.setXY(313, 190);
+    image1_1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
+    add(image1_1);
+
+    image2.setXY(-2, 10);
+    image2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
+    add(image2);
+
+    image2_2.setXY(-2, 190);
+    image2_2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
     add(image2_2);
 }
 

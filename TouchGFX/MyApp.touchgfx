@@ -529,41 +529,6 @@
             }
           },
           {
-            "Type": "Image",
-            "Name": "image1",
-            "X": 56,
-            "Y": 230,
-            "Width": 38,
-            "Height": 10,
-            "RelativeFilename": "Untitled5.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_1",
-            "X": 223,
-            "Y": 229,
-            "Width": 38,
-            "Height": 10,
-            "RelativeFilename": "Untitled5.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image2",
-            "X": 56,
-            "Width": 38,
-            "Height": 10,
-            "RelativeFilename": "Untitled6.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image2_2",
-            "X": 223,
-            "Y": 2,
-            "Width": 38,
-            "Height": 10,
-            "RelativeFilename": "Untitled6.png"
-          },
-          {
             "Type": "Circle",
             "Name": "ball",
             "X": 154,
@@ -580,6 +545,42 @@
             "Radius": 6.0,
             "EndAngle": 360.0,
             "CapPrecision": "Triangle"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "X": -3,
+            "Y": 10,
+            "Width": 10,
+            "Height": 38,
+            "RelativeFilename": "Untitled5.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1_1",
+            "X": -3,
+            "Y": 189,
+            "Width": 10,
+            "Height": 38,
+            "RelativeFilename": "Untitled5.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "X": 313,
+            "Y": 10,
+            "Width": 10,
+            "Height": 38,
+            "RelativeFilename": "Untitled6.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2_2",
+            "X": 313,
+            "Y": 189,
+            "Width": 10,
+            "Height": 38,
+            "RelativeFilename": "Untitled6.png"
           }
         ],
         "Interactions": [
@@ -600,14 +601,6 @@
         "Name": "HardReadyScreen",
         "CanvasBufferSize": 4800,
         "Components": [
-          {
-            "Type": "Image",
-            "Name": "image2_1",
-            "X": 56,
-            "Width": 38,
-            "Height": 10,
-            "RelativeFilename": "Untitled6.png"
-          },
           {
             "Type": "Box",
             "Name": "box3",
@@ -783,32 +776,6 @@
             }
           },
           {
-            "Type": "Image",
-            "Name": "image1",
-            "X": 56,
-            "Y": 230,
-            "Width": 38,
-            "Height": 10,
-            "RelativeFilename": "Untitled5.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_1",
-            "X": 223,
-            "Y": 229,
-            "Width": 38,
-            "Height": 10,
-            "RelativeFilename": "Untitled5.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image2",
-            "X": 56,
-            "Width": 38,
-            "Height": 10,
-            "RelativeFilename": "Untitled6.png"
-          },
-          {
             "Type": "TextArea",
             "Name": "counter2",
             "X": 245,
@@ -832,12 +799,39 @@
           },
           {
             "Type": "Image",
-            "Name": "image2_2",
-            "X": 223,
-            "Y": 2,
-            "Width": 38,
-            "Height": 10,
+            "Name": "image1",
+            "X": 313,
+            "Y": 10,
+            "Width": 10,
+            "Height": 38,
             "RelativeFilename": "Untitled6.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1_1",
+            "X": 313,
+            "Y": 190,
+            "Width": 10,
+            "Height": 38,
+            "RelativeFilename": "Untitled6.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "X": -2,
+            "Y": 10,
+            "Width": 10,
+            "Height": 38,
+            "RelativeFilename": "Untitled5.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2_2",
+            "X": -2,
+            "Y": 190,
+            "Width": 10,
+            "Height": 38,
+            "RelativeFilename": "Untitled5.png"
           }
         ],
         "Interactions": [

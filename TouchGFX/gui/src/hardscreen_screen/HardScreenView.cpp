@@ -20,6 +20,7 @@ void HardScreenView::setupScreen()
 	gameOver = false;
 	ballX = 160;
 	ballY = 120;
+
 	ballVelX = 1.4f;
 	ballVelY = 1.4f;
 	waitingForServe = false;

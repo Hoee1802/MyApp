@@ -8,13 +8,13 @@
 #include <mvp/View.hpp>
 #include <gui/hardreadyscreen_screen/HardReadyScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/mixins/Draggable.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class HardReadyScreenViewBase : public touchgfx::View<HardReadyScreenPresenter>
 {
@@ -33,7 +33,6 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Image image2_1;
     touchgfx::Box box3;
     touchgfx::Box box1;
     touchgfx::Box box2;
@@ -46,10 +45,10 @@ protected:
     touchgfx::BoxWithBorder goal1;
     touchgfx::BoxWithBorder goal2;
     touchgfx::TextAreaWithOneWildcard counter1;
+    touchgfx::TextAreaWithOneWildcard counter2;
     touchgfx::Image image1;
     touchgfx::Image image1_1;
     touchgfx::Image image2;
-    touchgfx::TextAreaWithOneWildcard counter2;
     touchgfx::Image image2_2;
 
     /*

@@ -12,9 +12,9 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class HardScreenViewBase : public touchgfx::View<HardScreenPresenter>
 {
@@ -43,12 +43,12 @@ protected:
     touchgfx::TextArea player2;
     touchgfx::BoxWithBorder goal1;
     touchgfx::BoxWithBorder goal2;
+    touchgfx::Circle ball;
+    touchgfx::PainterRGB565 ballPainter;
     touchgfx::Image image1;
     touchgfx::Image image1_1;
     touchgfx::Image image2;
     touchgfx::Image image2_2;
-    touchgfx::Circle ball;
-    touchgfx::PainterRGB565 ballPainter;
 
     /*
      * Wildcard Buffers

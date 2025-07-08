@@ -84,22 +84,6 @@ HardScreenViewBase::HardScreenViewBase()
     goal2.setBorderSize(0);
     add(goal2);
 
-    image1.setXY(56, 230);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
-    add(image1);
-
-    image1_1.setXY(223, 229);
-    image1_1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
-    add(image1_1);
-
-    image2.setXY(56, 0);
-    image2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
-    add(image2);
-
-    image2_2.setXY(223, 2);
-    image2_2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
-    add(image2_2);
-
     ball.setPosition(154, 114, 14, 14);
     ball.setCenter(7.5f, 7.5f);
     ball.setRadius(6);
@@ -108,6 +92,22 @@ HardScreenViewBase::HardScreenViewBase()
     ballPainter.setColor(touchgfx::Color::getColorFromRGB(153, 12, 12));
     ball.setPainter(ballPainter);
     add(ball);
+
+    image1.setXY(-3, 10);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
+    add(image1);
+
+    image1_1.setXY(-3, 189);
+    image1_1.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED5_ID));
+    add(image1_1);
+
+    image2.setXY(313, 10);
+    image2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
+    add(image2);
+
+    image2_2.setXY(313, 189);
+    image2_2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
+    add(image2_2);
 }
 
 HardScreenViewBase::~HardScreenViewBase()
