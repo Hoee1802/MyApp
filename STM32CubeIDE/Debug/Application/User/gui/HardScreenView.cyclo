@@ -1,9 +1,9 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenView.cpp:40:6:virtual void HardScreenView::tearDownScreen()	1
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenView.cpp:41:6:virtual void HardScreenView::tearDownScreen()	1
 ../../TouchGFX/gui/include/gui/hardscreen_screen/HardScreenView.hpp:11:13:HardScreenView::~HardScreenView()	1
 ../../TouchGFX/gui/include/gui/hardscreen_screen/HardScreenView.hpp:11:13:virtual HardScreenView::~HardScreenView()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenView.cpp:8:1:HardScreenView::HardScreenView()	1
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenView.cpp:15:6:virtual void HardScreenView::setupScreen()	1
-D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenView.cpp:45:6:virtual void HardScreenView::handleTickEvent()	65
+D:/henhung/BTL/MyApp/TouchGFX/gui/src/hardscreen_screen/HardScreenView.cpp:46:6:virtual void HardScreenView::handleTickEvent()	68

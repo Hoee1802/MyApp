@@ -23,6 +23,8 @@ protected:
     int score1;           // Điểm số người chơi 1
     int score2;           // Điểm số người chơi 2
     bool gameOver;        // Trạng thái trò chơi
+    int buzzerBeepCounter;      // Bộ đếm số lần bíp của buzzer
+    bool buzzerBeepState;
 };
 
 #endif // MEDIUMSCREENVIEW_HPP
