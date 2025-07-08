@@ -16,7 +16,7 @@ Game Pingpong
 
 
 - Ảnh chụp minh họa:\
-  ![Ảnh minh họa](https://soict.hust.edu.vn/wp-content/uploads/logo-soict-hust-1-1024x416.png)
+  ![Ảnh minh họa]((https://github.com/Hoee1802/MyApp/blob/main/Schematic.jpg))
 
 ## TÁC GIẢ
 
