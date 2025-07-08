@@ -69,7 +69,7 @@ Ví dụ có thể liệt kê dạng bảng
 |PE2|MQ3 SCK|
 |PE3|MQ3 SDA|
 
-![Sơ đồ Schematic](https://github.com/Hoee1802/MyApp/blob/long/schematic.PNG)
+![Sơ đồ Schematic](https://github.com/Hoee1802/MyApp/blob/main/Schematic.jpg)
 
 ### TÍCH HỢP HỆ THỐNG
 
