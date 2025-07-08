@@ -44,7 +44,7 @@ Game Pingpong
 | STM32F429ZIT6 | Joystick 1 | Joystick 2 |   Buzzer   |
 |:-------------:|:----------:|:----------:|:----------:|
 | 3V3           | VCC        | VCC        |            |
-| GND           | GND        | GND        |            |
+| GND           | GND        | GND        |     GND    |
 | PA0           | VRy        |            |            |
 | PC3           | VRx        |            |            |
 | PG2           | SW         |            |            |
