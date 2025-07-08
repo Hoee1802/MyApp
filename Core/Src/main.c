@@ -25,6 +25,7 @@
 #include "app_touchgfx.h"
 #include "joystick_task.h"
 
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stm32f4xx_hal_adc.h"
@@ -105,7 +106,7 @@ const osThreadAttr_t GUI_Task_attributes = {
 osThreadId_t joystickTaskHandle;
 const osThreadAttr_t joystickTask_attributes = {
   .name = "joystickTask",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
@@ -639,10 +640,15 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 
 // Joystick Analog
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_5;
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_5|GPIO_PIN_7;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  GPIO_InitStruct.Pin = GPIO_PIN_3;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
 //Joystick Button
   GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;

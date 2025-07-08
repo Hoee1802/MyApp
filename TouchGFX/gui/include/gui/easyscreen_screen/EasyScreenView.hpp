@@ -25,6 +25,9 @@ protected:
     bool gameOver;        // Trạng thái trò chơi
     int buzzerBeepCounter;      // Bộ đếm số lần bíp của buzzer
     bool buzzerBeepState;
+    float desiredBallVelY1;         // Vận tốc Y mong muốn cho người chơi 1
+	float desiredBallVelY2;         // Vận tốc Y mong muốn cho người chơi 2
+	float lineAngle1, lineAngle2;    // Góc của đường line1 và line1_1
 };
 
 #endif // EASYSCREENVIEW_HPP

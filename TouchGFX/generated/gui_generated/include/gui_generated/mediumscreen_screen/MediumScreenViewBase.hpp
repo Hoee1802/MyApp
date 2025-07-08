@@ -14,6 +14,7 @@
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
 
 class MediumScreenViewBase : public touchgfx::View<MediumScreenPresenter>
 {
@@ -44,6 +45,10 @@ protected:
     touchgfx::BoxWithBorder goal1;
     touchgfx::Circle ball;
     touchgfx::PainterRGB565 ballPainter;
+    touchgfx::Line line1;
+    touchgfx::PainterRGB565 line1Painter;
+    touchgfx::Line line1_1;
+    touchgfx::PainterRGB565 line1_1Painter;
 
     /*
      * Wildcard Buffers

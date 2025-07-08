@@ -14,9 +14,14 @@
 typedef enum {
     JOY1_LEFT,
     JOY1_RIGHT,
+    JOY1_UP,
+	JOY1_DOWN,
     JOY2_LEFT,
     JOY2_RIGHT,
+    JOY2_UP,
+	JOY2_DOWN,
 	JOY1_BUTTON,
+
 	JOY2_BUTTON
 } JoystickCommand_t;
 

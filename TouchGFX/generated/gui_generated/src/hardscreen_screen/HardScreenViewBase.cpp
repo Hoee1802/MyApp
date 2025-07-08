@@ -108,6 +108,26 @@ HardScreenViewBase::HardScreenViewBase()
     image2_2.setXY(313, 189);
     image2_2.setBitmap(touchgfx::Bitmap(BITMAP_UNTITLED6_ID));
     add(image2_2);
+
+    line1.setPosition(13, 114, 33, 19);
+    line1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    line1.setPainter(line1Painter);
+    line1.setStart(5, 5);
+    line1.setEnd(95, 45);
+    line1.setLineWidth(1);
+    line1.setLineEndingStyle(touchgfx::Line::BUTT_CAP_ENDING);
+    line1.setAlpha(95);
+    add(line1);
+
+    line1_1.setPosition(269, 110, 33, 19);
+    line1_1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    line1_1.setPainter(line1_1Painter);
+    line1_1.setStart(5, 5);
+    line1_1.setEnd(95, 45);
+    line1_1.setLineWidth(1);
+    line1_1.setLineEndingStyle(touchgfx::Line::BUTT_CAP_ENDING);
+    line1_1.setAlpha(95);
+    add(line1_1);
 }
 
 HardScreenViewBase::~HardScreenViewBase()

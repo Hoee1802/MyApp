@@ -11,7 +11,7 @@ Game Pingpong
   - Xử lý va chạm bóng với vợt, tường và cập nhật điểm số.
   - Cho phép bắt đầu/trò chơi lại khi có tín hiệu điều khiển.
   - Đảm bảo tốc độ xử lý mượt mà, không giật lag khi thao tác điều khiển.
-  - Có thể bổ sung hiệu ứng âm thanh (buzzer) hoặc đèn báo khi có điểm/va chạm (nếu có linh kiện hỗ trợ).
+  - Hiệu ứng âm thanh (buzzer) khi có điểm.
 - **Ý nghĩa:** Dự án giúp sinh viên rèn luyện kỹ năng lập trình nhúng, xử lý ngoại vi (ADC cho joystick, giao tiếp màn hình, ngắt...), thiết kế giao diện điều khiển thực tế, và làm việc nhóm.
 
 
@@ -36,24 +36,26 @@ Game Pingpong
 
 - **Các kit, module, linh kiện sử dụng:**
   - 2 x Joystick analog (điều khiển hai vợt trong game)
+  - Buzzer
   - Dây kết nối Dupont
 
 - **Sơ đồ kết nối cơ bản:**
 
-| STM32F429ZIT6 | Joystick 1 | Joystick 2 |
-|:-------------:|:----------:|:----------:|
-| 3V3           | 5V         | 5V         |
-| GND           | GND        | GND        |
-| PA2           | VRx        |            |
-| PA3           | VRy        |            |
-| PB1           | SW         |            |
-| PA0           |            | VRx        |
-| PA1           |            | VRy        |
-| PB0           |            | SW         |
-
+| STM32F429ZIT6 | Joystick 1 | Joystick 2 |   Buzzer   |
+|:-------------:|:----------:|:----------:|:----------:|
+| 3V3           | VCC        | VCC        |            |
+| GND           | GND        | GND        |            |
+| PA0           | VRy        |            |            |
+| PC3           | VRx        |            |            |
+| PG2           | SW         |            |            |
+| PA5           |            | VRy        |            |
+| PA7           |            | VRx        |            |
+| PG3           |            | SW         |            |
+| PD12          |            |            |    VCC     |
 - **Chức năng từng module:**
   - **STM32F429ZIT6:** Xử lý tín hiệu, đọc dữ liệu joystick, điều khiển logic game ping pong hai người chơi.
   - **Joystick:** Nhập tín hiệu điều khiển từ người chơi (di chuyển vợt).
+  - **Buzzer:** Kêu khi người chơi ghi điểm
 
 
 
@@ -64,7 +66,6 @@ Ví dụ có thể liệt kê dạng bảng
 |STM32F429|Module ngoại vi|
 |--|--|
 |PA0|Nút bấm điều khiển trên board|
-|PG13|Led báo trên board|
 |PE2|MQ3 SCK|
 |PE3|MQ3 SDA|
 
@@ -75,8 +76,8 @@ Ví dụ có thể liệt kê dạng bảng
 #### **Thành phần phần cứng và vai trò**
 - **STM32F429ZIT6**: Vi điều khiển trung tâm, tiếp nhận tín hiệu từ joystick, xử lý thuật toán game và xuất dữ liệu hiển thị.
 - **Joystick x2**: Thiết bị nhập liệu, mỗi joystick điều khiển một vợt, cho phép 2 người chơi tương tác với trò chơi.
-- **Màn hình OLED/LCD** *(nếu có)*: Hiển thị trạng thái trò chơi: vị trí bóng, vị trí vợt, điểm số của từng người chơi.
-- **Buzzer hoặc LED báo hiệu** *(nếu có)*: Tạo hiệu ứng âm thanh/ánh sáng khi có sự kiện đặc biệt như ghi điểm, va chạm.
+- **Màn hình OLED/LCD** : Hiển thị trạng thái trò chơi: vị trí bóng, vị trí vợt, điểm số của từng người chơi.
+- **Buzzer** : Tạo hiệu ứng âm thanh khi ghi điểm.
 
 #### **Thành phần phần mềm và vai trò**
 - **Firmware (chạy trên STM32)**: 

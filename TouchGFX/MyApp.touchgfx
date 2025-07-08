@@ -581,6 +581,46 @@
             "Width": 10,
             "Height": 38,
             "RelativeFilename": "Untitled6.png"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 13,
+            "Y": 114,
+            "Width": 33,
+            "Height": 19,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 95,
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 95.0,
+            "EndY": 45.0,
+            "LineWidth": 1.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1",
+            "X": 269,
+            "Y": 110,
+            "Width": 33,
+            "Height": 19,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 95,
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 95.0,
+            "EndY": 45.0,
+            "LineWidth": 1.0,
+            "LineEndingStyle": "Butt"
           }
         ],
         "Interactions": [
@@ -1046,6 +1086,46 @@
             "Radius": 6.0,
             "EndAngle": 360.0,
             "CapPrecision": "Triangle"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 13,
+            "Y": 114,
+            "Width": 33,
+            "Height": 19,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 95,
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 95.0,
+            "EndY": 45.0,
+            "LineWidth": 1.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1",
+            "X": 268,
+            "Y": 114,
+            "Width": 33,
+            "Height": 19,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 95,
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 95.0,
+            "EndY": 45.0,
+            "LineWidth": 1.0,
+            "LineEndingStyle": "Butt"
           }
         ],
         "Interactions": [
@@ -1446,6 +1526,46 @@
             "Radius": 6.0,
             "EndAngle": 360.0,
             "CapPrecision": "Triangle"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 13,
+            "Y": 114,
+            "Width": 33,
+            "Height": 19,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 95,
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 95.0,
+            "EndY": 45.0,
+            "LineWidth": 1.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1",
+            "X": 268,
+            "Y": 114,
+            "Width": 33,
+            "Height": 19,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 95,
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 95.0,
+            "EndY": 45.0,
+            "LineWidth": 1.0,
+            "LineEndingStyle": "Butt"
           }
         ],
         "Interactions": [

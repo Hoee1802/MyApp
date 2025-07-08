@@ -15,6 +15,7 @@
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
 
 class HardScreenViewBase : public touchgfx::View<HardScreenPresenter>
 {
@@ -49,6 +50,10 @@ protected:
     touchgfx::Image image1_1;
     touchgfx::Image image2;
     touchgfx::Image image2_2;
+    touchgfx::Line line1;
+    touchgfx::PainterRGB565 line1Painter;
+    touchgfx::Line line1_1;
+    touchgfx::PainterRGB565 line1_1Painter;
 
     /*
      * Wildcard Buffers

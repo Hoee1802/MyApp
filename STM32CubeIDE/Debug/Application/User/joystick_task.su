@@ -1,1 +1,2 @@
-../Application/User/joystick_task.cpp:32:17:void JoystickTask(void*)	64	static
+../Application/User/joystick_task.cpp:38:6:void uart_print(const char*)	8	static
+../Application/User/joystick_task.cpp:42:17:void JoystickTask(void*)	240	static
