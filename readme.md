@@ -16,7 +16,11 @@ Game Pingpong
 
 
 - Ảnh chụp minh họa:\
+<<<<<<< HEAD
   ![Ảnh minh họa](https://github.com/Hoee1802/MyApp/blob/main/Schematic.jpg)
+=======
+  ![Ảnh minh họa]((https://github.com/Hoee1802/MyApp/blob/main/Schematic.jpg))
+>>>>>>> b1bd0e016881fc297db5f5766d100ff1a73ff20d
 
 ## TÁC GIẢ
 
@@ -44,7 +48,7 @@ Game Pingpong
 | STM32F429ZIT6 | Joystick 1 | Joystick 2 |   Buzzer   |
 |:-------------:|:----------:|:----------:|:----------:|
 | 3V3           | VCC        | VCC        |            |
-| GND           | GND        | GND        |            |
+| GND           | GND        | GND        |     GND    |
 | PA0           | VRy        |            |            |
 | PC3           | VRx        |            |            |
 | PG2           | SW         |            |            |
@@ -59,6 +63,18 @@ Game Pingpong
 
 
 ## SƠ ĐỒ SCHEMATIC
+<<<<<<< HEAD
+=======
+
+_Cho biết cách nối dây, kết nối giữa các linh kiện_
+Ví dụ có thể liệt kê dạng bảng
+|STM32F429|Module ngoại vi|
+|--|--|
+|PA0|Nút bấm điều khiển trên board|
+|PE2|MQ3 SCK|
+|PE3|MQ3 SDA|
+
+>>>>>>> b1bd0e016881fc297db5f5766d100ff1a73ff20d
 ![Sơ đồ Schematic](https://github.com/Hoee1802/MyApp/blob/main/Schematic.jpg)
 
 ### TÍCH HỢP HỆ THỐNG
@@ -180,7 +196,7 @@ extern "C" void JoystickTask(void *argument)
 ### Giải thích hàm này:
   - Đây là một task FreeRTOS có nhiệm vụ đọc giá trị từ hai joystick (Joystick 1 và Joystick 2) thông qua ADC (Analog-to-Digital Converter) và nút bấm GPIO, sau đó chuyển thành các lệnh điều khiển (JoystickCommand_t) và gửi vào hàng đợi FreeRTOS (joystickQueueHandle).
   - Sử dụng 4 kênh analog 0,5,7,13 theo thứ tự kênh 13->0->7->5 tương ứng với JOY1_X, JOY1_y, JOY2_X, JOY2_Y, mỗi kênh lấy mẫu trong 144 chu kỳ.
-  - ADC1 được cấu hình ở chế đọ SCAN, lần lượt các kênh polling các giá trị rồi so sánh với các ngưỡng, sau đó các command theo giá trị được đẩy vào hàng đợi để xử lý.
+  - ADC1 được cấu hình ở chế độ SCAN, lần lượt polling các giá trị từ các kênh rồi so sánh với các ngưỡng, sau đó các command theo giá trị được đẩy vào hàng đợi để xử lý.
   - 2 chân GPIO2,3 được đọc liên tục để kiểm tra sau đó command cũng được đưa vào hàng đợi.
 
 ### KẾT QUẢ
