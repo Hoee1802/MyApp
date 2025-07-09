@@ -9,12 +9,12 @@ public:
     ModelListener() : model(0) {}
     
     virtual ~ModelListener() {}
-    virtual void movePaddle1Left() {}
-    virtual void movePaddle1Right() {}
-    virtual void movePaddle2Left() {}
-    virtual void movePaddle2Right() {}
-    virtual void paddle1Action() {}
-    virtual void paddle2Action() {}
+//    virtual void movePaddle1Left() {}
+//    virtual void movePaddle1Right() {}
+//    virtual void movePaddle2Left() {}
+//    virtual void movePaddle2Right() {}
+//    virtual void paddle1Action() {}
+//    virtual void paddle2Action() {}
     void bind(Model* m)
     {
         model = m;

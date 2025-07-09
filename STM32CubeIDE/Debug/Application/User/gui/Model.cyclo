@@ -1,11 +1,5 @@
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:8:1:Model::Model()	1
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:12:6:void Model::tick()	1
-D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:18:6:static void Model::movePaddle1Left()	2
-D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:22:6:static void Model::movePaddle1Right()	2
-D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:27:6:static void Model::movePaddle2Left()	2
-D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:31:6:static void Model::movePaddle2Right()	2
-D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:35:6:static void Model::paddle1Action()	2
-D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:39:6:static void Model::paddle2Action()	2
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:42:6:void Model::setWinner(int)	1
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:48:5:int Model::getWinner(int)	1
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/model/Model.cpp:55:6:void Model::resetGame()	1

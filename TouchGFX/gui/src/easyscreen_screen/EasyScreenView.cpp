@@ -11,7 +11,7 @@
 extern osMessageQueueId_t joystickQueueHandle;
 
 // Hàm khởi tạo của lớp EasyScreenView
-EasyScreenView::EasyScreenView() : ballX(160), ballY(80), ballVelX(1), ballVelY(1),
+EasyScreenView::EasyScreenView() : ballX(160), ballY(80), ballVelX(1.4f), ballVelY(1.4f),
                                    waitingForServe(false), serveDelayTicks(0), servingPlayer(0),
                                    score1(0), score2(0), gameOver(false),
                                    buzzerBeepCounter(0), buzzerBeepState(false),
@@ -29,8 +29,8 @@ void EasyScreenView::setupScreen()
     gameOver = false;
     ballX = 160;
     ballY = 120;
-    ballVelX = 1;
-    ballVelY = 1;
+    ballVelX = 1.4f;
+    ballVelY = 1.4f;
     waitingForServe = false;
     serveDelayTicks = 0;
     servingPlayer = 0;
@@ -144,7 +144,7 @@ void EasyScreenView::handleTickEvent()
                 if (waitingForServe && servingPlayer == 1) {
                     desiredBallVelY1 -= 0.2f;
                     if (desiredBallVelY1 < -2.0f) desiredBallVelY1 = -2.0f;
-                    lineAngle1 = atan2f(desiredBallVelY1, 2.0f) * 180.0f / M_PI;
+                    lineAngle1 = atan2f(desiredBallVelY1, 2.0f) * 180.0f / M_PI;//tính góc phát bóng thoe độ từ giá trị radian của hàm  atan2f
                     // Cập nhật đường dẫn với tâm bóng
                     line1.invalidate();
                                         float ballCenterX = ballX + ball.getWidth() / 2.0f;
@@ -161,14 +161,14 @@ void EasyScreenView::handleTickEvent()
                 if (waitingForServe && servingPlayer == 1) {
                     desiredBallVelY1 += 0.2f;
                     if (desiredBallVelY1 > 2.0f) desiredBallVelY1 = 2.0f;
-                    lineAngle1 = atan2f(desiredBallVelY1, 2.0f) * 180.0f / M_PI;
+                    lineAngle1 = atan2f(desiredBallVelY1, 2.0f) * 180.0f / M_PI;//đổi từ radian sang độ
                     // Cập nhật đường dẫn với tâm bóng
                     line1.invalidate();
                                         float ballCenterX = ballX + ball.getWidth() / 2.0f;
                                         float ballCenterY = ballY + ball.getHeight() / 2.0f;
-                                        line1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
+                                        line1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);//khung hiển thị hướng bóng
                                         line1.setStart(16, 16);
-                                        line1.setEnd(16 + 30 * cosf(lineAngle1 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle1 * M_PI / 180.0f));
+                                        line1.setEnd(16 + 30 * cosf(lineAngle1 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle1 * M_PI / 180.0f));//
                                         line1.setVisible(true);
                                         line1.invalidate();
                 }
@@ -195,14 +195,14 @@ void EasyScreenView::handleTickEvent()
                 if (waitingForServe && servingPlayer == 2) {
                     desiredBallVelY2 += 0.2f;
                     if (desiredBallVelY2 > 2.0f) desiredBallVelY2 = 2.0f;
-                    lineAngle2 = atan2f(desiredBallVelY2, -2.0f) * 180.0f / M_PI;
+                    lineAngle2 = atan2f(desiredBallVelY2, -2.0f) * 180.0f / M_PI;//tính góc phát bóng theo độ, hàm atan2f trả về góc theo radian
                     // Cập nhật đường dẫn với tâm bóng
                     line1_1.invalidate();
                                         float ballCenterX = ballX + ball.getWidth() / 2.0f;
                                         float ballCenterY = ballY + ball.getHeight() / 2.0f;
-                                        line1_1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
-                                        line1_1.setStart(16, 16);
-                                        line1_1.setEnd(16 + 30 * cosf(lineAngle2 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle2 * M_PI / 180.0f));
+                                        line1_1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);//khung hiển thị hướng bóng
+                                        line1_1.setStart(16, 16);//tọa độ điểm bắt đầu
+                                        line1_1.setEnd(16 + 30 * cosf(lineAngle2 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle2 * M_PI / 180.0f));//tính tọa độ điểm kết thúc từ cos, sin của góc
                                         line1_1.setVisible(true);
                                         line1_1.invalidate();
                 }
@@ -373,7 +373,7 @@ void EasyScreenView::handleTickEvent()
             ballY = paddle2.getY() + paddle2.getHeight()/2 - ball.getHeight()/2;
             // Cập nhật đường dẫn với tâm bóng
             line1_1.invalidate();
-                       float ballCenterX = ballX + ball.getWidth() / 2.0f;
+                       float ballCenterX = ballX + ball.getWidth() / 2.0f;//xác định tọa độ tâm bóng
                        float ballCenterY = ballY + ball.getHeight() / 2.0f;
                        line1_1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
                        line1_1.setStart(16, 16);

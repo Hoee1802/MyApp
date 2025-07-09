@@ -1,9 +1,3 @@
-
-
-
-
-
-
 #include "joystick_task.h"          // Header tùy chỉnh cho định nghĩa tác vụ joystick
 #include "main.h"                  // Header chính cho thư viện HAL của STM32
 #include "cmsis_os.h"              // API CMSIS-RTOS cho FreeRTOS
@@ -23,29 +17,24 @@ extern osMessageQueueId_t joystickQueueHandle; // Handle hàng đợi FreeRTOS
 #define JOY2_X_CHANNEL ADC_CHANNEL_7 // Kênh ADC cho trục X của Joystick 2
 #define JOY2_Y_CHANNEL ADC_CHANNEL_5  // Kênh ADC cho trục Y của Joystick 2
 
-// Định nghĩa chân GPIO cho nút bấm
 #define JOY1_BUTTON_PIN GPIO_PIN_2    // Chân GPIO cho nút bấm Joystick 1
 #define JOY2_BUTTON_PIN GPIO_PIN_3    // Chân GPIO cho nút bấm Joystick 2
 #define JOY_BUTTON_PORT GPIOG         // Cổng GPIO cho nút bấm
 
-// Định nghĩa ngưỡng ADC
 #define JOY_THRESHOLD_LEFT   1000     // Ngưỡng cho chuyển động trái
 #define JOY_THRESHOLD_RIGHT  3000     // Ngưỡng cho chuyển động phải
 
 
-uint32_t tick_counter = 0;            // Biến đếm thời gian
+//uint32_t tick_counter = 0;            // Biến đếm thời gian
 
-void uart_print(const char* msg) {
-    HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
-}
 
 extern "C" void JoystickTask(void *argument)
 {
     // Khởi tạo giá trị ADC ở giữa dải (2048 cho ADC 12-bit)
-    uint32_t adc_values[4] = {2048, 2048, 2048, 2048}; // Lưu giá trị ADC: [JOY1_X, JOY1_Y, JOY2_X, JOY2_Y]
+    uint32_t adc_values[4] = {2048, 2048, 2048, 2048}; // mảng lưu giá trị ADC: [JOY1_X, JOY1_Y, JOY2_X, JOY2_Y]
 
-    // Cấu hình kênh ADC
-    ADC_ChannelConfTypeDef sConfig = {0};
+
+    ADC_ChannelConfTypeDef sConfig = {0};//đặt các trường về 0
     uint8_t channel_rank = 1;
 
     // Cấu hình tất cả 4 kênh cho ADC1 ở chế độ Scan
@@ -53,7 +42,7 @@ extern "C" void JoystickTask(void *argument)
     for (int i = 0; i < 4; i++) {
         sConfig.Channel = channels[i];
         sConfig.Rank = channel_rank++;
-        sConfig.SamplingTime = ADC_SAMPLETIME_144CYCLES;
+        sConfig.SamplingTime = ADC_SAMPLETIME_144CYCLES;//quét tuần tự 4 kênh, mỗi kênh lấy mẫu trong 144 chu kỳ
         HAL_ADC_ConfigChannel(&hadc1, &sConfig);
     }
 
@@ -75,7 +64,7 @@ extern "C" void JoystickTask(void *argument)
 
         // Đọc lần lượt giá trị từ 4 kênh
         for (int i = 0; i < 4; i++) {
-            HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+            HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);//polling giá trị adc
             adc_values[i] = HAL_ADC_GetValue(&hadc1);
         }
         HAL_ADC_Stop(&hadc1);
@@ -84,7 +73,7 @@ extern "C" void JoystickTask(void *argument)
         // Trục X
         if (adc_values[1] < JOY_THRESHOLD_LEFT) {
             command = JOY1_LEFT;
-            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);//lưu vào hàng đợi command
         } else if (adc_values[1] > JOY_THRESHOLD_RIGHT) {
             command = JOY1_RIGHT;
             osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
@@ -133,16 +122,6 @@ extern "C" void JoystickTask(void *argument)
             osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
         }
         lastJoy2ButtonState = joy2ButtonState;
-
-        // Cập nhật bộ đếm thời gian
-        tick_counter += 20;
-        if (tick_counter >= 500) {
-            tick_counter = 0;
-            char buffer[128];
-            sprintf(buffer, "JOY1: X=%lu, Y=%lu | JOY2: X=%lu, Y=%lu\r\n",
-                    adc_values[0], adc_values[1], adc_values[2], adc_values[3]);
-            uart_print(buffer);
-        }
 
         osDelay(10); // Tạm dừng 10ms
     }

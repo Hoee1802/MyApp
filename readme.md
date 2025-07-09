@@ -7,7 +7,7 @@ Game Pingpong
 - **Đề bài:** Thiết kế và xây dựng hệ thống trò chơi Ping Pong cho 2 người chơi trên nền tảng vi điều khiển STM32F429ZIT6.
 - **Tính năng yêu cầu:**
   - Mỗi người chơi điều khiển một vợt thông qua một joystick analog riêng biệt.
-  - Hiển thị trạng thái trò chơi (vị trí bóng, vị trí vợt, điểm số) lên màn hình (OLED hoặc LCD).
+  - Hiển thị trạng thái trò chơi (vị trí bóng, vị trí vợt, hướng bóng, điểm số) lên màn hình (OLED hoặc LCD).
   - Xử lý va chạm bóng với vợt, tường và cập nhật điểm số.
   - Cho phép bắt đầu/trò chơi lại khi có tín hiệu điều khiển.
   - Đảm bảo tốc độ xử lý mượt mà, không giật lag khi thao tác điều khiển.
@@ -16,7 +16,7 @@ Game Pingpong
 
 
 - Ảnh chụp minh họa:\
-  ![Ảnh minh họa](https://soict.hust.edu.vn/wp-content/uploads/logo-soict-hust-1-1024x416.png)
+  ![Ảnh minh họa](https://github.com/Hoee1802/MyApp/blob/main/Schematic.jpg)
 
 ## TÁC GIẢ
 
@@ -58,18 +58,8 @@ Game Pingpong
   - **Buzzer:** Kêu khi người chơi ghi điểm
 
 
-
 ## SƠ ĐỒ SCHEMATIC
-
-_Cho biết cách nối dây, kết nối giữa các linh kiện_
-Ví dụ có thể liệt kê dạng bảng
-|STM32F429|Module ngoại vi|
-|--|--|
-|PA0|Nút bấm điều khiển trên board|
-|PE2|MQ3 SCK|
-|PE3|MQ3 SDA|
-
-![Sơ đồ Schematic](https://github.com/Hoee1802/MyApp/blob/long/schematic.PNG)
+![Sơ đồ Schematic](https://github.com/Hoee1802/MyApp/blob/main/Schematic.jpg)
 
 ### TÍCH HỢP HỆ THỐNG
 
@@ -84,7 +74,7 @@ Ví dụ có thể liệt kê dạng bảng
   - Nhận và xử lý tín hiệu analog từ 2 joystick.
   - Thực hiện thuật toán di chuyển bóng, phát hiện va chạm, cập nhật điểm số.
   - Điều khiển giao diện hiển thị (OLED/LCD).
-  - Xử lý các hiệu ứng phụ như âm thanh, ánh sáng (nếu có).
+  - Xử lý các hiệu ứng phụ như âm thanh.
 - **Giao diện người dùng**:  
   - Được hiển thị trực tiếp trên màn hình nối với STM32.
   - Không sử dụng phần mềm ngoài, mọi thao tác điều khiển và hiển thị được thực hiện toàn bộ trên vi điều khiển và các module ngoại vi.
@@ -98,14 +88,100 @@ Ví dụ có thể liệt kê dạng bảng
 
 - Giải thích một số hàm quan trọng: ý nghĩa của hàm, tham số vào, ra
 
-  ```C
-     /**
-      *  Hàm tính ...
-      *  @param  x  Tham số
-      *  @param  y  Tham số
-      */
-     void abc(int x, int y = 2);
-  ```
+extern "C" void JoystickTask(void *argument)
+{
+    
+    uint32_t adc_values[4] = {2048, 2048, 2048, 2048};
+    ADC_ChannelConfTypeDef sConfig = {0};//
+    uint8_t channel_rank = 1;
+    uint32_t channels[4] = {JOY1_X_CHANNEL, JOY1_Y_CHANNEL, JOY2_X_CHANNEL, JOY2_Y_CHANNEL};
+    for (int i = 0; i < 4; i++) {
+        sConfig.Channel = channels[i];
+        sConfig.Rank = channel_rank++;
+        sConfig.SamplingTime = ADC_SAMPLETIME_144CYCLES;
+        HAL_ADC_ConfigChannel(&hadc1, &sConfig);
+    }
+
+    hadc1.Instance->CR1 |= ADC_CR1_SCAN; 
+    hadc1.Instance->SQR1 &= ~(ADC_SQR1_L); 
+    hadc1.Instance->SQR1 |= (3 << 20); 
+
+       JoystickCommand_t command;
+
+    
+    GPIO_PinState lastJoy1ButtonState = GPIO_PIN_SET;
+    GPIO_PinState lastJoy2ButtonState = GPIO_PIN_SET;
+
+    for (;;) {
+       
+        HAL_ADC_Start(&hadc1);
+
+        for (int i = 0; i < 4; i++) {
+            HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+            adc_values[i] = HAL_ADC_GetValue(&hadc1);
+        }
+        HAL_ADC_Stop(&hadc1);
+
+        if (adc_values[1] < JOY_THRESHOLD_LEFT) {
+            command = JOY1_LEFT;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);//lưu vào hàng đợi command
+        } else if (adc_values[1] > JOY_THRESHOLD_RIGHT) {
+            command = JOY1_RIGHT;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+        }
+
+       
+        if (adc_values[0] < JOY_THRESHOLD_LEFT) {
+            command = JOY1_UP;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+        }else if (adc_values[0] > JOY_THRESHOLD_RIGHT) {
+            command = JOY1_DOWN;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+        }
+
+        // Xử lý nút bấm Joystick 1
+        GPIO_PinState joy1ButtonState = HAL_GPIO_ReadPin(JOY_BUTTON_PORT, JOY1_BUTTON_PIN);
+        if (joy1ButtonState == GPIO_PIN_RESET && lastJoy1ButtonState == GPIO_PIN_SET) {
+            command = JOY1_BUTTON;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+        }
+        lastJoy1ButtonState = joy1ButtonState;
+
+        // Xử lý Joystick 2
+        // Trục X
+        if (adc_values[3] < JOY_THRESHOLD_LEFT) {
+            command = JOY2_LEFT;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+        } else if (adc_values[3] > JOY_THRESHOLD_RIGHT) {
+            command = JOY2_RIGHT;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+        }
+
+        // Trục Y
+        if (adc_values[2] < JOY_THRESHOLD_LEFT) {
+            command = JOY2_UP;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+        }
+        else if (adc_values[2] > JOY_THRESHOLD_RIGHT) {
+            command = JOY2_DOWN;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+        }
+        // Xử lý nút bấm Joystick 2
+        GPIO_PinState joy2ButtonState = HAL_GPIO_ReadPin(JOY_BUTTON_PORT, JOY2_BUTTON_PIN);
+        if (joy2ButtonState == GPIO_PIN_RESET && lastJoy2ButtonState == GPIO_PIN_SET) {
+            command = JOY2_BUTTON;
+            osMessageQueuePut(joystickQueueHandle, &command, 0, 0);
+        }
+        lastJoy2ButtonState = joy2ButtonState;
+        osDelay(10); 
+    }
+}
+
+### Giải thích hàm này:
+  - Đây là một task FreeRTOS có nhiệm vụ đọc giá trị từ hai joystick (Joystick 1 và Joystick 2) thông qua ADC (Analog-to-Digital Converter) và nút bấm GPIO, sau đó chuyển thành các lệnh điều khiển (JoystickCommand_t) và gửi vào hàng đợi FreeRTOS (joystickQueueHandle).
+  - Sử dụng 4 kênh analog 0,5,7,13 theo thứ tự kênh 13->0->7->5 tương ứng với JOY1_X, JOY1_y, JOY2_X, JOY2_Y, mỗi kênh lấy mẫu trong 144 chu kỳ.
+  - ADC1 được cấu hình ở chế đọ SCAN, lần lượt các kênh polling các giá trị rồi so sánh với các ngưỡng, sau đó các command theo giá trị được đẩy vào hàng đợi để xử lý.
+  - 2 chân GPIO2,3 được đọc liên tục để kiểm tra sau đó command cũng được đưa vào hàng đợi.
 
 ### KẾT QUẢ
 

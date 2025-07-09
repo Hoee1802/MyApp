@@ -2,12 +2,14 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "joystick_task.h"
+#include <cmath>
 
 extern osMessageQueueId_t joystickQueueHandle;
 
-MediumScreenView::MediumScreenView():ballX(160), ballY(120), ballVelX(1.2f), ballVelY(1.2f),
+MediumScreenView::MediumScreenView():ballX(160), ballY(120), ballVelX(1.4f), ballVelY(1.4f),
 								  waitingForServe(false), serveDelayTicks(0), servingPlayer(0),
-								  score1(0), score2(0),gameOver(false),buzzerBeepCounter(0), buzzerBeepState(false)
+								  score1(0), score2(0),gameOver(false),buzzerBeepCounter(0), buzzerBeepState(false),
+								  desiredBallVelY1(0.0f), desiredBallVelY2(0.0f),lineAngle1(0.0f), lineAngle2(0.0f)
 {
 
 }
@@ -20,14 +22,26 @@ void MediumScreenView::setupScreen()
 	gameOver = false;
 	ballX = 160;
 	ballY = 120;
-	ballVelX = 1.2f;
-	ballVelY = 1.2f;
+	ballVelX = 1.4f;
+	ballVelY = 1.4f;
 	waitingForServe = false;
 	serveDelayTicks = 0;
 	servingPlayer = 0;
     buzzerBeepCounter = 0;
     buzzerBeepState = false;
     // Đặt vị trí ban đầu của bóng
+
+    desiredBallVelY1 = 0.0f;
+    desiredBallVelY2 = 0.0f;
+    lineAngle1 = 0.0f;
+    lineAngle2 = 0.0f;
+
+    // Ẩn các đường ban đầu
+    line1.setVisible(false);
+    line1_1.setVisible(false);
+    line1.invalidate();
+    line1_1.invalidate();
+
 	ball.invalidate();
 	ball.moveTo(ballX, ballY);
 	ball.invalidate();
@@ -47,7 +61,11 @@ void MediumScreenView::handleTickEvent()
 {
 
     if (gameOver) {
-        return; // Không xử lý nếu trò chơi kết thúc
+    	line1.setVisible(false);
+		line1_1.setVisible(false);
+		line1.invalidate();
+		line1_1.invalidate();
+        return;
     }
     // Xử lý bíp buzzer
 	if (buzzerBeepCounter > 0) {
@@ -117,26 +135,110 @@ void MediumScreenView::handleTickEvent()
 					}
 				}
 				break;
-            case JOY1_BUTTON:
-				// Người chơi 1 bấm nút để phát bóng
+
+            case JOY1_UP:
 				if (waitingForServe && servingPlayer == 1) {
-					waitingForServe = false;
-					ballVelX = 1.2f; // Phát bóng sang phải
-					ballVelY = (paddle1.getY() + paddle1.getHeight()/2 > ballY) ? -1.2f : 1.2f;
-					ball.setVisible(true);
-					ball.invalidate();
+					desiredBallVelY1 -= 0.2f;
+					if (desiredBallVelY1 < -2.0f) desiredBallVelY1 = -2.0f;
+					lineAngle1 = atan2f(desiredBallVelY1, 2.0f) * 180.0f / M_PI;
+					// Cập nhật đường dẫn với tâm bóng
+					line1.invalidate();
+										float ballCenterX = ballX + ball.getWidth() / 2.0f;
+										float ballCenterY = ballY + ball.getHeight() / 2.0f;
+										line1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33); // Kích thước vùng bao quanh
+										line1.setStart(16, 16); // Tâm tương đối trong vùng
+										line1.setEnd(16 + 30 * cosf(lineAngle1 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle1 * M_PI / 180.0f));
+										line1.setVisible(true);
+										line1.invalidate();
 				}
 				break;
-			case JOY2_BUTTON:
-				// Người chơi 2 bấm nút để phát bóng
+
+			case JOY1_DOWN:
+				if (waitingForServe && servingPlayer == 1) {
+					desiredBallVelY1 += 0.2f;
+					if (desiredBallVelY1 > 2.0f) desiredBallVelY1 = 2.0f;
+					lineAngle1 = atan2f(desiredBallVelY1, 2.0f) * 180.0f / M_PI;
+					// Cập nhật đường dẫn với tâm bóng
+					line1.invalidate();
+										float ballCenterX = ballX + ball.getWidth() / 2.0f;
+										float ballCenterY = ballY + ball.getHeight() / 2.0f;
+										line1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
+										line1.setStart(16, 16);
+										line1.setEnd(16 + 30 * cosf(lineAngle1 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle1 * M_PI / 180.0f));
+										line1.setVisible(true);
+										line1.invalidate();
+				}
+				break;
+
+			case JOY2_UP:
 				if (waitingForServe && servingPlayer == 2) {
-					waitingForServe = false;
-					ballVelX = -1.2f; // Phát bóng sang trái
-					ballVelY = (paddle2.getY() + paddle2.getHeight()/2 > ballY) ? -1.2f : 1.2f;
-					ball.setVisible(true);
-					ball.invalidate();
+					desiredBallVelY2 -= 0.2f;
+					if (desiredBallVelY2 < -2.0f) desiredBallVelY2 = -2.0f;
+					lineAngle2 = atan2f(desiredBallVelY2, -2.0f) * 180.0f / M_PI;
+					// Cập nhật đường dẫn với tâm bóng
+					line1_1.invalidate();
+									   float ballCenterX = ballX + ball.getWidth() / 2.0f;
+									   float ballCenterY = ballY + ball.getHeight() / 2.0f;
+									   line1_1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
+									   line1_1.setStart(16, 16);
+									   line1_1.setEnd(16 + 30 * cosf(lineAngle2 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle2 * M_PI / 180.0f));
+									   line1_1.setVisible(true);
+									   line1_1.invalidate();
 				}
 				break;
+
+			case JOY2_DOWN:
+				if (waitingForServe && servingPlayer == 2) {
+					desiredBallVelY2 += 0.2f;
+					if (desiredBallVelY2 > 2.0f) desiredBallVelY2 = 2.0f;
+					lineAngle2 = atan2f(desiredBallVelY2, -2.0f) * 180.0f / M_PI;
+					// Cập nhật đường dẫn với tâm bóng
+					line1_1.invalidate();
+										float ballCenterX = ballX + ball.getWidth() / 2.0f;
+										float ballCenterY = ballY + ball.getHeight() / 2.0f;
+										line1_1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
+										line1_1.setStart(16, 16);
+										line1_1.setEnd(16 + 30 * cosf(lineAngle2 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle2 * M_PI / 180.0f));
+										line1_1.setVisible(true);
+										line1_1.invalidate();
+				}
+				break;
+
+            case JOY1_BUTTON:
+                if (waitingForServe && servingPlayer == 1) {
+                    waitingForServe = false;
+                    float speed = 2.0f;
+                    ballVelX = sqrt(speed * speed - desiredBallVelY1 * desiredBallVelY1);
+                    ballVelY = desiredBallVelY1;
+                    if (ballVelX < 0.5f) {
+                        ballVelX = 0.5f;
+                        ballVelY = (desiredBallVelY1 >= 0) ? sqrt(speed * speed - ballVelX * ballVelX)
+                                                          : -sqrt(speed * speed - ballVelX * ballVelX);
+                    }
+                    ball.setVisible(true);
+                    ball.invalidate();
+                    line1.setVisible(false);
+                    line1.invalidate();
+                }
+                break;
+
+            case JOY2_BUTTON:
+                if (waitingForServe && servingPlayer == 2) {
+                    waitingForServe = false;
+                    float speed = 2.0f;
+                    ballVelX = -sqrt(speed * speed - desiredBallVelY2 * desiredBallVelY2);
+                    ballVelY = desiredBallVelY2;
+                    if (ballVelX > -0.5f) {
+                        ballVelX = -0.5f;
+                        ballVelY = (desiredBallVelY2 >= 0) ? sqrt(speed * speed - ballVelX * ballVelX)
+                                                          : -sqrt(speed * speed - ballVelX * ballVelX);
+                    }
+                    ball.setVisible(true);
+                    ball.invalidate();
+                    line1_1.setVisible(false);
+                    line1_1.invalidate();
+                }
+                break;
         }
     }
 
@@ -174,8 +276,8 @@ void MediumScreenView::handleTickEvent()
             }
 
             // Xử lý va chạm với bên trái (ballX < 1)
-                if (ballX >319) {
-                    if (ballY > 60 && ballY < 181) {
+			if (ballX >319) {
+				if (ballY > 60 && ballY < 181) {
                         // Bóng trong vùng goal2, cộng điểm cho người chơi 1
                         score1++;
                         Unicode::snprintf(MediumScreenViewBase::score1Buffer, MediumScreenViewBase::SCORE1_SIZE, "%d", score1);
@@ -194,7 +296,18 @@ void MediumScreenView::handleTickEvent()
                         servingPlayer = 1; // Người chơi 1 phát bóng
                         ballX = paddle1.getX() + paddle1.getWidth() + 10; // Gần paddle1
                         ballY = paddle1.getY() + paddle1.getHeight()/2 - ball.getHeight()/2; // Căn giữa paddle
-                        ball.moveTo(ballX, ballY);
+                        desiredBallVelY1 = 0.0f;
+					    lineAngle1 = 0.0f;
+					    // Cập nhật đường dẫn với tâm bóng
+					    line1.invalidate();
+								   float ballCenterX = ballX + ball.getWidth() / 2.0f;
+								   float ballCenterY = ballY + ball.getHeight() / 2.0f;
+								   line1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
+								   line1.setStart(16, 16);
+								   line1.setEnd(16 + 30 * cosf(lineAngle1 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle1 * M_PI / 180.0f));
+								   line1.setVisible(true);
+								   line1.invalidate();
+								   ball.moveTo(ballX, ballY);
                         ball.invalidate();
                         return; // Thoát để không xử lý thêm
                     } else {
@@ -225,7 +338,18 @@ void MediumScreenView::handleTickEvent()
                         servingPlayer = 2; // Người chơi 2 phát bóng
                         ballX = paddle2.getX() - ball.getWidth() - 10; // Gần paddle2
                         ballY = paddle2.getY() + paddle2.getHeight()/2 - ball.getHeight()/2; // Căn giữa paddle
-                        ball.moveTo(ballX, ballY);
+                        desiredBallVelY2 = 0.0f;
+						lineAngle2 = 0.0f;
+						// Cập nhật đường dẫn với tâm bóng
+						line1_1.invalidate();
+									float ballCenterX = ballX + ball.getWidth() / 2.0f;
+									float ballCenterY = ballY + ball.getHeight() / 2.0f;
+									line1_1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
+									line1_1.setStart(16, 16);
+									line1_1.setEnd(16 + 30 * cosf(lineAngle2 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle2 * M_PI / 180.0f));
+									line1_1.setVisible(true);
+									line1_1.invalidate();
+									ball.moveTo(ballX, ballY);
                         ball.invalidate();
                         return; // Thoát để không xử lý thêm
                     } else {
@@ -249,11 +373,29 @@ void MediumScreenView::handleTickEvent()
                     ball.invalidate();
                 }
             }
-            // Cập nhật vị trí bóng theo paddle khi chờ phát
+            // Cập nhật vị trí bóng theo paddle
             if (servingPlayer == 1) {
                 ballY = paddle1.getY() + paddle1.getHeight()/2 - ball.getHeight()/2;
+                // Cập nhật đường dẫn với tâm bóng
+                line1.invalidate();
+                            float ballCenterX = ballX + ball.getWidth() / 2.0f;
+                            float ballCenterY = ballY + ball.getHeight() / 2.0f;
+                            line1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
+                            line1.setStart(16, 16);
+                            line1.setEnd(16 + 30 * cosf(lineAngle1 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle1 * M_PI / 180.0f));
+                            line1.setVisible(true);
+                            line1.invalidate();
             } else if (servingPlayer == 2) {
                 ballY = paddle2.getY() + paddle2.getHeight()/2 - ball.getHeight()/2;
+                // Cập nhật đường dẫn với tâm bóng
+                line1_1.invalidate();
+                           float ballCenterX = ballX + ball.getWidth() / 2.0f;
+                           float ballCenterY = ballY + ball.getHeight() / 2.0f;
+                           line1_1.setPosition(ballCenterX - 16, ballCenterY - 16, 33, 33);
+                           line1_1.setStart(16, 16);
+                           line1_1.setEnd(16 + 30 * cosf(lineAngle2 * M_PI / 180.0f), 16 + 30 * sinf(lineAngle2 * M_PI / 180.0f));
+                           line1_1.setVisible(true);
+                           line1_1.invalidate();
             }
             ball.moveTo(ballX, ballY);
             ball.invalidate();

@@ -13,6 +13,8 @@ public:
     virtual void tearDownScreen();
     void handleTickEvent();
 protected:
+
+
     float ballX;      // Vị trí X của bóng
 	float ballY;      // Vị trí Y của bóng
 	float ballVelX;   // Vận tốc X của bóng

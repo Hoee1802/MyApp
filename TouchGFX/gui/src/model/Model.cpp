@@ -15,30 +15,30 @@ void Model::tick()
     staticListener = modelListener; // gán mỗi lần để sync
 }
 
-void Model::movePaddle1Left() {
-    if (staticListener) staticListener->movePaddle1Left();
-}
-
-void Model::movePaddle1Right() {
-    if (staticListener) staticListener->movePaddle1Right();
-}
-
-
-void Model::movePaddle2Left() {
-    if (staticListener) staticListener->movePaddle2Left();
-}
-
-void Model::movePaddle2Right() {
-    if (staticListener) staticListener->movePaddle2Right();
-}
-
-void Model::paddle1Action() {
-    if (staticListener) staticListener->paddle1Action();
-}
-
-void Model::paddle2Action() {
-    if (staticListener) staticListener->paddle2Action();
-}
+//void Model::movePaddle1Left() {
+//    if (staticListener) staticListener->movePaddle1Left();
+//}
+//
+//void Model::movePaddle1Right() {
+//    if (staticListener) staticListener->movePaddle1Right();
+//}
+//
+//
+//void Model::movePaddle2Left() {
+//    if (staticListener) staticListener->movePaddle2Left();
+//}
+//
+//void Model::movePaddle2Right() {
+//    if (staticListener) staticListener->movePaddle2Right();
+//}
+//
+//void Model::paddle1Action() {
+//    if (staticListener) staticListener->paddle1Action();
+//}
+//
+//void Model::paddle2Action() {
+//    if (staticListener) staticListener->paddle2Action();
+//}
 void Model::setWinner(int winnerId)
 {
     winner = winnerId;

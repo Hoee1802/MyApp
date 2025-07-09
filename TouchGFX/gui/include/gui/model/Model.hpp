@@ -21,13 +21,13 @@ public:
 
     void tick();
     // Gọi từ joystick_task.c
-    static void movePaddle1Left();
-    static void movePaddle1Right();
-
-    static void movePaddle2Left();
-    static void movePaddle2Right();
-    static void paddle1Action();
-    static void paddle2Action();
+//    static void movePaddle1Left();
+//    static void movePaddle1Right();
+//
+//    static void movePaddle2Left();
+//    static void movePaddle2Right();
+//    static void paddle1Action();
+//    static void paddle2Action();
     void setWinner(int winnerId);
 	int getWinner(int playerId);
 	void resetGame();

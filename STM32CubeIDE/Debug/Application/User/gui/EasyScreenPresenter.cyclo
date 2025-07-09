@@ -1,9 +1,3 @@
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:18:virtual void ModelListener::movePaddle1Left()	1
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:13:18:virtual void ModelListener::movePaddle1Right()	1
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:14:18:virtual void ModelListener::movePaddle2Left()	1
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:15:18:virtual void ModelListener::movePaddle2Right()	1
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:18:virtual void ModelListener::paddle1Action()	1
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::paddle2Action()	1
 ../../TouchGFX/gui/include/gui/easyscreen_screen/EasyScreenPresenter.hpp:30:13:EasyScreenPresenter::~EasyScreenPresenter()	1
 D:/henhung/BTL/MyApp/TouchGFX/gui/src/easyscreen_screen/EasyScreenPresenter.cpp:16:6:virtual void EasyScreenPresenter::deactivate()	1
 ../../TouchGFX/gui/include/gui/easyscreen_screen/EasyScreenPresenter.hpp:30:13:virtual EasyScreenPresenter::~EasyScreenPresenter()	1
